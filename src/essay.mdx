@@ -1,0 +1,225 @@
+import { SideNote } from './Components';
+import { EarnProgress, ManyHumans, SpeedyClocks, WageEntry, wages } from "./Experiments";
+
+# Zeit ist Geld
+
+<p className="subtitle">Ein Essay über den (monetären) Wert von Zeit</p>
+
+<section>
+  Dieses Essay zu lesen wird Zeit „kosten“. Bisher {
+  props.time < 60
+    ? (<> zwar nur {props.time.toFixed(0)} Sekunden, das wird sich jedoch noch ändern.</>)
+    : (<> {props.time.toFixed(0)} Sekunden.</>)
+}
+
+  Doch was heißt „kosten“ in diesem Kontext? Kann man Zeit etwa ausgeben, kaufen,
+  verkaufen, handeln? Wenn ja, was ist der Wert von Zeit? Ist alle Zeit gleich viel wert?
+  Was bedeutet Lohnungleichheit für die Verteilung von Zeit?
+</section>
+
+<section>
+  ## Zeit verkaufen
+
+  Viele Menschen in Deutschland verbringen circa die Hälfte ihres wachen Tages damit, ihre
+  Zeit zu verkaufen. _Acht Stunden arbeiten, acht Stunden schlafen und acht Stunden Freizeit und
+  Erholung_
+  <SideNote>Robert Owen (1771–1858) als Forderung zur Einführung des Acht-Stunden-Arbeitstages
+    [[Quelle abgerufen am 18.01.2022]](https://de.wikipedia.org/w/index.php?title=Achtstundentag&oldid=218006239)
+  </SideNote>.
+  Normalerweise nennen wir diese Tätigkeit jedoch nicht „Zeit verkaufen“, sondern „Lohnarbeit“.
+
+  Beim Handel mit Dienstleistungen ist es offensichtlich, dass wir Zeit kaufen bzw. verkaufen.
+  Sei es, bei der Frisör:in oder in der Psychotherapie: Es findet ein direkter Tausch von einer bestimmten, klar
+  definierten Zeiteinheit für einen bestimmten, klar definierten Geldbetrag statt. *Haare Schneiden 20&nbsp;€.
+  Therapiestunde 100&nbsp;€*
+  <SideNote>Verhaltenstherapie, Einzelbehandlung, Dauer mind. 50 Min.
+    [[Quelle abgerufen am 20.01.2022]](https://www.bptk.de/wp-content/uploads/2020/04/GOP-Infotabelle_Stand-2020.pdf)
+  </SideNote>.
+
+  Bei anderen Käufen ist nicht auf den ersten Blick offensichtlich, dass mit Zeit gehandelt
+  wird. *Pizza 8&nbsp;€.*
+
+  Hier steht zwar auf der einen Seite ein Geldbetrag, auf der anderen Seite steht
+  jedoch ein greifbares, physisches (und in diesem Fall essbares) Produkt.
+  Um die Pizza herzustellen, musste die Pizzabäcker:in Arbeitszeit aufwenden. 
+  Zusätzlich brauchte sie Rohstoffe, z. B. das Mehl, die Hefe, die Tomaten, den Käse, etc.
+
+  Um diese Rohstoffe herzustellen, brauchte es auch wieder Arbeitszeit, und eventuell
+  weitere Rohstoffe (z. B. Weizen für die Mehlherstellung oder Dünger und Wasser für das Ziehen von Tomaten). 
+  Auch für die Herstellung dieser Rohstoffe musste Zeit aufgewendet werden
+  <SideNote>An dieser Stelle muss angemerkt werden, dass nicht _alle_ Wertschöpfung allein auf das
+    Aufwenden und Verkaufen von Zeit zurückgeführt werden kann. So wird z. B. für das Züchten von
+    Tomaten zusätzlich die Fläche benötigt, auf der die Pflanzen wachsen. Diese Fläche kann nicht sinnvoll in
+    Zeitaufwand umgerechnet werden und soll deshalb für den Zweck dieses Textes ignoriert werden.
+  </SideNote>.
+  
+  Wir sehen also, dass auch beim Handel mit physischen Waren ein Handel mit Zeit erfolgt.
+
+</section>
+
+<section>
+  ## Der Wert der Zeit
+
+  Was an Preisen für Dienstleistungen deutlich wird, jedoch auch für andere Waren gilt, ist, dass nicht alle Zeit gleich
+  viel wert ist.
+  _Haare schneiden 20&nbsp;€. Therapiestunde 100&nbsp;€._
+
+  Oft ist uns die unterschiedliche Vergütung unterschiedlicher Tätigkeiten zwar prinzipiell klar, jedoch trotzdem
+  schlecht greifbar. Dies hat verschiedene Gründe.
+
+  Gehalt wird oft in großen Einheiten angegeben. *36.588 Euro pro Jahr*
+  <SideNote>durchschnittliches Brutto-Einkommen von Arbeitnehmer:innen in Deutschland
+    [[Quelle abgerufen am 20.01.2022]](https://www.dgb.de/themen/++co++6ca263de-fb0e-11e9-bdcf-52540088cada#wiehoch2021)
+  </SideNote>. 
+  Dadurch fällt es schwer, sich darunter etwas vorzustellen.
+  Was könnte man alles in einem Jahr machen? Ein Haus bauen, ein Buch schreiben, mit dem Fahrrad nach Spanien fahren,
+  etc.
+  Was könnte man alles mit 36&nbsp;588&nbsp;€ machen? Über zwölftausend Laibe Brot kaufen
+  <SideNote>bei einem Preis von 3&nbsp;€ pro Laib</SideNote>,
+  mehr als eintausendzweihundert Mal zum Frisör gehen
+  <SideNote>Bei einem Preis von 20&nbsp;€ pro Haarschnitt</SideNote>, etc.
+
+  Noch weniger Greifbar wird die Sache mit dem Lohn dadurch, dass nicht gerne über Gehälter geredet wird.
+  *Über Geld redet man nicht.* 
+  So fällt ungleiche Bezahlung nicht auf und kein Veränderungswille entsteht.
+</section>
+
+<section>
+  ## Vergleichswerte: Wer verdient wie viel?
+
+  Um Licht in dieses Dunkel zu bringen, ist es hilfreich, Vergleichswerte einzuholen und diese in greifbare
+  Einheiten umzurechnen
+  <SideNote>Der Einfachheit halber werden nachfolgend Brutto-Einkommen (vor Steuerabgaben) betrachtet.
+    Steuern sind natürlich ein wichtiger Faktor beim Einkommen, allerdings oft schwer abzuschätzen und (international)
+    zu
+    vergleichen.
+  </SideNote>.
+
+  Wie viel verdienst du? Der Einfachheit halber kannst du dein Gehalt entweder
+  als Stundenlohn, oder als Jahres- oder als Monatseinkommen eingeben.
+
+  <WageEntry wage={props.wage} setWage={props.setWage} />
+
+  Der **Mindestlohn in Deutschland beträgt 9,82&nbsp;€/h** brutto (vor Abzug von Steuern)
+  <SideNote>Stand 01.01.2022.
+    [[Quelle abgerufen am 20.01.2022]](https://www.dgb.de/themen/++co++6ca263de-fb0e-11e9-bdcf-52540088cada#wiehoch2021)
+  </SideNote>.
+
+  Das durchschnittliche **Einkommen von Arbeitnehmer:innen** in Deutschland liegt bei 3049&nbsp;€/Monat brutto
+  <SideNote>Stand 2021.
+    [[Quelle abgerufen am 20.01.2022]](https://www.dgb.de/themen/++co++37f4eb9a-5bc3-11eb-ac48-001a4a160123)
+  </SideNote>,
+  was einem Stundenlohn von
+  <code>(3049&nbsp;€/Monat) / (21&nbsp;Arbeitstage/Monat) / (8h&nbsp;Stunden/Tag) =&nbsp;**18,15&nbsp;€/h**</code> entspricht.
+
+  Das Durchschnittsgehalt für *Professoren* beträgt in Deutschland 6500 €/Monat brutto
+  <SideNote>Stand 2022
+    [[Quelle abgerufen am 20.01.2022]](https://www.academics.de/ratgeber/gehalt-professor-was-verdient-ein-professor)
+  </SideNote>,
+  woraus sich ein Stundenlohn von 
+  <code>(3049&nbsp;€/Monat) / (21&nbsp;Arbeitstage/Monat) / (8&nbsp;h/Tag) =&nbsp;**38,69&nbsp;€/h**</code> ergibt.
+
+  **Elon Musk, der momentan reichste Mensch der Welt**, besitzt 264&nbsp;*Milliarden*&nbsp;US-Dollar
+  <SideNote>Stand 14.01.2022
+    [[Quelle abgerufen am
+    20.01.2022]](https://de.statista.com/statistik/daten/studie/181482/umfrage/liste-der-top-25-milliardaere-weltweit/)
+  </SideNote> (231.5&nbsp;*Milliarden*&nbsp;Euro).
+  Elon Musk ist 50 Jahre alt. Selbst wenn wir (unrealistischerweise) annehmen, dass Elon Musk seit seinem 16.
+  Geburtstag ohne Urlaub oder sonstigen Pausen 80 Stunden pro Woche gearbeitet hätte, ergeben sich
+  <code>(50&nbsp;Jahre&nbsp;-&nbsp;16&nbsp;Jahre) * 52&nbsp;Wochen/Jahr * 80&nbsp;Stunden/Woche = 141&nbsp;440&nbsp;Arbeitsstunden</code>,
+  die Musk maximal in seinem Leben geleistet haben kann. Hieraus ergibt sich ein Stundenlohn von
+  <code>231.5&nbsp;*Milliarden*&nbsp;€&nbsp;/&nbsp;141&nbsp;440&nbsp;h =&nbsp;**1.6&nbsp;Millionen&nbsp;€/h**</code>
+  <SideNote> Natürlich ist dieser Stundenlohn komplett unrealistisch, was für die Zwecke
+    dieses Essays ignoriert werden soll. Oder wollte etwa jemand behaupten, dass Musk sich sein Geld nicht
+    im Schweiße seines Angesichts erarbeitet habe?
+  </SideNote>.
+
+  Der **Mindestlohn für Näher:innen in Bangladesch** beträgt umgerechnet ca. 95 US-Dollar/Monat
+  <SideNote>Stand 2018
+    [[Quelle abgerufen am 20.01.2022]](https://fashionunited.ch/nachrichten/business/bangladesch-mindestlohn-fuer-bekleidungsarbeiter-wird-auf-95-us-dollar-erhoeht/2018091715842)
+  </SideNote> (ca. 83,31 €/Monat).
+  Da zuverlässige Informationen über die tatsächlichen Arbeitszeiten schwierig zu bekommen sind, nehmen wir
+  optimistische 12-Stunden-Schichten bei einer 6-Tage-Woche an. Hieraus ergibt sich ein Stundenlohn von
+  <code>(83,31&nbsp;€/Monat) / (4&nbsp;Wochen/Monat) / (6&nbsp;Tage/Woche) / (12&nbsp;h/Tag) = **0,29&nbsp;€/h**</code>
+  <SideNote>Ob dieser Mindestlohn eingehalten wird, steht auf einer anderen Seite.</SideNote>.
+
+</section>
+<section>
+  ## Die Zeit eines Euros
+
+  Um ein Verständnis für diese Zahlen zu entwickeln ergibt es Sinn, sich Gehalt auf kleineren Skalen zu verdeutlichen
+  und zu vergleichen. Wie lange dauert es, 1&nbsp;€ zu verdienen?
+
+  Machen wir hierzu ein Gedankenexperiment: Wie lange dauert es für verschiedene Menschen, einen Euro zu verdienen?
+  <EarnProgress
+    wage={props.wage}
+    target={1}
+  />
+
+  Wir sehen also, dass es je nach Einkommen unterschiedlich lange dauert, einen Geldbetrag zu „erarbeiten“.
+
+</section>
+
+<section>
+  ## Schnelle und langsame Zeit
+
+  Was passiert, wenn du das Geld, das du verdienst, wiederum nutzt, um die Zeit einer anderen Person zu kaufen?
+
+  Um dies zu Veranschaulichen, können wir folgendes Gedankenexperiment durchführen:
+  Würdest du mit einem Stundenlohn von {props.wage.toFixed(2).replace(".", ",")}€ die Zeit von Elon Musk kaufen wollen, (z. B. damit er
+  dir die Haare schneidet),
+  müsstest du pro Minute, die du von ihm einkaufst {(wages["Elon Musk"] / props.wage / 60 / 8).toFixed(0)} *Tage*
+  Arbeiten. Kaufst du jedoch Zeit von einer Näher:in in Bangladesch in Form eines T-Shirts, welches, musst du
+  nur {(wages["Näher:in in Bangladesch"] / props.wage * 60 * 60).toFixed(0)} *Sekunden* arbeiten, um eine Stunde
+  Arbeitszeit der Näher:innen zu kaufen
+  <SideNote>In diesem Text werden alle Abgaben, Zwischenhändler und Materialkosten ignoriert,
+    obwohl aufgrund des geringen Stundenlohnes der Näher:innen das meiste Geld auf sie entfällt.
+  </SideNote>.
+
+  Veranschaulichen wir diesen Zusammenhang nun mithilfe der unten stehenden Uhren:
+  Jede Uhr ist einer Person zugeordnet, die ihre Zeit verkauft.
+  Klickst du auf deine Uhr, läuft diese mit der normalen Geschwindigkeit <code>1s ≙ 1s</code>.
+  Alle anderen Uhren zeigen wie viel Zeit du dir von den anderen Personen kaufen könntest.
+  Klickst du auf die uhr der Näher:in in Bangladesch, läuft diese mit der normalen Geschwindigkeit <code>1s ≙ 1s</code>.
+  Alle anderen Uhren zeigen wie viel Zeit sich die Näher:in von den anderen Personen kaufen könnte
+  <SideNote>Praktisch keine.</SideNote>.
+  <SpeedyClocks wage={props.wage} />
+</section>
+
+<section>
+  ## Zeit von vielen Menschen
+
+  Wie wir gesehen haben, können reiche Menschen mit dem Geld, das sie in einer Stunde verdienen, viele Stunden
+  Arbeitszeit von armen Menschen kaufen.
+  Jedoch kann ein armer Mensch nicht so viel arbeiten, als dass er damit all das Geld, was ein reicher Mensch verdient,
+  bekommen könnte.
+  *Tatsächlich können sich die Uhren armer Menschen nicht schneller bewegen. Es ist unmöglich, mehr zu Arbeiten als Zeit
+  vorhanden ist*.
+
+  Reiche Menschen dagegen können mit ihrem Geld nicht nur die Arbeitszeit von einem Menschen kaufen, sie können gleich mehrere
+  Menschen für sich Arbeiten lassen. Ein einziger Mensch kann so über die Zeit vieler Menschen verfügen.
+  
+  Mithilfe der untenstehenden Kästen soll dieser Zusammenhang verdeutlicht werden.
+  Klickst du auf deinen Kasten, kannst du sehen, wie viele Näher:innen in Bangladesch, Menschen mit Mindestlohn, 
+  oder Professoren du Beschäftigen könntest
+  <SideNote>Wieder unter Nicht-Berücksichtigung von Steuern, Sozialabgaben, o.Ä.</SideNote>.
+  Klickst du auf das Feld von Elon Musk, kannst du z. B. sehen, von wie vielen Menschen deiner Gehaltsklasse er 
+  die Zeit aufkaufen könnte. Anders ausgedrückt: Wie viel mal mehr Geld er als du verdienst.
+  
+  <ManyHumans wage={props.wage} />
+</section>
+
+<section>
+  ## Fazit
+
+  Menschen verdienen in unserem kapitalistischen System sehr unterschiedlich viel Geld. Dies führt nicht nur zu einer
+  ungleichen Verteilung der materiellen Güter, sondern auch zu einer ungleichen Verteilung
+  der Zeit. Reiche Menschen können mit ihrem Geld die Zeit sehr vieler armer Menschen kaufen. Elon Musk ist *absurd*
+  reich.
+
+  Hättest du in der Zeit, in der du dieses Essay gelesen hast gearbeitet, hättest
+  du {((props.time / 60 / 60) * props.wage).toFixed(2).replace(".", ",")}&nbsp;€ verdient.
+
+  *Dieses Essay wurde von Jaro Habiger 2022 im Rahmen des zweiwöchigen „New Media“ Basisklassen-Workshops an der Kunsthochschule Kassel
+  bei Rosa Menkman und Joel Baumann geschrieben.*
+</section>
