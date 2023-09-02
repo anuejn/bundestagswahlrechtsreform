@@ -1,23 +1,7 @@
 import * as React from 'react';
-import { HTMLProps, useEffect, useMemo, useState } from "react";
-
-const startTime = Date.now();
-export function useTime(): number {
-  const [time, setTime] = useState(0);
-  useEffect(() => {
-    let running = true;
-    const callback = () => {
-      setTime((Date.now() - startTime) / 1000);
-      if (running) requestAnimationFrame(callback);
-    };
-    callback();
-
-    return () => {
-      running = false;
-    };
-  }, []);
-  return time;
-}
+import { HTMLProps, useEffect, useMemo, useState } from 'react';
+import sources from './btw.json';
+import { ElectionData, parseElectionData } from './btw_kerg';
 
 let sn_count = 0;
 export function SideNote({ children }: { children: React.ReactNode }) {
@@ -36,17 +20,22 @@ export function SideNote({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function ExperimentWrapper({ children, style = {} }: { children: React.ReactNode, style?: React.CSSProperties }) {
-  return (
-    <figure
-      style={{
-        borderTop: '1px solid darkgray',
-        borderBottom: '1px solid darkgray',
-        padding: '10px 0',
-        ...style,
-      }}
-    >
-      {children}
-    </figure>
-  );
+export function Wahl() {
+  const data = useMemo(async () => {
+    console.log(btw_kerg);
+    console.log(einwohnerdaten);
+    const text = await (await fetch(sources[2021])).text();
+    const election = parseElectionData(text);
+    console.log(election);
+    console.log(getErststimmenSitze(election));
+    console.log(
+      sainteLaguë(
+        Object.fromEntries(election.bundesländer.map((land) => [land.name, land.wahlberechtigte])),
+        598
+      )
+    );
+    console.log(sainteLaguë(einwohnerdaten, 598));
+  }, []);
+
+  return <></>;
 }
