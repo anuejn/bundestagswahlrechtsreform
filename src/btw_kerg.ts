@@ -21,7 +21,7 @@ export type Partei = {
 
 function isBundesgebiet(row: string[], headerFlat: string[]) {
   const name = row[headerFlat.findIndex((x) => x == 'Name')];
-  return name.includes('Bundesgebiet');
+  return name.includes('Bundesgebiet') || name.includes('BUNDESGEBIET');
 }
 
 function isBundesland(row: string[], headerFlat: string[]) {
@@ -154,3 +154,8 @@ export function getElectionData(year: number): {
     einwohnerdaten: getEntry(einwohnerdaten, year)?.default || null,
   };
 }
+
+export const electionsYears = [
+  1953, 1957, 1961, 1965, 1969, 1972, 1976, 1980, 1983, 1987, 1990, 1994, 1998, 2002, 2005, 2009,
+  2013, 2017, 2021,
+];
