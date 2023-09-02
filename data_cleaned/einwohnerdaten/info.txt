@@ -1,0 +1,9 @@
+2021.json:
+    https://www.bundeswahlleiterin.de/mitteilungen/bundestagswahlen/2021/20210909_btw21-sitzkontingente.html
+    Deutsche Bevölkerung am 31. Mai 2021
+2017.json:
+    https://bundeswahlleiterin.de/info/presse/mitteilungen/bundestagswahl-2017/26_17_sitzkontingente.html
+    Deutsche Bevölkerung 31.05.2016
+2013.json:
+    https://www.bundeswahlleiterin.de/mitteilungen/bundestagswahl-2013/20130902-sitzkontingente.html
+    Deutsche Bevölkerung 31.12.2012
