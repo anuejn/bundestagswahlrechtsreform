@@ -92,7 +92,8 @@ function fixLänderField(election: ElectionData) {
     };
     const candidate = election.bundesländer.find(
       (bundesland) =>
-        (bundesland.nr > 900 ? bundesland.nr - 900 : bundesland.nr).toString() == wahlkreis.land
+        (bundesland.nr > 900 ? bundesland.nr - 900 : bundesland.nr).toString() == wahlkreis.land ||
+        bundesland.nr.toString() == wahlkreis.land
     );
     if (candidate) {
       wahlkreis.land = candidate.name;

@@ -2,11 +2,12 @@ import { describe, expect, it } from 'vitest';
 import {
   CalculationContext,
   election1956,
+  election2011,
   election2013,
   election2020,
   getLänderSitze2013,
 } from './calculate_election';
-import { sainteLaguë } from './appointment_method';
+import { hareNimeyer, sainteLaguë } from './appointment_method';
 import { getElectionData } from './btw_kerg';
 
 describe('election 2021', () => {
@@ -273,5 +274,72 @@ describe('election 2009', () => {
         direktMandate: 0,
       },
     });
+  });
+});
+
+describe('election 2002', () => {
+  const ctx: CalculationContext = {
+    ...getElectionData(2002),
+    apportionmentMethod: hareNimeyer,
+    sitze: 598,
+    warnings: [],
+  };
+
+  it('gesamtergebniss', () => {
+    const result = election1956(ctx);
+    expect(ctx.warnings).toEqual([]);
+    expect(ctx.sitze).toEqual(603);
+    expect(result).toEqual({
+      SPD: {
+        sitze: 251,
+        überhangMandate: 4,
+        direktMandate: 171,
+      },
+      GRÜNE: {
+        sitze: 55,
+        überhangMandate: 0,
+        direktMandate: 1,
+      },
+      CDU: {
+        sitze: 190,
+        überhangMandate: 1,
+        direktMandate: 82,
+      },
+      CSU: {
+        sitze: 58,
+        überhangMandate: 0,
+        direktMandate: 43,
+      },
+      FDP: {
+        sitze: 47,
+        überhangMandate: 0,
+        direktMandate: 0,
+      },
+      PDS: {
+        sitze: 2,
+        überhangMandate: 2,
+        direktMandate: 2,
+      },
+    });
+  });
+
+  it('election1956 has PDS', () => {
+    const result = election1956(ctx);
+    expect(result).toHaveProperty('PDS');
+  });
+
+  it('election2011 has PDS', () => {
+    const result = election2011(ctx);
+    expect(result).toHaveProperty('PDS');
+  });
+
+  it('election2013 has PDS', () => {
+    const result = election2013(ctx);
+    expect(result).toHaveProperty('PDS');
+  });
+
+  it('election2020 has PDS', () => {
+    const result = election2020(ctx);
+    expect(result).toHaveProperty('PDS');
   });
 });

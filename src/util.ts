@@ -66,3 +66,13 @@ export function sumRecord2DAxis1(
   });
   return result;
 }
+
+export function max<T>(list: T[], acessor: (x: T) => number): T {
+  let max = list[0];
+  list.forEach((x) => {
+    if (acessor(x) > acessor(max)) {
+      max = x;
+    }
+  });
+  return max;
+}
