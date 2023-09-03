@@ -14,15 +14,20 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@mdx-js/rollup": "^2.3.0",
+    "@mui/material": "^5.14.7",
+    "@mui/x-charts": "^6.0.0-alpha.9",
     "esbuild": "^0.14.11",
     "rc-progress": "^3.2.4",
     "react": "^17.0.2",
     "react-clock": "^3.0.0",
     "react-dom": "^17.0.2",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^3.0.1",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.7",

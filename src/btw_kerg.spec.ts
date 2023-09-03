@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { electionsYears, getElectionData } from './btw_kerg';
 import { CalculationContext, election1956 } from './calculate_election';
 import { sainteLaguë } from './appointment_method';
+import { partyColors } from './parties';
 
 describe('can parse', () => {
   electionsYears.forEach((year) => {
@@ -21,9 +22,9 @@ describe('Has Correct Party Names', () => {
         warnings: [],
       };
       const result = election1956(ctx);
-      Object.keys(result).forEach(party => {
-        expect(["CDU", "CSU", "SPD", "GRÜNE", "DIE LINKE", "AfD", "SSW", "FDP", "DP", "Zentrum", "GB/BHE", "PDS"]).toContain(party)
-      })
+      Object.keys(result).forEach((party) => {
+        expect(Object.keys(partyColors)).toContain(party);
+      });
     });
   });
 });

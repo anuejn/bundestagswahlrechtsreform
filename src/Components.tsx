@@ -1,10 +1,14 @@
 import * as React from 'react';
-import { HTMLProps, useEffect, useMemo, useState } from 'react';
-import sources from './btw.json';
-import { ElectionData, parseElectionData } from './btw_kerg';
+import { useMemo } from 'react';
 
 let sn_count = 0;
-export function SideNote({ children }: { children: React.ReactNode }) {
+export function SideNote({
+  children,
+  label,
+}: {
+  children: React.ReactNode;
+  label?: React.ReactNode;
+}) {
   const id = useMemo(() => {
     sn_count += 1;
 
@@ -13,29 +17,15 @@ export function SideNote({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <label htmlFor={id} className={'margin-toggle sidenote-number'} />
+      <label htmlFor={id} className={'margin-toggle ' + (label ? '' : 'sidenote-number')}>
+        {label}
+      </label>
       <input type="checkbox" id={id} className={'margin-toggle'} />
-      <span className="sidenote">{children}</span>
+      <span className={label ? 'marginnote' : 'sidenote'}>{children}</span>
     </>
   );
 }
 
-export function Wahl() {
-  const data = useMemo(async () => {
-    console.log(btw_kerg);
-    console.log(einwohnerdaten);
-    const text = await (await fetch(sources[2021])).text();
-    const election = parseElectionData(text);
-    console.log(election);
-    console.log(getErststimmenSitze(election));
-    console.log(
-      sainteLaguë(
-        Object.fromEntries(election.bundesländer.map((land) => [land.name, land.wahlberechtigte])),
-        598
-      )
-    );
-    console.log(sainteLaguë(einwohnerdaten, 598));
-  }, []);
-
-  return <></>;
+export function Caption({ children }: { children: React.ReactNode }) {
+  return <SideNote label={<>&#8853;</>}>{children}</SideNote>;
 }

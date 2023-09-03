@@ -3,7 +3,10 @@ import { incrementInAccRecord, mapRecord, max, sumRecord1D } from './util';
 export function sainteLaguë(input: Record<string, number>, seats: number): Record<string, number> {
   const result: Record<string, number> = {};
   while (Object.values(result).reduce((a, b) => a + b, 0) < seats) {
-    let winner = max(Object.entries(input), ([name, votes]: [string, number]) => votes / (2 * (result[name] || 0) + 1))
+    let winner = max(
+      Object.entries(input),
+      ([name, votes]: [string, number]) => votes / (2 * (result[name] || 0) + 1)
+    );
     incrementInAccRecord(result, winner[0], 1);
   }
   return result;
@@ -29,10 +32,13 @@ export function hareNimeyer(input: Record<string, number>, seats: number): Recor
 }
 
 export function DHondt(input: Record<string, number>, seats: number): Record<string, number> {
-    const result: Record<string, number> = {};
-    while (Object.values(result).reduce((a, b) => a + b, 0) < seats) {
-      let winner = max(Object.entries(input), ([name, votes]: [string, number]) => votes / ((result[name] || 0) + 1))
-      incrementInAccRecord(result, winner[0], 1);
-    }
-    return result;
+  const result: Record<string, number> = {};
+  while (Object.values(result).reduce((a, b) => a + b, 0) < seats) {
+    let winner = max(
+      Object.entries(input),
+      ([name, votes]: [string, number]) => votes / ((result[name] || 0) + 1)
+    );
+    incrementInAccRecord(result, winner[0], 1);
   }
+  return result;
+}

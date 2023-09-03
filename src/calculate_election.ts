@@ -7,7 +7,6 @@ import {
   mapRecord,
   max,
   sumRecord1D,
-  sumRecord2DAxis0,
   sumRecord2DAxis1,
   transposeRecord,
 } from './util';
@@ -325,3 +324,10 @@ export function election1956(ctx: CalculationContext): Wahlergebniss {
     überhangMandate: überhangBund[partei],
   }));
 }
+
+export const electionMethods = {
+  1956: election1956,
+  2011: election2011,
+  2013: election2013,
+  2020: election2020,
+};

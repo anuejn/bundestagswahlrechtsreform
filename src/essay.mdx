@@ -1,9 +1,11 @@
-import { SideNote, Wahl } from './Components';
+import { SideNote, Caption } from './Components';
+import { Wahl, WahlSelectable } from './ElectionCharts';
+import { election2020 } from './calculate_election';
 
 # Wer sind die Gewinner der Bundestagswahlrechtsreform?
 
 <p className="subtitle">
-  Ein interaktives Essay über1 die politischen Folgen der Reform des Bundestagswahlrechts 2023
+  Ein interaktives Essay über die politischen Folgen der Reform des Bundestagswahlrechts 2023
 </p>
 
 <section>
@@ -17,17 +19,49 @@ import { SideNote, Wahl } from './Components';
 </section>
 
 <section>
-  # Geschichte: Warum so Komplex?
-  Um zu verstehen, warum es im deutschen Wahlsystem Erst- und Zweitstimmen gibt, lohnt sich ein Blick in die Geschichte
-  <SideNote>
-    Hierzu empfehle ich den exzellenten Abschnitt zur Geschichte aus dem 
-    [Wikipedia Artikel zum Bundestagswahlrecht](https://de.wikipedia.org/w/index.php?title=Bundestagswahlrecht&oldid=232659539#Geschichte_des_Bundestagswahlrechts)
-  </SideNote>
-  .
+  ## Geschichte: Warum so Komplex?
+
+Um zu verstehen, warum es im deutschen Wahlsystem Erst- und Zweitstimmen gibt, lohnt sich ein Blick in die Geschichte. Eine komplette Betrachtung der Entwicklungen meinerseits wäre an dieser Stelle nicht sehr gewinnbringend, ich empfehle aber bei Interesse einen Blick in die Wikipedia zu werfen.<SideNote>In den Abschnitt zur Geschichte aus dem [Wikipedia Artikel zum Bundestagswahlrecht](https://de.wikipedia.org/w/index.php?title=Bundestagswahlrecht&oldid=232659539#Geschichte_des_Bundestagswahlrechts)</SideNote> Kurz gesagt gibt es 5 größere Änderungen am Verfahren der Sitzeverteilung in kürzerer Vergangenheit:
+
+Von 1956 bis 2011 wurde im Großen und Ganzen das Gleiche Verfahren mit nur kleineren Detail-Änderungen eingesetzt. Es funktioniert so, dass zunächst
+
+2011 -> rechtswiedrig
+
+2013 bis 2020
+
+2020 bis 2023
+
+</section>
+
+<section>
+  ## Wahlen Nachrechnen: Nicht so einfach wie gedacht
+  
+  Um ein besseres Gefühl für die praktischen Auswirkungen der verschiedenen Wahlverfahren zu bekommen muss man zu aller erst im Detail verstehen, wie die endgültige Sitzeverteilung aus den abgegebenen Stimmen berechnet wird. Hierzu veröffentlicht die Bundeswahlleiterin die Stimmdaten aller Bundestagswahlen als Open-Data. <SideNote>[Unter dem Kryptischen Namen btw_kerg.zip](https://www.bundeswahlleiter.de/dam/jcr/ce2d2b6a-f211-4355-8eea-355c98cd4e47/btw_kerg.zip). Leider vändert sich das Datenformat sehr oft und nicht alle für die Auswertung benötigten Daten sind Enthalten. Daher ist noch viel manuelle Arbeit zur bereinigung der Daten notwendig</SideNote>
+
+Um zu überprüfen, dass wir das Verfahren zur Sitzeverteilung richtig verstanden haben, lohnt es sich zunächst eine Wahl nachzurechnen und das Ergebniss zu vergleichen.
+Im nachfolgenden ist die Sitzeverteilung aus der Bundestagswahl 2021 mit dem 2021 gültigen Sitzverteilungsverfahren von 2020 berechnet.
 
 {' '}
+<figure>
+  <Caption>
+    Sitzeverteilung des 20. Bundestages - Nachgerechnet. Der SSW ist in diesem Diagramm für bessere
+    Sichtbarkeit größer dargestellt.
+  </Caption>
+  <Wahl year={2021} method={election2020} />
+</figure>
 
-<Wahl />
+Wir sehen, dass das Ergebniss dem Aktuellen Bundestag entspricht. Unsere Berechnungsmethode ist also korrekt.
+
+Tatsächlich interessant wird dieses aufwändige nachrechnen von Wahlen allerdings erst, wenn wir die Wahl mit anderen Wahlverfahren nachrechnen:
+
+{' '}
+<figure>
+  <Caption>
+    Sitzeverteilung des 20. Bundestages - Nachgerechnet. Der SSW ist in diesem Diagramm für bessere
+    Sichtbarkeit größer dargestellt.
+  </Caption>
+  <WahlSelectable />
+</figure>
 
 </section>
 
@@ -36,6 +70,6 @@ import { SideNote, Wahl } from './Components';
   //TODO
 
 _Dieses Essay wurde von Jaro Habiger 2023 im Rahmen des Kurses "Introduction to Economics, Politics and SDGs"
-bei Monika Mokre an der Universität für Angewandte Kunst geschrieben._
+bei Monika Mokre an der Universität für Angewandte Kunst geschrieben. Besonderer Dank gilt Philipp für große unterstützung beim bereinigen und einlesen der Daten und meinem Opa für das beantworten von Vielen Fragen und die initiale Idee._
 
 </section>
