@@ -3,8 +3,15 @@ import { CalculationContext, election2020, electionMethods } from './calculate_e
 import { sainteLaguë } from './appointment_method';
 import { partiesSorted } from './parties';
 import { electionsYears, getElectionData } from './btw_kerg';
-import { PieChart, pieArcClasses } from '@mui/x-charts';
-import { Alert, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import {
+  ChartsTooltip,
+  PieChart,
+  PiePlot,
+  ResponsiveChartContainer,
+  pieArcClasses,
+  useDrawingArea,
+} from '@mui/x-charts';
+import { Alert, FormControl, InputLabel, MenuItem, Select, styled } from '@mui/material';
 
 export function Wahl({ year, method }: { year: number; method: typeof election2020 }) {
   const ctx: CalculationContext = {
@@ -20,30 +27,51 @@ export function Wahl({ year, method }: { year: number; method: typeof election20
     value: Math.max(10, party.sitze), // we do this so that small parties are still visible
   }));
 
+  const StyledText = styled('text')(({ theme }) => ({
+    stroke: 'none',
+    fill: theme.palette.text.primary,
+    shapeRendering: 'crispEdges',
+    fontFamily: 'sans-serif',
+    fontWeight: 'bold',
+    fontSize: '16pt',
+  }));
+
+  function CenterText({ children }: { children: React.ReactNode }) {
+    const { left, top, width, height } = useDrawingArea();
+    return (
+      <StyledText x={left + width / 2} y={top + height / 2 + 5} textAnchor="middle">
+        {children}
+      </StyledText>
+    );
+  }
+
   return (
     <>
-      <PieChart
-        series={[
-          {
-            startAngle: -110,
-            endAngle: 110,
-            paddingAngle: 0.5,
-            innerRadius: 40,
-            outerRadius: 200,
-            cy: 200,
-            data,
-            highlightScope: { faded: 'global' },
-            valueFormatter: (v) => v.sitze,
-          },
-        ]}
+      <ResponsiveChartContainer
+        margin={{ top: 20, left: 10, right: 10, bottom: -110 }}
+        height={300}
         sx={{
           [`& .${pieArcClasses.faded}`]: {
             fill: 'gray',
           },
         }}
-        height={300}
-        legend={{ hidden: true }}
-      />
+        series={[
+          {
+            type: 'pie',
+            startAngle: -110,
+            endAngle: 110,
+            paddingAngle: 0.5,
+            innerRadius: 40,
+            data,
+            highlightScope: { faded: 'global' },
+            valueFormatter: (v) => v.sitze,
+          },
+        ]}
+      >
+        <PiePlot />
+        <ChartsTooltip trigger="item" />
+        <CenterText>{ctx.sitze}</CenterText>
+      </ResponsiveChartContainer>
       {ctx.warnings.map((w) => (
         <Alert severity="warning">{w}</Alert>
       ))}
@@ -53,13 +81,15 @@ export function Wahl({ year, method }: { year: number; method: typeof election20
 
 export function WahlSelectable() {
   const year = useRecordSelectState(Object.fromEntries(electionsYears.map((y) => [y, y])), '2021');
-  const methode = useRecordSelectState(electionMethods);
+  const methode = useRecordSelectState(electionMethods, '2020');
 
   return (
     <>
       <Wahl year={year.state} method={methode.state} />
-      <RecordSelect state={methode} label="Methode" />
-      <RecordSelect state={year} label="Jahr" />
+      <div style={{ paddingTop: 10 }}>
+        <RecordSelect state={methode} label="Methode" />
+        <RecordSelect state={year} label="Jahr" />
+      </div>
     </>
   );
 }
