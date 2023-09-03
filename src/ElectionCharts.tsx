@@ -5,7 +5,6 @@ import { partiesSorted } from './parties';
 import { electionsYears, getElectionData } from './btw_kerg';
 import {
   ChartsTooltip,
-  PieChart,
   PiePlot,
   ResponsiveChartContainer,
   pieArcClasses,
@@ -24,7 +23,7 @@ export function Wahl({ year, method }: { year: number; method: typeof election20
   const data = partiesSorted(method(ctx)).map((party) => ({
     ...party,
     label: party.name,
-    value: Math.max(10, party.sitze), // we do this so that small parties are still visible
+    value: Math.max(ctx.sitze * 0.01, party.sitze), // we do this so that small parties are still visible
   }));
 
   const StyledText = styled('text')(({ theme }) => ({
@@ -60,7 +59,6 @@ export function Wahl({ year, method }: { year: number; method: typeof election20
             type: 'pie',
             startAngle: -110,
             endAngle: 110,
-            paddingAngle: 0.5,
             innerRadius: 40,
             data,
             highlightScope: { faded: 'global' },

@@ -249,6 +249,7 @@ export function election2011(ctx: CalculationContext): Wahlergebniss {
   // We do not implement Reststimmenverwertung because according to wikipedia it is unclear how it works
   // TODO: we could try to guess some random implementation here
 
+  ctx.sitze = sumRecord1D(mindestzahlenBund);
   return mapListToRecord(parteien, (partei) => ({
     sitze: Math.max(mindestzahlenBund[partei] || 0, direktMandateBund[partei] || 0),
     direktMandate: direktMandateBund[partei] || 0,
