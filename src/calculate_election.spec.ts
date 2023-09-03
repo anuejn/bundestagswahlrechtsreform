@@ -5,10 +5,11 @@ import {
   election2011,
   election2013,
   election2020,
+  electionMethods,
   getLänderSitze2013,
 } from './calculate_election';
 import { hareNimeyer, sainteLaguë } from './appointment_method';
-import { getElectionData } from './btw_kerg';
+import { electionsYears, getElectionData } from './btw_kerg';
 
 describe('election 2021', () => {
   const ctx: CalculationContext = {
@@ -341,5 +342,21 @@ describe('election 2002', () => {
   it('election2020 has PDS', () => {
     const result = election2020(ctx);
     expect(result).toHaveProperty('PDS');
+  });
+});
+
+describe('Does not crash', () => {
+  Object.entries(electionMethods).forEach(([methodName, method]) => {
+    electionsYears.forEach((year) => {
+      it(`method ${methodName}, year ${year}`, () => {
+        const ctx: CalculationContext = {
+          ...getElectionData(year),
+          apportionmentMethod: sainteLaguë,
+          sitze: 598,
+          warnings: [],
+        };
+        method(ctx);
+      });
+    });
   });
 });

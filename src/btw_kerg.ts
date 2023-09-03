@@ -90,11 +90,36 @@ function fixLänderField(election: ElectionData) {
       SH: 'Schleswig-Holstein',
       TH: 'Thüringen',
     };
+    const toNonCaps: Record<string, string> = {
+      'BADEN-WUERTTEMBERG': 'Baden-Württemberg',
+      BAYERN: 'Bayern',
+      BERLIN: 'Berlin',
+      BRANDENBURG: 'Brandenburg',
+      BREMEN: 'Bremen',
+      HAMBURG: 'Hamburg',
+      HESSEN: 'Hessen',
+      'MECKLENBURG-VORPOMMERN': 'Mecklenburg-Vorpommern',
+      NIEDERSACHSEN: 'Niedersachsen',
+      'NORDRHEIN-WESTFALEN': 'Nordrhein-Westfalen',
+      'RHEINLAND-PFALZ': 'Rheinland-Pfalz',
+      SAARLAND: 'Saarland',
+      SACHSEN: 'Sachsen',
+      'SACHSEN-ANHALT': 'Sachsen-Anhalt',
+      'SCHLESWIG-HOLSTEIN': 'Schleswig-Holstein',
+      THUERINGEN: 'Thüringen',
+    };
+
     const candidate = election.bundesländer.find(
       (bundesland) =>
         (bundesland.nr > 900 ? bundesland.nr - 900 : bundesland.nr).toString() == wahlkreis.land ||
         bundesland.nr.toString() == wahlkreis.land
     );
+
+    election.bundesländer = election.bundesländer.map((land) => ({
+      ...land,
+      name: land.name in toNonCaps ? toNonCaps[land.name] : land.name,
+    }));
+
     if (candidate) {
       wahlkreis.land = candidate.name;
     } else if (wahlkreis.land in shorthands) {
