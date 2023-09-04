@@ -11,64 +11,138 @@ import {
 } from './ElectionCharts';
 import { election2020 } from './calculate_election';
 
-# Wer sind die Gewinner der Bundestagswahlrechtsreform?
+# Wer sind die Gewinner der <br /> Bundestagswahlrechtsreform?
 
 <p className="subtitle">
   Ein interaktives Essay über die politischen Folgen der Reform des Bundestagswahlrechts 2023
 </p>
 
 <section>
-  Die Wahlen zum Deutschen Bundestag sind verhältnismäßig Komplex: Erststimmen, Zweitstimmen,
-  Überhang- und Ausgleichsmandate, Direktkandidaten und Landeslisten. Auf den ersten Blick fragt man
-  sich, warum wir nicht einfach "ganz normal" wählen können. Und dann ändern sich auch noch ständig
-  Details: 2008, 20011, 2013, 2021 und nun zuletzt dieses Jahr 2023. Doch was verändert sich
-  eigentlich? In diesem Essay möchte ich versuchen, die Auswirkungen der Änderungen greifbarer zu
-  machen um zu Zeigen, dass es sich beim Wahlrecht nicht nur um bürokratische Details handelt,
-  sondern handfeste politische Machtverhältnisse auf dem Spiel stehen.
-</section>
-
-<section>
-  ## Geschichte: Warum so Komplex?
-
-Um zu verstehen, warum es im deutschen Wahlsystem Erst- und Zweitstimmen gibt, lohnt sich ein Blick in die Geschichte. Eine komplette Betrachtung der Entwicklungen meinerseits wäre an dieser Stelle nicht sehr gewinnbringend, ich empfehle aber bei Interesse einen Blick in die Wikipedia zu werfen.<SideNote>In den Abschnitt zur Geschichte aus dem [Wikipedia Artikel zum Bundestagswahlrecht](https://de.wikipedia.org/w/index.php?title=Bundestagswahlrecht&oldid=232659539#Geschichte_des_Bundestagswahlrechts)</SideNote> Kurz gesagt gibt es 5 größere Änderungen am Verfahren der Sitzeverteilung in kürzerer Vergangenheit:
-
-Von 1956 bis 2011 wurde im Großen und Ganzen das Gleiche Verfahren mit nur kleineren Detail-Änderungen eingesetzt. Es funktioniert so, dass zunächst
-
-2011 -> rechtswiedrig
-
-2013 bis 2020
-
-2020 bis 2023
-
-</section>
-
-<section>
-  ## Wahlen Nachrechnen: Nicht so einfach wie gedacht
-  
-  Um ein besseres Gefühl für die praktischen Auswirkungen der verschiedenen Wahlverfahren zu bekommen muss man zu aller erst im Detail verstehen, wie die endgültige Sitzeverteilung aus den abgegebenen Stimmen berechnet wird. Hierzu veröffentlicht die Bundeswahlleiterin die Stimmdaten aller Bundestagswahlen als Open-Data. <SideNote>[Unter dem Kryptischen Namen btw_kerg.zip](https://www.bundeswahlleiter.de/dam/jcr/ce2d2b6a-f211-4355-8eea-355c98cd4e47/btw_kerg.zip). Leider vändert sich das Datenformat sehr oft und nicht alle für die Auswertung benötigten Daten sind Enthalten. Daher ist noch viel manuelle Arbeit zur bereinigung der Daten notwendig</SideNote>
-
-Um zu überprüfen, dass wir das Verfahren zur Sitzeverteilung richtig verstanden haben, lohnt es sich zunächst eine Wahl nachzurechnen und das Ergebniss zu vergleichen.
-Im nachfolgenden ist die Sitzeverteilung aus der Bundestagswahl 2021 mit dem 2021 gültigen Sitzverteilungsverfahren von 2020 berechnet.
 
 <figure>
   <Caption>
-    Sitzeverteilung des 20. Bundestages - Nachgerechnet. Der SSW ist in diesem Diagramm für bessere
+    Sitzeverteilung des 20. Deutschen Bundestages. Der SSW ist in allen Diagrammen für bessere
     Sichtbarkeit größer dargestellt.
   </Caption>
   <Wahl year={2021} method={election2020} />
 </figure>
 
-Wir sehen, dass das Ergebniss dem Aktuellen Bundestag entspricht. Unsere Berechnungsmethode ist also korrekt.
+Die Wahlen zum Deutschen Bundestag sind verhältnismäßig Komplex: Erststimmen, Zweitstimmen,
+Überhang- und Ausgleichsmandate, Direktkandidaten und Landeslisten. Und dann ändern sich auch noch ständig Details im Sitzverteilungsverfahren 2011, 2013, 2021 und nun zuletzt dieses Jahr 2023. Doch was verändert sich eigentlich? In diesem Essay möchte ich versuchen, die Auswirkungen der Änderungen greifbarer zu machen um zu Zeigen, dass es sich beim Wahlrecht nicht nur um bürokratische Details handelt, sondern handfeste politische Machtverhältnisse auf dem Spiel stehen. Natürlich ist der Sitzverteilungsverfahren nicht der einzig relevante Punkt des deutschen Rechts. Eine wichtige Frage ist zum Beispiel wer wählen darf. Hier gab es in der Geschichte viele Verbesserungen zum Beispiel für Personen, die im Gefängnis sitzen und durch die Herabsetzung des Wahlalters für jüngere Personen. Auch diese Änderung wirken sich auf die Machtverhältnisse im Bundestag relevant aus. zusätzlich haben die Zuschneidung der Wahlkreise und das Wahlgebiet großen Einfluss und sich im Laufe der Geschichte geändert, z.B. durch den Anschluss des Saarlandes und die Wiedervereinigung 1990 sind sehr relevante Faktoren. An dieser Stelle möchte ich allerdings vor allem das Teilungsverfahren betrachten, da dies der Knackpunkt an der Wahlrechtsreform 2023 ist.
 
-Tatsächlich interessant wird dieses aufwändige nachrechnen von Wahlen allerdings erst, wenn wir die Wahl mit anderen Wahlverfahren nachrechnen:
+## Geschichte: Ein Komplexes Wahlsystem
+
+Um zu verstehen, warum es im deutschen Wahlsystem Erst- und Zweitstimmen gibt, lohnt sich ein Blick in die Geschichte:<SideNote>Hier nur eine Grobe zusammenfassung, ich empfehle einen Blick in den Abschnitt zur Geschichte aus dem [Wikipedia Artikel zum Bundestagswahlrecht](https://de.wikipedia.org/w/index.php?title=Bundestagswahlrecht&oldid=232659539#Geschichte_des_Bundestagswahlrechts)</SideNote>
+
+Die erste Bundestagswahl fand 1945 statt. In diese konnte in den einzelnen Bundesländern der Bundesrepublik Deutschland gewählt werden und zwar nur mit einer Stimme. Die Idee bei der Wahl war allerdings, dass man zusätzlich zu einer proportionalen Verteilung der Sitze im Bundestag, je nach Stimmen auch noch eine regionale Vertretung haben möchte. Deshalb wurde die Stimme doppelt benutzt: Zuerst wird in jedem Wahlkreis, die Bewerber:in in den Bundestag gewählt, die die meisten Stimmen inm Wahlkreis auf sich vereint (relative Mehrheit). Zusätzlich wird versucht, das das Verhältnis der Sitze im Bundestag nach dem Verhältnis der Stimmen verteilt wird. Als zusätzliche besonderheit wurde eine Sperrklausel eingeführt: Nur diejenigen Parteien ziehen in den Bundestag, die entweder 5% der Stimmen auf sich vereinen können<SideNote>dies gilt zunächst pro Bundesland, ab 1953 dann aber für das gesamte Bundesgebiet</SideNote>, oder mindestens ein Direktmandat erringen (Grundmandatsklausel).
+
+Dieses veränderte sich das erste Mal 1953. Bei dieser Bundestagswahl konnte jede Wahlberechtigte Person zwei Stimmen abgeben: **Erststimme um eine Kandidat:in im Wahlkreis direkt zu wählen** und **Zweitstimme um eine Partei per Verhältniswahl** zu wählen. Die Doppelfunktion der Wahl von Direktkandidaten und der proportionalen Wahl wurden also aufgeteilt, es wurde möglich einen anderen Direktkandidaten für die Vertretung der Wahlkreise als eine Partei mit der proportionalen Zweitstimme zu wählen. Zusätzlich wurde die Grundmandatsklausel auf 3 Sitze angehoben.
+
+### Sitzverteilungsverfahren von 1956: Stabilität für Jahre
+
+Von 1956 bis 2011 hat sich das Sitzzuteilungsverfahren nur minimal geändert und es wurde wie folgt gewählt: Da die Bundestagswahl eine **personalisierte Verhältniswahl** ist, soll der Anteil Sitze im Parlament (ungefähr) dem Anteil an Zweitstimmen entsprechen. Dies wird in dem Sitzzuteilungsverfahren so Folge getragen, dass wir zunächst einmal alle Zweitstimmen zusammenzählen und aufgrund der Anteile die Sitze im Bundestag verteilen.<SideNote>Dies ist ein Problem, das im Laufe der Zeit unterschiedlich gelöst wurde: Bis 1985 wurde [das Verfahren von D’Hondt](https://de.wikipedia.org/wiki/D%E2%80%99Hondt-Verfahren) eingesetzt, danach [Hare-Nimeyer](https://de.wikipedia.org/wiki/Hare-Niemeyer-Verfahren) und ab 2008 [Sainte-Laguë](https://de.wikipedia.org/wiki/Sainte-Lagu%C3%AB-Verfahren). In der Praxis liefern alle drei Verfahren sehr ähnliche Ergebnisse, weshalb alle Grafiken in diesem Essay der Einfachheit halber mitels Sainte-Laguë berechnet werden.</SideNote> Hierbei ist die reguläre Parlamentsgröße die doppelte Anzahl an Sitzen, wie es Wahlkreise gibt. Aktuell gibt es 299 Wahlkreise, die reguläre Parlamentsgröße beträgt also 598 Sitze. In der Bundestagswahl werden **Landeslisten** gewählt, die Parteien stellen also keine Liste an Bewerber:innen für das gesamte Bundesgebiet auf, sondern in jedem einzeln Bundesland eine. Die Sitze für jede Partei, die sie nach Zweitstimmen bekommen müsste, auf die Landeslisten aufteilen müssen. Hierzu nehmen wir den Anteil, den das jeweilige Bundesland für das Parteiergebnis erbracht hat. Wenn also in einem Bundesland viel die SPD gewählt wird, soll die SPD auch in diesem Land viele Sitze von ihrer Landesliste bekommen.
+Nun ist die Wahl allerdings eine _personalisierte_ Verhältniswahl. Um dem personalisierten Rechnung zu tragen wird in jedem Wahlkreis ermittelt, welcher Kandidat die relative Mehrheit der Erststimmen hat, also welcher Kandidat im Wahlkreis die meisten Erststimmen auf sich vereinen konnte. Dieser bekommt anschließend das Mandat.
+So haben wir also nach dem Anteil der Stimmen in einem Bundesland für eine Partei die Sitze der Parteien auf die Landeslisten aufgeteilt und wir wissen, in welchen Bundesländern sich die Wahlkreise befinden.
+Jetzt müssen wir noch das Ergebnis der Zweitstimmensitze und der Direktmandate zusammenrechnen. Hierfür geben wir jeder Partei zunächst einmal die Sitze, die sie nach ihrer Landesliste haben sollte. Wenn sie im entsprechenden Bundesland Direktmandate errungen hat, werden diese zuerst zugeteilt und erst danach mit der Landesliste aufgefüllt. Wenn eine Partei mehr Direktmandate als Zweitstimmensitze in einem Bundesland hat, bekommt sie sogenannte Überhangsmandate. Das heißt, sie bekommt mehr Sitze im Parlament, als ihnen eigentlich nach Zweitstimmen-Proporz zustehen würde.
+
+### BVerfG: Kein negatives Stimmgewicht!
+
+Dieses Sitzzuteilungsverfahren war bis 2011 gültig, wurde allerdings 2008 von einem Bundesverfassungsgerichtsurteil<SideNote>BVerfG, Urteil des Zweiten Senats vom 03. Juli 2008</SideNote> für rechtswidrig erklärt. Dies geschah aufgrund von Folgedem Sachverhalt bei der Bundestagswahl 2005:
+Bei den Bundestagswahlen werden die Direktkandidaten in den Wahlkreisen einige Zeit vor der Bundestagswahl bekannt gegeben. Der Direktkandidat der rechtsextremen NPD in einem Wahlkreis in Sachsen verstarb zwischen der Bekanntgabe der Direktkandidaten und der Wahl. Für diesen Fall sieht das Bundeswahlgesetz eine Nachwahl statt. Das heißt, in diesem diesem Wahlkreis wird nicht zum regulären Termin der Bundestagswahl gewählt, sondern einige Zeit später. <SideNote>[ZAZ.net - Nachwahl in Dresden: „Ernsthaftes juristisches Problem“](https://www.faz.net/aktuell/politik/inland/nachwahl-in-dresden-ernsthaftes-juristisches-problem-1253752.html)</SideNote>Nun ist das Wahlergebnis der anderen Wahlkreise zu diesem Zeitpunkt schon bekannt und es ergab sich durch ungünstige Eigenschaften des Sitzzuteilungsverfahrens, dass es für die CDU günstiger ist, in besagtem Wahlkreis weniger Zweitstimmen zu bekommen, um insgesamt einen Parlamentssitz mehr bekommen (Negatives Stimmgewicht). Mit unserem Wissen um das Sitzverteilungsverfahren können wir diese verstehen wie dieses nevative Stimmgewicht zu stande kommt: Die CDU hatte in Sachsen bei der Bundestagswahl 2005 sowieso mehr Direktmandate, als sie Listenmandate hätte, was bedeutet, dass eine Erhöhung des Zweitstimmenanteils im besagten Wahlkreis keine zusätzlichen Sitze von der Sächsischen landesliste bringt, weil die zusätzlichen Sitze quasi von den Direktmandaten "aufgegessen" werden.
+Jedoch macht Sachsen bei zusätzlichen Zweitstimmen einen größeren Anteil an den Zweitstimmen für die Gesamt-CDU aus. Hierdurch könnte es passieren, dass ein Listenmandat in Sachsen mehr vergeben wird (welches von den Direktkandidaten "aufgegessen wird"), und dieses in einem anderen Bundesland weniger vergeben, und zu einem weiteren Sitz für die CDU führt. Hierdurch hätte die CDU durch weniger Zweitstimmen ein insgesamt besseres Ergebnis im Parlament erzielt.
+Das Bundesverfassungsgericht hat hierzu entschieden, dass dies nicht passieren darf (verständlicherweise), und dass ein negatives Stimmgewicht in diesem Maße nicht auftreten darf.
+Daraufhin gab das Bundesverfassungsgericht dem Gesetzgeber eine Frist bis zum 30. Juni 2011 das Bundeswahlrecht reformieren. Die Frist wurde verpasst, jedoch wurde am 3. Dezember 2011 ein Gesetzentwurf von der CDU/CSU und FDP verabschiedet.
+
+### Sitzverteilungsverfahren von 2011: Verfassunswiedrig
+
+Dieser Gesetzentwurf sieht eine Neustrukturierung des Sitzzuteilungsverfahrens vor, nachdem zuerst die insgesamt verfügbaren Sitze des Bundestages auf die Bundesländer und erst danach auf die Parteien verteilt werden, also genau umgekehrt wie bisher. Die Fassung des Bundeswahlgesetzes von 2011 wurde allerdings bereits 2012 vor dem Bundesverfassungsgericht angefochten und für rechtswidrig erklärt<SideNote>BVerfG, Urteil des Zweiten Senats vom 25. Juli 2012</SideNote>, da sie verfassungswidrige negative Stimmgewicht nicht eliminiere und außerdem Überhangmandaten das Maß an nicht zulässig ist. Sie sind "nur in einem Umfang hinnehmbar, der den Grundcharakter der Wahl als einer Verhältniswahl nicht aufhebt" und nur bei "Anfall von Überhangmandaten im Umfang von mehr als etwa einer halben Fraktionsstärke" zulässig. So wurde das Sitzzuteilungsverfahren von 2011 bei keiner Bundestagswahl genutzt.
+
+An dieser Stelle ergibt es Sinn, sich die Anzahl der Überhangmandate, die die Sitzverteilungsverfahren Produzieren vergleichend anzusehen:
 
 <figure>
   <Caption>
-    Sitzeverteilung des 20. Bundestages - Nachgerechnet. Der SSW ist in diesem Diagramm für bessere
-    Sichtbarkeit größer dargestellt.
+    Unausgeglichene Überhangmandate. Da sich die Wahlsysteme von 2011, 2013 und 2020 hauptsächlich
+    im Ausgleich der Überhangmandate unterscheiden, ist die Betrachtung von 2011 die interessanteste
+    für die ursächliche Bestimmung der Überhangmandate dieser Gruppe von Wahlsystemen.
+  </Caption>
+  <ÜberhangMandateTotal />
+</figure>
+
+Beim Nachrechnen fällt uns auf, dass es keinen Großen unterschied in der Anzahl der Überhangmandate gibt. // TODO: warum???
+
+### Sitzverteilungsverfahren von 2013: Große Parlamente
+
+Aufgrund des Bundesverfassungsgerichtsurteils wurde das Sitzverteilungsverfahren 2013 erneut reformiert und es wurden die sogenannten Ausgleichsmandate eingeführt: Für Überhangmandate, die in einzelnen Bundesländern anfallen, bekommen Parteien die keine Überhangmandate haben, weitere Sitze im Parlament, damit die Verteilung im Parlament fair ist und den Zweitstimmen entspricht. So soll der Grundcharakter der Verhältniswahl gewahrt werden. Die Anzahl der Sitze im Bundestag so lange erhöht wird, bis das Verhältnis dem Zweitstimmenergebniss entspricht. Dadurch wird der Bundestag natürlich deutlich größer und und besteht nicht mehr aus 598 Sitzen plus Überhangmandate, sondern erreicht Größen im Bereich von 700 Sitzen.
+
+Wie in der folgenden Grafik zu sehen ist, ist bei der Wahlrechtsrevision von 2013 eine deutliche Vergrößerung des Bundestages zu beobachten.
+
+<figure>
+  <Caption>
+    Vergleich der Parlamentsgrößenentwicklung mit den verschiedenen Berechnungsmethoden. Das
+    Verfahren "Zweitstimmen" ist ein imaginäres Verfahren, dass immer die Zielgröße des Bundestages
+    (doppelte Anzahl Wahlkreise) proportional nach Zweitstimmen aufteilt.
+  </Caption>
+  <ParlamentGröße />
+</figure>
+
+### Sitzzuteilungsverfahren von 2020: Geht's etwas kleiner?
+
+Da sowohl der Bundestag räumlich zu klein sei, als auch durch eine erhöhte Größe des Parlaments eine ineffiziente Nutzung von Steuergeldern angeprangert wurde, stand 2020 erneut eine Wahlrechtsreform ins Haus. Es wurde beschlossen, dass man das Wahlrecht von 2013 in seinem Verfahren ähnlich belässt, allerdings bis zu drei Überhangmandate erlaubt. Hierdurch ist die Sitzeverteilung zwar weiter entfernt vom Zweitstimmenproporz. So werden bis zu drei Überhangmandate nicht ausgeglichen um die Parlamentsgröße zu drücken. Durch eine Veränderungen in der politischen Landschaft ergab sich trotzdem eine weitere Vergrößerung des Bundestages.
+
+## Warum wird das Parlament immer Größer?
+
+An dieser stelle ergibt sich natürlich die frage, warum der Bundestag mit den Wahlsystemen von 2011/2013 zunehmend wächst. Hierzu lohnt es sich zu Betrachten auf welche Parteien die Überhangmandate entfallen, die ausgeglichen werden müssen:
+
+<figure>
+  <Caption>
+    Unausgeglichene Überhangmandate. Da sich die Wahlsysteme von 2011, 2013 und 2020 hauptsächlich
+    im Ausgleich der Überhangmandate unterscheiden, ist die Betrachtung von 2011 die interessanteste
+    für die ursächliche Bestimmung der Überhangmandate dieser Wahlsysteme.
+  </Caption>
+  <ÜberhangMandate />
+</figure>
+
+Wir sehen, dass die Überhangmandate ab 2013 vorwiegend auf CDU/CSU und teilweise auch auf die SPD fallen. Dies kann erklärt werden mit einem rückgang der Stimmen für die klassischen "Volksparteien" (vgl. Grafik über die Stimmentwicklung), da diese zwar noch das Gros der Direktmande erringen können, gleichzeitig aber nicht mehr genügend Zweitstimmen bekommen um diese durch reguläre Sitze abzudecken.
+
+## Wahlrechtsreform 2023: Probleme gelöst?
+
+Nun geht es also darum, das Wahlrecht erneut zu reformieren. Wir bei der aktuellen Reform von 2023 angekommen. 2023 wollte die Ampel-Koalition eine grundlegendere Lösung finden als 2020. So hat man sich entschieden, diverse Änderungen vorzunehmen:
+
+Bewerber, die in ihrem Wahlkreis direkt gewählt werden, allerdings nicht durch Zweitstimmen gedeckt sind bekommen kein Mandat mehr. Direktmandate werden nun nur noch erteilt, wenn sie von Landeslisten- sitzen gedeckt werden. Hierdurch haben nicht mehr alle Wahlkreise einen eigenen Bundestagsabgeordneten.
+
+Außerdem wurde die Sperrklausel angepasst. Vor 2023 war eine Partei mit Listenkandidaten im Bundestag vertreten wenn sie bundesweit entweder mindestens fünf Prozent der Zweitstimmen auf sich vereinen konnte oder drei Direktmandate errangen (Grundmandatsklausel). Direkt Gewählte Bewerber:innen zogen immer in den Bundestag ein, auch wenn die Partei ansonsten an der Sperrklausel scheiterte.<SideNote>Dies geschah nur ein einziges mal in der deutschen Geschichte, nämlich 2002 beim PDS</SideNote> Die Wahlrechtsreform sieht vor, dass die Grundmandatsklausel wegfällt, nunmehr also nurnoch Parteien mit Bundesweit über 5% der Zweitstimmen über die Sperrklausel kommen. Zusätzlich sieht die Reform vor, dass auch keine Direktmandate mehr an Bewerber von Parteien verteilt werden, die nicht über die Sperrklausel kommen.<SideNote>Dies gilt nicht für Bewerber die ohne Partei antreten.</SideNote>
+Dies erscheint nun erst einmal wie ein kleines Detail, macht aber einen enormen politischen Unterschied, insbesondere für DIE LINKE und die CSU.
+Die Partei Die Linke kam bei der Bundestagswahl 2021 nur aufgrund der Grundmandatsklausel regulär ins Parlament, da sie nur 4,9 Prozent der Zweitstimmen, aber drei Direktmandate hatte. Für die CSU ist die reform bedrohlich, da diese nur in Bayern antritt und dadurch bei der Bundestagswahl 2021 mit 5,1% der bundesweiten Zweitstimmen auch nur knapp über der 5%-Hürde war. Mit nur mit 60102 Stimmen weniger hätte sie unter 5% gehabt und wäre nach der Wahlrechtsreform von 2023 nicht mehr in den bundestag eingezogen.
+Zusammen haben Die Linkspartei und die CSU Verfassungsbeschwerde gegen diese Neufassung des Bundeswahlgesetzes eingelegt.
+
+Ein Blick auf die Entwicklung der Zweitstimmen verrät, dass die CSU eher stimmen verliert. Um im weiteren betrachten zu können, was passiert, wenn die CSU unter der 5%-Hürde liegt, führen wir nun ein Projeziertes Wahlergebnis "PROJ" / "2021 mit CSU unter Sperrklausel" ein, was den Wahlergebnisen von 2021 entspricht, die CSU in allen Wahlkreisen aber etwas weniger Stimmen errungen hat.
+
+<figure>
+  <Caption>Entwicklung der Zweitstimmenergebnisse der Parteien</Caption>
+  <ParteienZweitstimmen />
+</figure>
+
+## Wahlen Nachrechnen: Nicht so einfach wie gedacht
+
+Um ein besseres Gefühl für die praktischen Auswirkungen der verschiedenen Wahlverfahren zu bekommen, ist es hilfreich, zuerst im Detail zu verstehen, wie die endgültige Sitzeverteilung aus den abgegebenen Stimmen berechnet wird. Hierzu veröffentlicht die Bundeswahlleiterin die Stimmdaten aller Bundestagswahlen als Open-Data. <SideNote>[Unter dem Kryptischen Namen btw_kerg.zip](https://www.bundeswahlleiter.de/dam/jcr/ce2d2b6a-f211-4355-8eea-355c98cd4e47/btw_kerg.zip). Leider verändert sich das Datenformat sehr oft und nicht alle für die Auswertung benötigten Daten sind Enthalten. Daher ist noch viel manuelle Arbeit zur Bereinigung der Daten notwendig</SideNote>
+
+Um zu überprüfen, dass wir das Verfahren zur Sitzverteilung richtig verstanden haben, lohnt es sich zunächst eine Wahl nachzurechnen und das Ergebnis zu vergleichen. Dies ist in der allerersten Grafik dieses Essays geschehen.<SideNote>Die geneigte Leser\*in möge an dieser Stelle hochscrollen und die Sitzverteilung mit dem Amtlichen Enndergebnis vergleichen.</SideNote> Wir sehen, dass das Ergebniss dem Aktuellen Bundestag entspricht.<SideNote>Da die Berechnungsverfahren viele subtitle Feinheiten beinhalten, kannn es sein, dass die hier berechneten Zahlen nicht exakt stimmen und ich mich verrechnet habe. Für Hinweise darüber bin ich Dankbar.</SideNote>
+
+Tatsächlich interessant wird dieses aufwändige nachrechnen von Wahlen allerdings erst, wenn wir die Wahl mit einem anderen Wahlverfahren nachrechnen. So können wir die Ergebnisse vergleichen und feststellen, welche Parteien von welchem Sitzverteilungsverfahren bevorzugt bzw. benachteiligt werden:
+
+<figure>
+  <Caption>
+    Sitzeverteilungen mit verschiedenen Berechnungsmethoden.
+
+    Hier und an jeder anderen stelle dieses Essays lohnt es sich, verschiedene Methoden (in unterschiedlichen Wahljahren) auszuprobieren und zu vergleichen um ein Gefühl für die Ünterschiede zu entwickeln.
+
   </Caption>
   <WahlSelectable />
 </figure>
+
+Wenn wir nun die Sitzeverteilung für das Wahlergebnis der Bundestagswahl 2021 mit den Sitzverteilungsverfahren von 2020 und 2023 vergleichen, stellen wir fest, dass die Parlamentsgröße tatsächlich stark reduziert wird. Zusätzlich, und noch viel auffälliger stellen wir aber auch fest, dass sich die Machtverhältnisse zugunsten der Ampelkoalition verschieiben. Hat sie im aktuellen Parlament nur 56,5% der Sitze, so sind mit dem neuen Verteilungsverfahren nunmehr 60%. Auch die CDU/CSU gewinnt (relativ) an Sitzen, während die Linkspartei nicht mehr im Parlament vertreten ist.
+
+Doch welches Sitzverteilungsverfahren ist "besser"? Diese Frage lässt sich nur durch ein Werturteil beantworten, allerdings gibt uns das Grundgesetz und das Bundesverfassungsgericht hierzu Werte zur orientierung an die Hand. Die Bundestagswahl ist eine personalisierte Verhältniswahl, die "den Grundcharakter einer Verhältniswahl trägt".<SideNote>BVerfG, Urteil des Zweiten Senats vom 03. Juli 2008</SideNote> So soll sich die Sitzeverteilung nach dem Verhältnis der Zweitstimmen richten. Nun können wir die einzelnen Wahlverfahren mit einer reinen Sitzeverteilung nach Zweitstimmen (mit 5%-Hürde und Grundmandatsklausel) bei gleicher Parlamentsgröße vergleichen und die Differenzen betrachten:
 
 <figure>
   <Caption>
@@ -78,56 +152,30 @@ Tatsächlich interessant wird dieses aufwändige nachrechnen von Wahlen allerdin
   <WahlDiffSelectable />
 </figure>
 
-<figure>
-  <Caption>
-    Vergleich der Parlamentsgrößenentwicklung mit den verschiedenen Berechnungsmethoden
-  </Caption>
-  <ParlamentGröße />
-</figure>
+Bei längerer Beschäftigung mit dieser Grafik fällt auf, das CDU/CSU (und in geringerem Umfang auch die SPD) in vielen Jahren von den Sitzverteilungsverfahren von 1956, 2011, 2013 und 2020 profitieren. Die CDU/CSU war 2011, 2013, und 2020 an der Regierung beteiligt. Das Sitzverteilungsverfahren rückt dieses Ungleichgewicht für viele vergangene Jahre Gerade und bevorzugt FDP, Grüne, SPD und AfD für das Jahr 2021 bzw. in stärkerem Umfang in der Projektion, in der die CSU unter 5% der Zweitstimmen bekommt. Für die CDU ist die Wahlrechtsreform ein vergiftetes Geschenk, weil sie mit der CSU im Boot sitzt.
+2023 Waren FDP, Grüne und die SPD an der Regierung.
 
-- Die CSU hatte 5,1% bundesweit. mit 60102 hätte sie unter 5% gehabt und wäre nicht mehr in den bundestag gekommen.
+Noch klarer sind die Unterschiede der Wahlverfahren im direkten vergleich zu sehen:
 
 <figure>
   <Caption>
-    Vergleich der Parlamentsgrößenentwicklung mit den verschiedenen Berechnungsmethoden
-  </Caption>
-  <ParteienZweitstimmen />
-</figure>
-
-<figure>
-  <Caption>
-    Unausgeglichene Überhangmandate. Da sich die Wahlsysteme von 2011, 2013 und 2020 hauptsächlich
-    im Ausgleich der Überhangmandateunterscheiden, ist die Betrachtung von 2011 die interessanteste
-    für die ursächliche Bestimmung der Überhangmandate dieser Wahlsysteme.
-  </Caption>
-  <ÜberhangMandate />
-</figure>
-
-<figure>
-  <Caption>
-    Unausgeglichene Überhangmandate. Da sich die Wahlsysteme von 2011, 2013 und 2020 hauptsächlich
-    im Ausgleich der Überhangmandateunterscheiden, ist die Betrachtung von 2011 die interessanteste
-    für die ursächliche Bestimmung der Überhangmandate dieser Wahlsysteme.
-  </Caption>
-  <ÜberhangMandateTotal />
-</figure>
-
-<figure>
-  <Caption>
-    Unausgeglichene Überhangmandate. Da sich die Wahlsysteme von 2011, 2013 und 2020 hauptsächlich
-    im Ausgleich der Überhangmandateunterscheiden, ist die Betrachtung von 2011 die interessanteste
-    für die ursächliche Bestimmung der Überhangmandate dieser Wahlsysteme.
+    Unterschied des Prozentualen anteils der Sitze der Parteien im Bundestag bei Verwendung
+    verschiedener Sitzzuteilungsverfahren.
   </Caption>
   <AnteilVergleich />
 </figure>
 
-</section>
+## Fazit
 
-<section>
-  ## Fazit
-  //TODO
+Wahlgesetzgebung und Sitzverteilungsverfahren sind ein hochgradig politisches Thema. Unterschiede, die zuerst wie Bürokratische Details erscheinen haben reale Auswirkungen auf die Machtverhältnisse im Bundestag. Durch verschiedene Fassungen des Sitzzuteilungsverfahrens ergaben sich in der Vergangenheit teilweise starke strukturelle Vorteile für die CDU/CSU und in geringerem Maße für die SPD.
 
-_Dieses Essay wurde von Jaro Habiger 2023 im Rahmen des Kurses "Introduction to Economics, Politics and SDGs"
-bei Monika Mokre an der Universität für Angewandte Kunst geschrieben. Besonderer Dank gilt Philipp für große unterstützung beim bereinigen und einlesen der Daten und meinem Opa für das beantworten von Vielen Fragen und die initiale Idee._
+Die Wahlrechtsreform 2023 bedroht akut den Einzug der CSU und der Linkspartei in den Bundestag, während sie sich für FDP, Grüne, SPD und AfD voraussichtlich positiv auswirkt.
+
+<br />
+<br />
+
+_Dieses Essay wurde von Jaro Habiger 2023 als Hausarbeit für den Kurs "Introduction to Economics, Politics and SDGs" bei Monika Mokre an der Universität für Angewandte Kunst geschrieben. Besonderer Dank gilt Philipp für seine große Unterstützung beim Bereinigen und Einlesen der Daten und meinem Opa für das Beantworten von vielen Fragen und die initiale Idee._
+
+_Der Quellcode für alle Berechnungen und die bereinigten Daten die den Visualisierungen zugrunde liegen [sind hier zu finden](https://github.com/anuejn/bundestagswahlrechtsreform/)._
 
 </section>
