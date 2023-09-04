@@ -261,11 +261,13 @@ export function election2011(ctx: CalculationContext): Wahlergebniss {
   });
 
   const überhangMandateLänder = mapRecord(länderSitze, (landSitze, land) =>
-    mapListToRecord(parteienImParlament, partei => Math.max(
-      0,
-      (direktMandateLänder[land][partei] || 0) - (zweitStimmenSitzeLänder[land][partei] || 0)
-    ),)
-  )
+    mapListToRecord(parteienImParlament, (partei) =>
+      Math.max(
+        0,
+        (direktMandateLänder[land][partei] || 0) - (zweitStimmenSitzeLänder[land][partei] || 0)
+      )
+    )
+  );
   const überhangMandateBund = sumRecord2DAxis1(überhangMandateLänder);
 
   const mindestzahlenLänder = mapRecord(länderSitze, (landSitze, land) =>

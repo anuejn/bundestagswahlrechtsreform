@@ -225,7 +225,7 @@ export function ParteienZweitstimmen() {
         ((electionData.kerg.bundesgebiet.parteien.find((p) => p.name == partei)?.zweitstimmen ||
           0) /
           electionData.kerg.bundesgebiet.wähler) *
-        100
+          100
       );
     });
   });
@@ -298,7 +298,6 @@ export function ÜberhangMandate() {
   );
 }
 
-
 export function ÜberhangMandateTotal() {
   const methods = {
     1956: election1956,
@@ -320,8 +319,8 @@ export function ÜberhangMandateTotal() {
         warnings: [],
       };
       const result = method(ctx);
-      methodResults[methodName].push(sumRecord1D(mapRecord(result, r => r.überhangMandate)))
-    })
+      methodResults[methodName].push(sumRecord1D(mapRecord(result, (r) => r.überhangMandate)));
+    });
   });
 
   const series = Object.entries(methodResults).map(([method, results]) => ({
