@@ -1,13 +1,14 @@
 import React, { HTMLProps, useEffect, useMemo, useState } from 'react';
 import {
   CalculationContext,
+  ParteiErgebniss,
   election1956,
   election2020,
   electionMethods,
   electionNurZweitstimmen,
 } from './calculate_election';
 import { sainteLaguë } from './appointment_method';
-import { partiesSorted } from './parties';
+import { partiesSorted, partyColors } from './parties';
 import { electionsYears, getElectionData } from './btw_kerg';
 import {
   BarChart,
@@ -26,6 +27,7 @@ import {
 import { Alert, styled } from '@mui/material';
 import { RecordSelect, useRecordSelectState } from './RecordSelect';
 import { ChartsLegend } from '@mui/x-charts/ChartsLegend';
+import { mapRecord } from './util';
 
 const StyledText = styled('text')(({ theme }) => ({
   stroke: 'none',
@@ -45,7 +47,7 @@ function CenterText({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Wahl({ year, method }: { year: number; method: typeof election2020 }) {
+export function Wahl({ year, method }: { year: number | string; method: typeof election2020 }) {
   const electionData = getElectionData(year);
   const ctx: CalculationContext = {
     ...electionData,
@@ -78,7 +80,7 @@ export function Wahl({ year, method }: { year: number; method: typeof election20
             innerRadius: 40,
             data,
             highlightScope: { faded: 'global' },
-            valueFormatter: (v) => v.sitze,
+            valueFormatter: (v) => (v as unknown as ParteiErgebniss).sitze.toString(),
           },
         ]}
       >
@@ -122,7 +124,7 @@ function ZeroLine() {
   return <StyledLine x1={left} x2={left + width} y1={yAxisScale(0)} y2={yAxisScale(0)} />;
 }
 
-export function WahlDiff({ year }: { year: number }) {
+export function WahlDiff({ year }: { year: number | string }) {
   const electionData = getElectionData(year);
 
   let xaxis: string[] = [];
@@ -150,8 +152,6 @@ export function WahlDiff({ year }: { year: number }) {
         label: methodName,
       };
     });
-
-  console.log(series);
 
   return (
     <ResponsiveChartContainer
@@ -183,8 +183,9 @@ export function WahlDiffSelectable() {
 }
 
 export function ParlamentGröße() {
+  const years = electionsYears.filter((y) => Number.isFinite(y));
   const series = Object.entries(electionMethods).map(([methodName, method]) => {
-    const data = electionsYears.map((year) => {
+    const data = years.map((year) => {
       const electionData = getElectionData(year);
       const ctx: CalculationContext = {
         ...electionData,
@@ -206,38 +207,43 @@ export function ParlamentGröße() {
 
   return (
     <LineChart
-      xAxis={[{ data: electionsYears, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+      xAxis={[{ data: years, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
       series={series}
       height={500}
     />
   );
 }
 
-export function Überhangmandate() {
-  const series = Object.entries(electionMethods).map(([methodName, method]) => {
-    const data = electionsYears.map((year) => {
-      const electionData = getElectionData(year);
-      const ctx: CalculationContext = {
-        ...electionData,
-        apportionmentMethod: sainteLaguë,
-        sitze: electionData.kerg.wahlkreise.length * 2,
-        warnings: [],
-      };
-      method(ctx);
-      return ctx.sitze;
-    });
+export function ParteienZweitstimmen() {
+  const parteien = mapRecord(partyColors, (_, party) => [] as number[]);
+  const years = electionsYears.filter((y) => Number.isFinite(y));
 
-    return {
-      type: 'line' as 'line',
-      data,
-      label: methodName,
-      curve: 'linear' as 'linear',
-    };
+  years.forEach((year) => {
+    const electionData = getElectionData(year);
+    Object.entries(parteien).forEach(([partei, results]) => {
+      results.push(
+        ((electionData.kerg.bundesgebiet.parteien.find((p) => p.name == partei)?.zweitstimmen ||
+          0) /
+          electionData.kerg.bundesgebiet.wähler) *
+          100
+      );
+    });
   });
+
+  const series = Object.entries(parteien).map(([partei, results]) => ({
+    type: 'line' as 'line',
+    data: results,
+    label: partei,
+    curve: 'linear' as 'linear',
+    valueFormatter: (v: number) => `${v.toFixed(1)}%`,
+    color: partyColors[partei as keyof typeof partyColors],
+  }));
+
+  console.log(series);
 
   return (
     <LineChart
-      xAxis={[{ data: electionsYears, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+      xAxis={[{ data: years, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
       series={series}
       height={500}
     />

@@ -170,17 +170,51 @@ function getEntry(record: Record<string, any>, year: number): any {
   return record[path];
 }
 
-export function getElectionData(year: number): {
+export function getElectionData(entry: number | string): {
   kerg: ElectionData;
   einwohnerdaten: Record<string, number> | null;
 } {
+  const year = entry == '2021 CSU Sperrklausel' ? 2021 : (entry as number);
+
+  const kerg = parseElectionData(getEntry(btw_kerg, year));
+
+  if (entry == '2021 CSU Sperrklausel') {
+    [kerg.wahlkreise, kerg.bundesländer, [kerg.bundesgebiet]].forEach((kind) => {
+      kind.forEach((gebiet) => {
+        gebiet.parteien.forEach((partei) => {
+          if (partei.name == 'CSU' && partei.zweitstimmen) {
+            partei.zweitstimmen *= 0.9749871297434228;
+          }
+        });
+      });
+    });
+  }
+
   return {
-    kerg: parseElectionData(getEntry(btw_kerg, year)),
+    kerg,
     einwohnerdaten: getEntry(einwohnerdaten, year)?.default || null,
   };
 }
 
 export const electionsYears = [
-  1953, 1957, 1961, 1965, 1969, 1972, 1976, 1980, 1983, 1987, 1990, 1994, 1998, 2002, 2005, 2009,
-  2013, 2017, 2021,
+  1953,
+  1957,
+  1961,
+  1965,
+  1969,
+  1972,
+  1976,
+  1980,
+  1983,
+  1987,
+  1990,
+  1994,
+  1998,
+  2002,
+  2005,
+  2009,
+  2013,
+  2017,
+  2021,
+  '2021 CSU Sperrklausel' as const,
 ];

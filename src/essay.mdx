@@ -1,5 +1,11 @@
 import { SideNote, Caption } from './Components';
-import { Wahl, WahlSelectable, WahlDiffSelectable, ParlamentGröße } from './ElectionCharts';
+import {
+  Wahl,
+  WahlSelectable,
+  WahlDiffSelectable,
+  ParlamentGröße,
+  ParteienZweitstimmen,
+} from './ElectionCharts';
 import { election2020 } from './calculate_election';
 
 # Wer sind die Gewinner der Bundestagswahlrechtsreform?
@@ -77,6 +83,13 @@ Tatsächlich interessant wird dieses aufwändige nachrechnen von Wahlen allerdin
 </figure>
 
 - Die CSU hatte 5,1% bundesweit. mit 60102 hätte sie unter 5% gehabt und wäre nicht mehr in den bundestag gekommen.
+
+<figure>
+  <Caption>
+    Vergleich der Parlamentsgrößenentwicklung mit den verschiedenen Berechnungsmethoden
+  </Caption>
+  <ParteienZweitstimmen />
+</figure>
 
 </section>
 
