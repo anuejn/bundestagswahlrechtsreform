@@ -186,7 +186,7 @@ export function getElectionData(entry: number | string): ElectionDataBundle {
         kind.forEach((gebiet) => {
           gebiet.parteien.forEach((partei) => {
             if (partei.name == 'CSU' && partei.zweitstimmen) {
-              partei.zweitstimmen *= 0.9749871297434228;
+              partei.zweitstimmen *= 0.963287284186502;
             }
           });
         });
