@@ -13,12 +13,12 @@ import { sainteLaguë } from './appointment_method';
 import { partiesSorted, partyColors } from './parties';
 import { electionsYears, getElectionData } from './btw_kerg';
 import {
-  BarChart,
   BarPlot,
   ChartsAxis,
   ChartsAxisHighlight,
   ChartsTooltip,
   DEFAULT_X_AXIS_KEY,
+  DEFAULT_Y_AXIS_KEY,
   LineChart,
   PiePlot,
   ResponsiveChartContainer,
@@ -104,7 +104,7 @@ export function WahlSelectable() {
   return (
     <>
       <Wahl year={year.state} method={method.state} />
-      <div style={{ paddingTop: 10 }}>
+      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
         <RecordSelect state={method} label="Methode" />
         <RecordSelect state={year} label="Jahr" />
       </div>
@@ -156,13 +156,16 @@ export function WahlDiff({ year }: { year: number | string }) {
   return (
     <ResponsiveChartContainer
       series={series}
-      xAxis={[{ data: xaxis, scaleType: 'band' }]}
+      xAxis={[{ data: xaxis, scaleType: 'band', id: DEFAULT_X_AXIS_KEY }]}
       height={300}
     >
       <BarPlot />
       <ChartsLegend />
       <ChartsTooltip />
-      <ChartsAxis bottomAxis={{ axisId: DEFAULT_X_AXIS_KEY, disableLine: true }} />
+      <ChartsAxis
+        bottomAxis={{ axisId: DEFAULT_X_AXIS_KEY, disableLine: true }}
+        leftAxis={{ label: 'Differenz Sitzzahl', axisId: DEFAULT_Y_AXIS_KEY }}
+      />
       <ChartsAxisHighlight x="band" />
       <ZeroLine />
     </ResponsiveChartContainer>
@@ -175,7 +178,7 @@ export function WahlDiffSelectable() {
   return (
     <>
       <WahlDiff year={year.state} />
-      <div style={{ paddingTop: 10 }}>
+      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
         <RecordSelect state={year} label="Jahr" />
       </div>
     </>
@@ -206,11 +209,16 @@ export function ParlamentGröße() {
 
   return (
     <LineChart
+      bottomAxis={{
+        label: 'Jahr (PROJ = 2021 mit CSU unter Sperrklausel)',
+        axisId: DEFAULT_X_AXIS_KEY,
+      }}
+      leftAxis={{ label: 'Parlamentsgröße in Sitzen', axisId: DEFAULT_Y_AXIS_KEY }}
       xAxis={[
         {
           data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
           valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
-          dataKey: 'jahr',
+          id: DEFAULT_X_AXIS_KEY,
         },
       ]}
       series={series}
@@ -250,11 +258,17 @@ export function ParteienZweitstimmen() {
 
   return (
     <LineChart
+      legend={{ hidden: true }}
+      bottomAxis={{
+        label: 'Jahr (PROJ = 2021 mit CSU unter Sperrklausel)',
+        axisId: DEFAULT_X_AXIS_KEY,
+      }}
+      leftAxis={{ label: 'Zweitstimmenanteil in %', axisId: DEFAULT_Y_AXIS_KEY }}
       xAxis={[
         {
           data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
           valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
-          dataKey: 'jahr',
+          id: DEFAULT_X_AXIS_KEY,
         },
       ]}
       series={series}
@@ -306,11 +320,17 @@ export function ÜberhangMandate() {
   return (
     <>
       <LineChart
+        legend={{ hidden: true }}
+        bottomAxis={{
+          label: 'Jahr (PROJ = 2021 mit CSU unter Sperrklausel)',
+          axisId: DEFAULT_X_AXIS_KEY,
+        }}
+        leftAxis={{ label: 'Anzahl der Überhangmandate je Partei', axisId: DEFAULT_Y_AXIS_KEY }}
         xAxis={[
           {
             data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
             valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
-            dataKey: 'jahr',
+            id: DEFAULT_X_AXIS_KEY,
           },
         ]}
         series={series}
@@ -322,7 +342,7 @@ export function ÜberhangMandate() {
           },
         }}
       />
-      <div style={{ paddingTop: 10 }}>
+      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
         <RecordSelect state={method} label="Methode" />
       </div>
     </>
@@ -361,11 +381,17 @@ export function ÜberhangMandateTotal() {
 
   return (
     <LineChart
+      legend={{ hidden: true }}
+      bottomAxis={{
+        label: 'Jahr (PROJ = 2021 mit CSU unter Sperrklausel)',
+        axisId: DEFAULT_X_AXIS_KEY,
+      }}
+      leftAxis={{ label: 'Anzahl der Überhangmandate aller Parteien', axisId: DEFAULT_Y_AXIS_KEY }}
       xAxis={[
         {
           data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
           valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
-          dataKey: 'jahr',
+          id: DEFAULT_X_AXIS_KEY,
         },
       ]}
       series={series}
@@ -420,13 +446,22 @@ export function AnteilVergleich() {
   return (
     <>
       <LineChart
+        legend={{ hidden: true }}
         xAxis={[
           {
             data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
             valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
-            dataKey: 'jahr',
+            id: DEFAULT_X_AXIS_KEY,
           },
         ]}
+        bottomAxis={{
+          label: 'Jahr (PROJ = 2021 mit CSU unter Sperrklausel)',
+          axisId: DEFAULT_X_AXIS_KEY,
+        }}
+        leftAxis={{
+          label: 'Unterschied des Prozentualen Sitzanteils B - A',
+          axisId: DEFAULT_Y_AXIS_KEY,
+        }}
         series={series}
         height={500}
         sx={{
@@ -436,7 +471,7 @@ export function AnteilVergleich() {
           },
         }}
       />
-      <div style={{ paddingTop: 10 }}>
+      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
         <RecordSelect state={methodA} label="Methode A" />
         <RecordSelect state={methodB} label="Methode B" />
       </div>

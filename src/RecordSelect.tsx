@@ -22,7 +22,7 @@ export function useRecordSelectState<T>(
 
 export function RecordSelect<T>({ state, label }: { state: RecordSelectState<T>; label: string }) {
   return (
-    <FormControl>
+    <FormControl style={{ flexGrow: 1 }}>
       <InputLabel>{label}</InputLabel>
       <Select
         value={(Object.entries(state.record).find(([k, v]) => v == state.state) || [])[0]}
