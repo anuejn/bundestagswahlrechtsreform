@@ -349,13 +349,16 @@ describe('Does not crash', () => {
   Object.entries(electionMethods).forEach(([methodName, method]) => {
     electionsYears.forEach((year) => {
       it(`method ${methodName}, year ${year}`, () => {
+        const data = getElectionData(year);
         const ctx: CalculationContext = {
-          ...getElectionData(year),
+          ...data,
           apportionmentMethod: sainteLaguë,
-          sitze: 598,
+          sitze: data.kerg.wahlkreise.length * 2,
           warnings: [],
         };
         method(ctx);
+        expect(ctx.sitze).toBeGreaterThan(0);
+        expect(ctx.sitze).toBeLessThan(1000);
       });
     });
   });

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 let sn_count = 0;
 export function SideNote({

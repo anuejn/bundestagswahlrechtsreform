@@ -56,9 +56,10 @@ export function getLänderSitze2013(ctx: CalculationContext): Record<string, num
     return ctx.apportionmentMethod(ctx.einwohnerdaten, ctx.sitze);
   } else {
     ctx.warnings.push(`
-            Für die Gewählte Wahl sind keine Einwohnerdaten verfügbar.
-            Stattdessen werden zur aufteilung der Sitze auf die Bundesländer Daten zu den
-            Wahlberechtigten genutzt, was ähnliche aber nicht identische Ergebnisse produziert.`);
+      Für die Gewählte Wahl sind keine Einwohnerdaten verfügbar.
+      Stattdessen werden zur aufteilung der Sitze auf die Bundesländer Daten zu den
+      Wahlberechtigten genutzt, was ähnliche aber nicht identische Ergebnisse produziert.
+    `);
     const wahlberechtigte = Object.fromEntries(
       ctx.kerg.bundesländer.map((land) => [land.name, land.wahlberechtigte])
     );
@@ -66,22 +67,59 @@ export function getLänderSitze2013(ctx: CalculationContext): Record<string, num
   }
 }
 
-/* used in the 2021 election */
-export function election2020(ctx: CalculationContext): Wahlergebniss {
+export function getParteienÜberSperrklausel(
+  ctx: CalculationContext,
+  grundmandatsklausel: number | null = 3
+): string[] {
   const direktMandateBund = getErststimmenSitze(ctx.kerg.wahlkreise);
-  const zweitStimmenAlle = getZweitStimmen(ctx.kerg.wahlkreise);
+  const zweitStimmenAlle = getZweitStimmen([ctx.kerg.bundesgebiet]);
   const wähler = ctx.kerg.bundesgebiet.wähler;
-  const parteienImParlament = ctx.kerg.bundesgebiet.parteien
+  return ctx.kerg.bundesgebiet.parteien
     .map((p) => p.name)
     .filter(
       (p) =>
-        direktMandateBund[p] >= 3 || // grundmandatsklauses
+        (grundmandatsklausel != null ? direktMandateBund[p] >= 3 : false) || // grundmandatsklauses
         (zweitStimmenAlle[p] / wähler) * 100 >= 5 || // 5%-Hürde
         minderheitenschutz.includes(p)
     );
-  const parteien = [...new Set([...Object.keys(direktMandateBund), ...parteienImParlament])];
+}
+
+export function getParteienImParlament(ctx: CalculationContext): string[] {
+  const parteienÜberSperrklausel = getParteienÜberSperrklausel(ctx);
+  const direktMandateBund = getErststimmenSitze(ctx.kerg.wahlkreise);
+  return [...new Set([...Object.keys(direktMandateBund), ...parteienÜberSperrklausel])];
+}
+
+export function electionNurZweitstimmen(ctx: CalculationContext): Wahlergebniss {
+  const parteienÜberSperrklausel = getParteienÜberSperrklausel(ctx);
+  const zweitStimmen = filterRecord(getZweitStimmen(ctx.kerg.wahlkreise), (_, partei) =>
+    parteienÜberSperrklausel.includes(partei)
+  );
+  const sitze = ctx.apportionmentMethod(zweitStimmen, ctx.sitze);
+  return mapRecord(sitze, (sitze) => ({ sitze, direktMandate: 0, überhangMandate: 0 }));
+}
+
+/* the current reform we are interested in */
+export function election2023(ctx: CalculationContext): Wahlergebniss {
+  ctx.sitze = 630;
+  const parteienÜberSperrklausel = getParteienÜberSperrklausel(ctx, null);
+  const zweitStimmen = filterRecord(getZweitStimmen(ctx.kerg.wahlkreise), (_, partei) =>
+    parteienÜberSperrklausel.includes(partei)
+  );
+  const sitze = ctx.apportionmentMethod(zweitStimmen, ctx.sitze);
+  return mapRecord(sitze, (sitze) => ({ sitze, direktMandate: 0, überhangMandate: 0 }));
+}
+
+/* used in the 2021 election */
+export function election2020(ctx: CalculationContext): Wahlergebniss {
+  const parteienÜberSperrklausel = getParteienÜberSperrklausel(ctx);
+  const parteienImParlament = getParteienImParlament(ctx);
+
+  const direktMandateBund = getErststimmenSitze(ctx.kerg.wahlkreise);
+
+  const zweitStimmenAlle = getZweitStimmen(ctx.kerg.wahlkreise);
   const zweitStimmenBund = filterRecord(zweitStimmenAlle, (_, k) =>
-    parteienImParlament.includes(k)
+    parteienÜberSperrklausel.includes(k)
   );
 
   const länderSitze = getLänderSitze2013(ctx);
@@ -94,7 +132,7 @@ export function election2020(ctx: CalculationContext): Wahlergebniss {
   const zweitStimmenSitzeLänder = mapRecord(länderSitze, (landSitze, land) => {
     const wahlkreise = ctx.kerg.wahlkreise.filter((w) => w.land == land);
     const zweitStimmen = filterRecord(getZweitStimmen(wahlkreise), (_, k) =>
-      parteienImParlament.includes(k)
+      parteienÜberSperrklausel.includes(k)
     );
     return ctx.apportionmentMethod(zweitStimmen, landSitze);
   });
@@ -102,7 +140,7 @@ export function election2020(ctx: CalculationContext): Wahlergebniss {
   const mindestzahlenLänder = mapRecord(länderSitze, (landSitze, land) => {
     const direktmandate = direktMandateLänder[land];
     const sitzeNachZweitStimmen = zweitStimmenSitzeLänder[land];
-    return mapListToRecord(parteienImParlament, (p) =>
+    return mapListToRecord(parteienÜberSperrklausel, (p) =>
       Math.max(
         Math.round(((direktmandate[p] || 0) + (sitzeNachZweitStimmen[p] || 0)) / 2),
         direktmandate[p] || 0
@@ -112,7 +150,7 @@ export function election2020(ctx: CalculationContext): Wahlergebniss {
 
   let zweitStimmenSitzeBund = ctx.apportionmentMethod(zweitStimmenBund, ctx.sitze);
   const mindestzahlenBund = mapRecord(sumRecord2DAxis1(mindestzahlenLänder), (m, k) =>
-    Math.max(m, zweitStimmenSitzeBund[k])
+    Math.max(m, zweitStimmenSitzeBund[k] || 0)
   );
   const mindestgröße = sumRecord1D(mindestzahlenBund);
   ctx.sitze = mindestgröße;
@@ -131,7 +169,7 @@ export function election2020(ctx: CalculationContext): Wahlergebniss {
     }
   }
 
-  return mapListToRecord(parteien, (partei) => ({
+  return mapListToRecord(parteienImParlament, (partei) => ({
     sitze: Math.max(zweitStimmenSitzeBund[partei] || 0, direktMandateBund[partei] || 0),
     direktMandate: direktMandateBund[partei] || 0,
     überhangMandate: Math.max(
@@ -143,21 +181,14 @@ export function election2020(ctx: CalculationContext): Wahlergebniss {
 
 /* used in the elections 2013 + 2017 */
 export function election2013(ctx: CalculationContext): Wahlergebniss {
-  const direktMandateBund = getErststimmenSitze(ctx.kerg.wahlkreise);
-  const zweitStimmenAlle = getZweitStimmen(ctx.kerg.wahlkreise);
-  const wähler = ctx.kerg.bundesgebiet.wähler;
-  const parteienImParlament = ctx.kerg.bundesgebiet.parteien
-    .map((p) => p.name)
-    .filter(
-      (p) =>
-        direktMandateBund[p] >= 3 || // grundmandatsklauses
-        (zweitStimmenAlle[p] / wähler) * 100 >= 5 || // 5%-Hürde
-        minderheitenschutz.includes(p)
-    );
-  const parteien = [...new Set([...Object.keys(direktMandateBund), ...parteienImParlament])];
+  const parteienÜberSperrklausel = getParteienÜberSperrklausel(ctx);
+  const parteienImParlament = getParteienImParlament(ctx);
 
+  const direktMandateBund = getErststimmenSitze(ctx.kerg.wahlkreise);
+
+  const zweitStimmenAlle = getZweitStimmen(ctx.kerg.wahlkreise);
   const zweitStimmenBund = filterRecord(zweitStimmenAlle, (_, k) =>
-    parteienImParlament.includes(k)
+    parteienÜberSperrklausel.includes(k)
   );
 
   const länderSitze = getLänderSitze2013(ctx);
@@ -170,13 +201,13 @@ export function election2013(ctx: CalculationContext): Wahlergebniss {
   const zweitStimmenSitzeLänder = mapRecord(länderSitze, (landSitze, land) => {
     const wahlkreise = ctx.kerg.wahlkreise.filter((w) => w.land == land);
     const zweitStimmen = filterRecord(getZweitStimmen(wahlkreise), (_, k) =>
-      parteienImParlament.includes(k)
+      parteienÜberSperrklausel.includes(k)
     );
     return ctx.apportionmentMethod(zweitStimmen, landSitze);
   });
 
   const mindestzahlenLänder = mapRecord(länderSitze, (landSitze, land) =>
-    mapListToRecord(parteienImParlament, (p) =>
+    mapListToRecord(parteienÜberSperrklausel, (p) =>
       Math.max(direktMandateLänder[land][p] || 0, zweitStimmenSitzeLänder[land][p] || 0)
     )
   );
@@ -199,7 +230,7 @@ export function election2013(ctx: CalculationContext): Wahlergebniss {
     }
   }
 
-  return mapListToRecord(parteien, (partei) => ({
+  return mapListToRecord(parteienImParlament, (partei) => ({
     sitze: Math.max(zweitStimmenSitzeBund[partei] || 0, direktMandateBund[partei] || 0),
     direktMandate: direktMandateBund[partei] || 0,
     überhangMandate: Math.max(
@@ -211,19 +242,9 @@ export function election2013(ctx: CalculationContext): Wahlergebniss {
 
 /* never used, was declared unlawful by BverfG before the next election */
 export function election2011(ctx: CalculationContext): Wahlergebniss {
+  const parteienÜberSperrklausel = getParteienÜberSperrklausel(ctx);
+  const parteienImParlament = getParteienImParlament(ctx);
   const direktMandateBund = getErststimmenSitze(ctx.kerg.wahlkreise);
-  const zweitStimmenAlle = getZweitStimmen(ctx.kerg.wahlkreise);
-  const wähler = ctx.kerg.bundesgebiet.wähler;
-  const parteienImParlament = ctx.kerg.bundesgebiet.parteien
-    .map((p) => p.name)
-    .filter(
-      (p) =>
-        direktMandateBund[p] >= 3 || // grundmandatsklauses
-        (zweitStimmenAlle[p] / wähler) * 100 >= 5 || // 5%-Hürde
-        minderheitenschutz.includes(p)
-    );
-  const parteien = [...new Set([...Object.keys(direktMandateBund), ...parteienImParlament])];
-
   const länderSitze = getLänderSitze2013(ctx);
 
   const direktMandateLänder = mapRecord(länderSitze, (landSitze, land) => {
@@ -234,7 +255,7 @@ export function election2011(ctx: CalculationContext): Wahlergebniss {
   const zweitStimmenSitzeLänder = mapRecord(länderSitze, (landSitze, land) => {
     const wahlkreise = ctx.kerg.wahlkreise.filter((w) => w.land == land);
     const zweitStimmen = filterRecord(getZweitStimmen(wahlkreise), (_, k) =>
-      parteienImParlament.includes(k)
+      parteienÜberSperrklausel.includes(k)
     );
     return ctx.apportionmentMethod(zweitStimmen, landSitze);
   });
@@ -250,7 +271,7 @@ export function election2011(ctx: CalculationContext): Wahlergebniss {
   // TODO: we could try to guess some random implementation here
 
   ctx.sitze = sumRecord1D(mindestzahlenBund);
-  return mapListToRecord(parteien, (partei) => ({
+  return mapListToRecord(parteienImParlament, (partei) => ({
     sitze: Math.max(mindestzahlenBund[partei] || 0, direktMandateBund[partei] || 0),
     direktMandate: direktMandateBund[partei] || 0,
     überhangMandate: Math.max(
@@ -262,26 +283,17 @@ export function election2011(ctx: CalculationContext): Wahlergebniss {
 
 /* used from 1956 - 2011; can also be used for 53 with a modified sperrklausel */
 export function election1956(ctx: CalculationContext): Wahlergebniss {
-  const direktMandateBund = getErststimmenSitze(ctx.kerg.wahlkreise);
-  const zweitStimmenAlle = getZweitStimmen(ctx.kerg.wahlkreise);
-  const wähler = ctx.kerg.bundesgebiet.wähler;
-  const parteienImParlament = ctx.kerg.bundesgebiet.parteien
-    .map((p) => p.name)
-    .filter(
-      (p) =>
-        direktMandateBund[p] >= 3 || // grundmandatsklausel
-        (zweitStimmenAlle[p] / wähler) * 100 >= 5 || // 5%-Hürde
-        minderheitenschutz.includes(p)
-    );
-  const parteien = [...new Set([...Object.keys(direktMandateBund), ...parteienImParlament])];
+  const parteienÜberSperrklausel = getParteienÜberSperrklausel(ctx);
+  const parteienImParlament = getParteienImParlament(ctx);
 
+  const direktMandateBund = getErststimmenSitze(ctx.kerg.wahlkreise);
   const direktMandateEinzelbewerber = sumRecord1D(
-    filterRecord(direktMandateBund, (mandate, partei) => !parteienImParlament.includes(partei))
+    filterRecord(direktMandateBund, (mandate, partei) => !parteienÜberSperrklausel.includes(partei))
   );
   ctx.sitze -= direktMandateEinzelbewerber;
 
   const zweitStimmen = filterRecord(getZweitStimmen(ctx.kerg.wahlkreise), (_, k) =>
-    parteienImParlament.includes(k)
+    parteienÜberSperrklausel.includes(k)
   );
   const sitzeBundOhneÜberhang = ctx.apportionmentMethod(zweitStimmen, ctx.sitze);
   const länder = Object.fromEntries(
@@ -305,13 +317,13 @@ export function election1956(ctx: CalculationContext): Wahlergebniss {
   });
 
   const sitzeLänder = mapRecord(sitzeAufgeteilt, (sitzeParteien, land) => {
-    return mapListToRecord(parteien, (partei) =>
+    return mapListToRecord(parteienImParlament, (partei) =>
       Math.max(sitzeParteien[partei] || 0, direktMandateLänder[land][partei] || 0)
     );
   });
 
   const überhangLänder = mapRecord(sitzeAufgeteilt, (sitzeParteien, land) =>
-    mapListToRecord(parteien, (partei) =>
+    mapListToRecord(parteienImParlament, (partei) =>
       Math.max(0, (direktMandateLänder[land][partei] || 0) - (sitzeParteien[partei] || 0))
     )
   );
@@ -331,4 +343,6 @@ export const electionMethods = {
   2011: election2011,
   2013: election2013,
   2020: election2020,
+  2023: election2023,
+  Zweitstimmen: electionNurZweitstimmen,
 };

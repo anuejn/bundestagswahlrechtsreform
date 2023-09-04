@@ -1,5 +1,5 @@
 import { SideNote, Caption } from './Components';
-import { Wahl, WahlSelectable } from './ElectionCharts';
+import { Wahl, WahlSelectable, WahlDiffSelectable, ParlamentGröße } from './ElectionCharts';
 import { election2020 } from './calculate_election';
 
 # Wer sind die Gewinner der Bundestagswahlrechtsreform?
@@ -41,8 +41,6 @@ Von 1956 bis 2011 wurde im Großen und Ganzen das Gleiche Verfahren mit nur klei
 Um zu überprüfen, dass wir das Verfahren zur Sitzeverteilung richtig verstanden haben, lohnt es sich zunächst eine Wahl nachzurechnen und das Ergebniss zu vergleichen.
 Im nachfolgenden ist die Sitzeverteilung aus der Bundestagswahl 2021 mit dem 2021 gültigen Sitzverteilungsverfahren von 2020 berechnet.
 
-{' '}
-
 <figure>
   <Caption>
     Sitzeverteilung des 20. Bundestages - Nachgerechnet. Der SSW ist in diesem Diagramm für bessere
@@ -62,6 +60,23 @@ Tatsächlich interessant wird dieses aufwändige nachrechnen von Wahlen allerdin
   </Caption>
   <WahlSelectable />
 </figure>
+
+<figure>
+  <Caption>
+    Vergleich der Ergebnisse der Sitzverteilungsverfahren mit einer Sitzeverteilung nach reinem
+    Zweitstimmenergebniss bei gleicher Parlamentsgröße.
+  </Caption>
+  <WahlDiffSelectable />
+</figure>
+
+<figure>
+  <Caption>
+    Vergleich der Parlamentsgrößenentwicklung mit den verschiedenen Berechnungsmethoden
+  </Caption>
+  <ParlamentGröße />
+</figure>
+
+- Die CSU hatte 5,1% bundesweit. mit 60102 hätte sie unter 5% gehabt und wäre nicht mehr in den bundestag gekommen.
 
 </section>
 

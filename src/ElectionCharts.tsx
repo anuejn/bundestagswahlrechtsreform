@@ -1,22 +1,56 @@
 import React, { HTMLProps, useEffect, useMemo, useState } from 'react';
-import { CalculationContext, election2020, electionMethods } from './calculate_election';
+import {
+  CalculationContext,
+  election1956,
+  election2020,
+  electionMethods,
+  electionNurZweitstimmen,
+} from './calculate_election';
 import { sainteLaguë } from './appointment_method';
 import { partiesSorted } from './parties';
 import { electionsYears, getElectionData } from './btw_kerg';
 import {
+  BarChart,
+  BarPlot,
+  ChartsAxis,
+  ChartsAxisHighlight,
   ChartsTooltip,
+  DEFAULT_X_AXIS_KEY,
+  LineChart,
   PiePlot,
   ResponsiveChartContainer,
   pieArcClasses,
   useDrawingArea,
+  useYScale,
 } from '@mui/x-charts';
-import { Alert, FormControl, InputLabel, MenuItem, Select, styled } from '@mui/material';
+import { Alert, styled } from '@mui/material';
+import { RecordSelect, useRecordSelectState } from './RecordSelect';
+import { ChartsLegend } from '@mui/x-charts/ChartsLegend';
+
+const StyledText = styled('text')(({ theme }) => ({
+  stroke: 'none',
+  fill: theme.palette.text.primary,
+  shapeRendering: 'crispEdges',
+  fontFamily: 'sans-serif',
+  fontWeight: 'bold',
+  fontSize: '16pt',
+}));
+
+function CenterText({ children }: { children: React.ReactNode }) {
+  const { left, top, width, height } = useDrawingArea();
+  return (
+    <StyledText x={left + width / 2} y={top + height / 2 + 5} textAnchor="middle">
+      {children}
+    </StyledText>
+  );
+}
 
 export function Wahl({ year, method }: { year: number; method: typeof election2020 }) {
+  const electionData = getElectionData(year);
   const ctx: CalculationContext = {
-    ...getElectionData(year),
+    ...electionData,
     apportionmentMethod: sainteLaguë,
-    sitze: 598,
+    sitze: electionData.kerg.wahlkreise.length * 2,
     warnings: [],
   };
 
@@ -25,24 +59,6 @@ export function Wahl({ year, method }: { year: number; method: typeof election20
     label: party.name,
     value: Math.max(ctx.sitze * 0.01, party.sitze), // we do this so that small parties are still visible
   }));
-
-  const StyledText = styled('text')(({ theme }) => ({
-    stroke: 'none',
-    fill: theme.palette.text.primary,
-    shapeRendering: 'crispEdges',
-    fontFamily: 'sans-serif',
-    fontWeight: 'bold',
-    fontSize: '16pt',
-  }));
-
-  function CenterText({ children }: { children: React.ReactNode }) {
-    const { left, top, width, height } = useDrawingArea();
-    return (
-      <StyledText x={left + width / 2} y={top + height / 2 + 5} textAnchor="middle">
-        {children}
-      </StyledText>
-    );
-  }
 
   return (
     <>
@@ -79,53 +95,151 @@ export function Wahl({ year, method }: { year: number; method: typeof election20
 
 export function WahlSelectable() {
   const year = useRecordSelectState(Object.fromEntries(electionsYears.map((y) => [y, y])), '2021');
-  const methode = useRecordSelectState(electionMethods, '2020');
+  const method = useRecordSelectState(electionMethods, '2020');
 
   return (
     <>
-      <Wahl year={year.state} method={methode.state} />
+      <Wahl year={year.state} method={method.state} />
       <div style={{ paddingTop: 10 }}>
-        <RecordSelect state={methode} label="Methode" />
+        <RecordSelect state={method} label="Methode" />
         <RecordSelect state={year} label="Jahr" />
       </div>
     </>
   );
 }
 
-type RecordSelectState<T> = {
-  state: T;
-  setState: (next: T) => void;
-  record: Record<string, T>;
-};
+const StyledLine = styled('line')(({ theme }) => ({
+  fill: 'none',
+  stroke: theme.palette.text.primary,
+  shapeRendering: 'crispEdges',
+  strokeWidth: 1,
+  pointerEvents: 'none',
+}));
 
-export function useRecordSelectState<T>(
-  record: Record<string, T>,
-  initial?: string
-): RecordSelectState<T> {
-  const initialValue = initial ? record[initial] : Object.values(record)[0];
-  const [state, setState] = useState(() => initialValue);
-  return {
-    state,
-    setState: (next: T) => setState(() => next),
-    record,
-  };
+function ZeroLine() {
+  const yAxisScale = useYScale();
+  const { left, width } = useDrawingArea();
+  return <StyledLine x1={left} x2={left + width} y1={yAxisScale(0)} y2={yAxisScale(0)} />;
 }
 
-export function RecordSelect<T>({ state, label }: { state: RecordSelectState<T>; label: string }) {
+export function WahlDiff({ year }: { year: number }) {
+  const electionData = getElectionData(year);
+
+  let xaxis: string[] = [];
+  const series = Object.entries(electionMethods)
+    .filter(([k, v]) => k != 'Zweitstimmen')
+    .map(([methodName, method]) => {
+      const ctx: CalculationContext = {
+        ...electionData,
+        apportionmentMethod: sainteLaguë,
+        sitze: electionData.kerg.wahlkreise.length * 2,
+        warnings: [],
+      };
+      const result = method(ctx);
+      const nurZweitstimmen = electionNurZweitstimmen(ctx);
+
+      const sorted = partiesSorted({ ...result, ...nurZweitstimmen });
+      xaxis = sorted.map((party) => party.name);
+      return {
+        type: 'bar' as 'bar',
+        data: sorted.map(
+          (party) =>
+            (result[party.name] || { sitze: 0 }).sitze -
+            (nurZweitstimmen[party.name] || { sitze: 0 }).sitze
+        ),
+        label: methodName,
+      };
+    });
+
+  console.log(series);
+
   return (
-    <FormControl>
-      <InputLabel>{label}</InputLabel>
-      <Select
-        value={(Object.entries(state.record).find(([k, v]) => v == state.state) || [])[0]}
-        label={label}
-        onChange={(e) => state.setState(state.record[e.target.value as string])}
-      >
-        {Object.keys(state.record).map((name) => (
-          <MenuItem key={name} value={name}>
-            {name}
-          </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
+    <ResponsiveChartContainer
+      series={series}
+      xAxis={[{ data: xaxis, scaleType: 'band' }]}
+      height={300}
+    >
+      <BarPlot />
+      <ChartsLegend />
+      <ChartsTooltip />
+      <ChartsAxis bottomAxis={{ axisId: DEFAULT_X_AXIS_KEY, disableLine: true }} />
+      <ChartsAxisHighlight x="band" />
+      <ZeroLine />
+    </ResponsiveChartContainer>
+  );
+}
+
+export function WahlDiffSelectable() {
+  const year = useRecordSelectState(Object.fromEntries(electionsYears.map((y) => [y, y])), '2021');
+
+  return (
+    <>
+      <WahlDiff year={year.state} />
+      <div style={{ paddingTop: 10 }}>
+        <RecordSelect state={year} label="Jahr" />
+      </div>
+    </>
+  );
+}
+
+export function ParlamentGröße() {
+  const series = Object.entries(electionMethods).map(([methodName, method]) => {
+    const data = electionsYears.map((year) => {
+      const electionData = getElectionData(year);
+      const ctx: CalculationContext = {
+        ...electionData,
+        apportionmentMethod: sainteLaguë,
+        sitze: electionData.kerg.wahlkreise.length * 2,
+        warnings: [],
+      };
+      method(ctx);
+      return ctx.sitze;
+    });
+
+    return {
+      type: 'line' as 'line',
+      data,
+      label: methodName,
+      curve: 'linear' as 'linear',
+    };
+  });
+
+  return (
+    <LineChart
+      xAxis={[{ data: electionsYears, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+      series={series}
+      height={500}
+    />
+  );
+}
+
+export function Überhangmandate() {
+  const series = Object.entries(electionMethods).map(([methodName, method]) => {
+    const data = electionsYears.map((year) => {
+      const electionData = getElectionData(year);
+      const ctx: CalculationContext = {
+        ...electionData,
+        apportionmentMethod: sainteLaguë,
+        sitze: electionData.kerg.wahlkreise.length * 2,
+        warnings: [],
+      };
+      method(ctx);
+      return ctx.sitze;
+    });
+
+    return {
+      type: 'line' as 'line',
+      data,
+      label: methodName,
+      curve: 'linear' as 'linear',
+    };
+  });
+
+  return (
+    <LineChart
+      xAxis={[{ data: electionsYears, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+      series={series}
+      height={500}
+    />
   );
 }
