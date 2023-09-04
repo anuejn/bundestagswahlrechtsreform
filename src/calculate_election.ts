@@ -7,6 +7,7 @@ import {
   mapRecord,
   max,
   sumRecord1D,
+  sumRecord2DAxis0,
   sumRecord2DAxis1,
   transposeRecord,
 } from './util';
@@ -65,6 +66,13 @@ export function getLänderSitze2013(ctx: CalculationContext): Record<string, num
     );
     return ctx.apportionmentMethod(wahlberechtigte, ctx.sitze);
   }
+}
+
+export function getLänderSitze2011(ctx: CalculationContext): Record<string, number> {
+  const wahlberechtigte = Object.fromEntries(
+    ctx.kerg.bundesländer.map((land) => [land.name, land.wahlberechtigte])
+  );
+  return ctx.apportionmentMethod(wahlberechtigte, ctx.sitze);
 }
 
 export function getParteienÜberSperrklausel(
@@ -245,7 +253,7 @@ export function election2011(ctx: CalculationContext): Wahlergebniss {
   const parteienÜberSperrklausel = getParteienÜberSperrklausel(ctx);
   const parteienImParlament = getParteienImParlament(ctx);
   const direktMandateBund = getErststimmenSitze(ctx.kerg.wahlkreise);
-  const länderSitze = getLänderSitze2013(ctx);
+  const länderSitze = getLänderSitze2011(ctx);
 
   const direktMandateLänder = mapRecord(länderSitze, (landSitze, land) => {
     const wahlkreise = ctx.kerg.wahlkreise.filter((w) => w.land == land);
@@ -260,29 +268,29 @@ export function election2011(ctx: CalculationContext): Wahlergebniss {
     return ctx.apportionmentMethod(zweitStimmen, landSitze);
   });
 
+  const gesamtSitzeLänder = mapRecord(länderSitze, (landSitze, land) =>
+    mapListToRecord(parteienImParlament, (p) =>
+      Math.max(direktMandateLänder[land][p] || 0, zweitStimmenSitzeLänder[land][p] || 0)
+    )
+  );
+  const gesamtSitzeBund = sumRecord2DAxis1(gesamtSitzeLänder);
+
   const überhangMandateLänder = mapRecord(länderSitze, (landSitze, land) =>
     mapListToRecord(parteienImParlament, (partei) =>
       Math.max(
         0,
-        (direktMandateLänder[land][partei] || 0) - (zweitStimmenSitzeLänder[land][partei] || 0)
+        (gesamtSitzeLänder[land][partei] || 0) - (zweitStimmenSitzeLänder[land][partei] || 0)
       )
     )
   );
   const überhangMandateBund = sumRecord2DAxis1(überhangMandateLänder);
 
-  const mindestzahlenLänder = mapRecord(länderSitze, (landSitze, land) =>
-    mapListToRecord(parteienImParlament, (p) =>
-      Math.max(direktMandateLänder[land][p] || 0, zweitStimmenSitzeLänder[land][p] || 0)
-    )
-  );
-  const mindestzahlenBund = sumRecord2DAxis1(mindestzahlenLänder);
-
   // We do not implement Reststimmenverwertung because according to wikipedia it is unclear how it works
   // TODO: we could try to guess some random implementation here
 
-  ctx.sitze = sumRecord1D(mindestzahlenBund);
+  ctx.sitze = sumRecord1D(gesamtSitzeBund);
   return mapListToRecord(parteienImParlament, (partei) => ({
-    sitze: Math.max(mindestzahlenBund[partei] || 0, direktMandateBund[partei] || 0),
+    sitze: gesamtSitzeBund[partei] || 0,
     direktMandate: direktMandateBund[partei] || 0,
     überhangMandate: überhangMandateBund[partei],
   }));
