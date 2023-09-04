@@ -1,6 +1,18 @@
 import { incrementInAccRecord, mapRecord, max, sumRecord1D } from './util';
 
-export function sainteLaguë(input: Record<string, number>, seats: number): Record<string, number> {
+function cachedAppointmentMethod(method: typeof sainteLaguëUncached): typeof sainteLaguëUncached {
+  const cache: Record<string, Record<string, number>> = {};
+
+  return (input, seats) => {
+    const key = JSON.stringify({ input, seats });
+    if (!(key in cache)) {
+      cache[key] = method(input, seats);
+    }
+    return cache[key];
+  };
+}
+
+function sainteLaguëUncached(input: Record<string, number>, seats: number): Record<string, number> {
   const result: Record<string, number> = {};
   while (Object.values(result).reduce((a, b) => a + b, 0) < seats) {
     let winner = max(
@@ -11,6 +23,7 @@ export function sainteLaguë(input: Record<string, number>, seats: number): Reco
   }
   return result;
 }
+export const sainteLaguë = cachedAppointmentMethod(sainteLaguëUncached);
 
 export function hareNimeyer(input: Record<string, number>, seats: number): Record<string, number> {
   const totalVotes = sumRecord1D(input);
