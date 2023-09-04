@@ -3,6 +3,8 @@ import {
   CalculationContext,
   ParteiErgebniss,
   election1956,
+  election2011,
+  election2013,
   election2020,
   electionMethods,
   electionNurZweitstimmen,
@@ -97,7 +99,7 @@ export function Wahl({ year, method }: { year: number | string; method: typeof e
 
 export function WahlSelectable() {
   const year = useRecordSelectState(Object.fromEntries(electionsYears.map((y) => [y, y])), '2021');
-  const method = useRecordSelectState(electionMethods, '2020');
+  const method = useRecordSelectState(electionMethods, '2023');
 
   return (
     <>
@@ -145,9 +147,7 @@ export function WahlDiff({ year }: { year: number | string }) {
       return {
         type: 'bar' as 'bar',
         data: sorted.map(
-          (party) =>
-            (result[party.name] || { sitze: 0 }).sitze -
-            (nurZweitstimmen[party.name] || { sitze: 0 }).sitze
+          (party) => (result[party.name]?.sitze || 0) - (nurZweitstimmen[party.name]?.sitze || 0)
         ),
         label: methodName,
       };
@@ -239,13 +239,61 @@ export function ParteienZweitstimmen() {
     color: partyColors[partei as keyof typeof partyColors],
   }));
 
-  console.log(series);
-
   return (
     <LineChart
       xAxis={[{ data: years, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
       series={series}
       height={500}
     />
+  );
+}
+
+export function ÜberhangMandate() {
+  const method = useRecordSelectState(
+    {
+      1956: election1956,
+      2011: election2011,
+      2013: election2013,
+      2020: election2020,
+    },
+    '2011'
+  );
+
+  const parteien = mapRecord(partyColors, (_, party) => [] as number[]);
+  const years = electionsYears.filter((y) => Number.isFinite(y));
+
+  years.forEach((year) => {
+    const electionData = getElectionData(year);
+    const ctx: CalculationContext = {
+      ...electionData,
+      apportionmentMethod: sainteLaguë,
+      sitze: electionData.kerg.wahlkreise.length * 2,
+      warnings: [],
+    };
+    const result = method.state(ctx);
+    Object.entries(parteien).forEach(([partei, results]) => {
+      results.push(result[partei]?.überhangMandate || 0);
+    });
+  });
+
+  const series = Object.entries(parteien).map(([partei, results]) => ({
+    type: 'line' as 'line',
+    data: results,
+    label: partei,
+    curve: 'linear' as 'linear',
+    color: partyColors[partei as keyof typeof partyColors],
+  }));
+
+  return (
+    <>
+      <LineChart
+        xAxis={[{ data: years, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+        series={series}
+        height={500}
+      />
+      <div style={{ paddingTop: 10 }}>
+        <RecordSelect state={method} label="Methode" />
+      </div>
+    </>
   );
 }

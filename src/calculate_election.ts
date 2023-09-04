@@ -259,6 +259,7 @@ export function election2011(ctx: CalculationContext): Wahlergebniss {
     );
     return ctx.apportionmentMethod(zweitStimmen, landSitze);
   });
+  const zweitStimmenSitzeBund = sumRecord2DAxis1(zweitStimmenSitzeLänder);
 
   const mindestzahlenLänder = mapRecord(länderSitze, (landSitze, land) =>
     mapListToRecord(parteienImParlament, (p) =>
@@ -276,7 +277,7 @@ export function election2011(ctx: CalculationContext): Wahlergebniss {
     direktMandate: direktMandateBund[partei] || 0,
     überhangMandate: Math.max(
       0,
-      (direktMandateBund[partei] || 0) - (mindestzahlenBund[partei] || 0)
+      (direktMandateBund[partei] || 0) - (zweitStimmenSitzeBund[partei] || 0)
     ),
   }));
 }
