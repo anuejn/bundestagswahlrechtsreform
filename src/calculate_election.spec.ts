@@ -149,7 +149,7 @@ describe('election 2017', () => {
       },
       CSU: {
         sitze: 46,
-        überhangMandate: 0,
+        überhangMandate: 0, // TODO: election 2011 says this is should be 36 but we get 34
         direktMandate: 46,
       },
       FDP: {
@@ -344,6 +344,51 @@ describe('election 2002', () => {
     expect(result).toHaveProperty('PDS');
   });
 });
+
+describe('election 1987', () => {
+  const data = getElectionData(1987);
+  const ctx: CalculationContext = {
+    ...data,
+    apportionmentMethod: hareNimeyer,
+    sitze: data.kerg.wahlkreise.length * 2,
+    warnings: [],
+  };
+
+  it('gesamtergebniss', () => {
+    const result = election1956(ctx);
+    expect(ctx.warnings).toEqual([]);
+    expect(ctx.sitze).toEqual(497);
+    expect(result).toEqual({
+      SPD: {
+        sitze: 186,
+        überhangMandate: 0,
+        direktMandate: 79,
+      },
+      GRÜNE: {
+        sitze: 42,
+        überhangMandate: 0,
+        direktMandate: 0,
+      },
+      CDU: {
+        sitze: 174,
+        überhangMandate: 1,
+        direktMandate: 124,
+      },
+      CSU: {
+        sitze: 49,
+        überhangMandate: 0,
+        direktMandate: 45,
+      },
+      FDP: {
+        sitze: 46,
+        überhangMandate: 0,
+        direktMandate: 0,
+      },
+    });
+  });
+});
+
+// TODO: check 1990 because of different sperrklausel
 
 describe('Does not crash', () => {
   Object.entries(electionMethods).forEach(([methodName, method]) => {
