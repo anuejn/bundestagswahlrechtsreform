@@ -325,7 +325,10 @@ export function ÜberhangMandate() {
           label: 'Jahr (PROJ = 2021 mit CSU unter Sperrklausel)',
           axisId: DEFAULT_X_AXIS_KEY,
         }}
-        leftAxis={{ label: 'Anzahl der Überhangmandate je Partei', axisId: DEFAULT_Y_AXIS_KEY }}
+        leftAxis={{
+          label: 'Anzahl der Unausgeglichenen Überhangmandate je Partei',
+          axisId: DEFAULT_Y_AXIS_KEY,
+        }}
         xAxis={[
           {
             data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
@@ -381,12 +384,14 @@ export function ÜberhangMandateTotal() {
 
   return (
     <LineChart
-      legend={{ hidden: true }}
       bottomAxis={{
         label: 'Jahr (PROJ = 2021 mit CSU unter Sperrklausel)',
         axisId: DEFAULT_X_AXIS_KEY,
       }}
-      leftAxis={{ label: 'Anzahl der Überhangmandate aller Parteien', axisId: DEFAULT_Y_AXIS_KEY }}
+      leftAxis={{
+        label: 'Anzahl der Unausgeglichenen Überhangmandate Aller Parteien',
+        axisId: DEFAULT_Y_AXIS_KEY,
+      }}
       xAxis={[
         {
           data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
