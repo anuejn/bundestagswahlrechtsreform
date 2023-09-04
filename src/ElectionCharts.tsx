@@ -183,9 +183,8 @@ export function WahlDiffSelectable() {
 }
 
 export function ParlamentGröße() {
-  const years = electionsYears.filter((y) => Number.isFinite(y));
   const series = Object.entries(electionMethods).map(([methodName, method]) => {
-    const data = years.map((year) => {
+    const data = electionsYears.map((year) => {
       const electionData = getElectionData(year);
       const ctx: CalculationContext = {
         ...electionData,
@@ -207,18 +206,28 @@ export function ParlamentGröße() {
 
   return (
     <LineChart
-      xAxis={[{ data: years, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+      xAxis={[
+        {
+          data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+          valueFormatter: (v) => (v == 2025 ? '2021 CSU Sperrklausel' : v.toString()),
+          dataKey: 'jahr',
+        },
+      ]}
       series={series}
       height={500}
+      sx={{
+        '.MuiMarkElement-root': {
+          scale: '0.6',
+          strokeWidth: 2,
+        },
+      }}
     />
   );
 }
 
 export function ParteienZweitstimmen() {
   const parteien = mapRecord(partyColors, (_, party) => [] as number[]);
-  const years = electionsYears.filter((y) => Number.isFinite(y));
-
-  years.forEach((year) => {
+  electionsYears.forEach((year) => {
     const electionData = getElectionData(year);
     Object.entries(parteien).forEach(([partei, results]) => {
       results.push(
@@ -241,9 +250,21 @@ export function ParteienZweitstimmen() {
 
   return (
     <LineChart
-      xAxis={[{ data: years, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+      xAxis={[
+        {
+          data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+          valueFormatter: (v) => (v == 2025 ? '2021 CSU Sperrklausel' : v.toString()),
+          dataKey: 'jahr',
+        },
+      ]}
       series={series}
       height={500}
+      sx={{
+        '.MuiMarkElement-root': {
+          scale: '0.6',
+          strokeWidth: 2,
+        },
+      }}
     />
   );
 }
@@ -260,9 +281,7 @@ export function ÜberhangMandate() {
   );
 
   const parteien = mapRecord(partyColors, (_, party) => [] as number[]);
-  const years = electionsYears.filter((y) => Number.isFinite(y));
-
-  years.forEach((year) => {
+  electionsYears.forEach((year) => {
     const electionData = getElectionData(year);
     const ctx: CalculationContext = {
       ...electionData,
@@ -287,9 +306,21 @@ export function ÜberhangMandate() {
   return (
     <>
       <LineChart
-        xAxis={[{ data: years, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+        xAxis={[
+          {
+            data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+            valueFormatter: (v) => (v == 2025 ? '2021 CSU Sperrklausel' : v.toString()),
+            dataKey: 'jahr',
+          },
+        ]}
         series={series}
         height={500}
+        sx={{
+          '.MuiMarkElement-root': {
+            scale: '0.6',
+            strokeWidth: 2,
+          },
+        }}
       />
       <div style={{ paddingTop: 10 }}>
         <RecordSelect state={method} label="Methode" />
@@ -307,9 +338,7 @@ export function ÜberhangMandateTotal() {
   };
 
   const methodResults = mapRecord(methods, () => [] as number[]);
-  const years = electionsYears.filter((y) => Number.isFinite(y));
-
-  years.forEach((year) => {
+  electionsYears.forEach((year) => {
     const electionData = getElectionData(year);
     Object.entries(methods).forEach(([methodName, method]) => {
       const ctx: CalculationContext = {
@@ -332,9 +361,85 @@ export function ÜberhangMandateTotal() {
 
   return (
     <LineChart
-      xAxis={[{ data: years, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+      xAxis={[
+        {
+          data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+          valueFormatter: (v) => (v == 2025 ? '2021 CSU Sperrklausel' : v.toString()),
+          dataKey: 'jahr',
+        },
+      ]}
       series={series}
       height={500}
+      sx={{
+        '.MuiMarkElement-root': {
+          scale: '0.6',
+          strokeWidth: 2,
+        },
+      }}
     />
+  );
+}
+
+export function AnteilVergleich() {
+  const methodA = useRecordSelectState(electionMethods, '2020');
+  const methodB = useRecordSelectState(electionMethods, '2023');
+
+  const parteien = mapRecord(partyColors, (_, party) => [] as number[]);
+  electionsYears.forEach((year) => {
+    const electionData = getElectionData(year);
+    const ctx: CalculationContext = {
+      ...electionData,
+      apportionmentMethod: sainteLaguë,
+      sitze: electionData.kerg.wahlkreise.length * 2,
+      warnings: [],
+    };
+    const resultA = methodA.state(ctx);
+    const sitzeA = ctx.sitze;
+
+    ctx.sitze = electionData.kerg.wahlkreise.length * 2;
+    const resultB = methodB.state(ctx);
+    const sitzeB = ctx.sitze;
+
+    Object.entries(parteien).forEach(([partei, results]) => {
+      results.push(
+        ((resultB[partei]?.sitze || 0) / sitzeB) * 100 -
+          ((resultA[partei]?.sitze || 0) / sitzeA) * 100
+      );
+    });
+  });
+
+  const series = Object.entries(parteien).map(([partei, results]) => ({
+    type: 'line' as 'line',
+    data: results,
+    label: partei,
+    curve: 'linear' as 'linear',
+    color: partyColors[partei as keyof typeof partyColors],
+    valueFormatter: (v: number) => `${v.toFixed(2)}%`,
+  }));
+
+  return (
+    <>
+      <LineChart
+        xAxis={[
+          {
+            data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+            valueFormatter: (v) => (v == 2025 ? '2021\n CSU Sperrklausel' : v.toString()),
+            dataKey: 'jahr',
+          },
+        ]}
+        series={series}
+        height={500}
+        sx={{
+          '.MuiMarkElement-root': {
+            scale: '0.6',
+            strokeWidth: 2,
+          },
+        }}
+      />
+      <div style={{ paddingTop: 10 }}>
+        <RecordSelect state={methodA} label="Methode A" />
+        <RecordSelect state={methodB} label="Methode B" />
+      </div>
+    </>
   );
 }
