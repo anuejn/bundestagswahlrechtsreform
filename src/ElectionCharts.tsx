@@ -29,7 +29,7 @@ import {
 import { Alert, styled } from '@mui/material';
 import { RecordSelect, useRecordSelectState } from './RecordSelect';
 import { ChartsLegend } from '@mui/x-charts/ChartsLegend';
-import { mapRecord } from './util';
+import { mapRecord, sumRecord1D } from './util';
 
 const StyledText = styled('text')(({ theme }) => ({
   stroke: 'none',
@@ -225,7 +225,7 @@ export function ParteienZweitstimmen() {
         ((electionData.kerg.bundesgebiet.parteien.find((p) => p.name == partei)?.zweitstimmen ||
           0) /
           electionData.kerg.bundesgebiet.wähler) *
-          100
+        100
       );
     });
   });
@@ -295,5 +295,47 @@ export function ÜberhangMandate() {
         <RecordSelect state={method} label="Methode" />
       </div>
     </>
+  );
+}
+
+
+export function ÜberhangMandateTotal() {
+  const methods = {
+    1956: election1956,
+    2011: election2011,
+    2013: election2013,
+    2020: election2020,
+  };
+
+  const methodResults = mapRecord(methods, () => [] as number[]);
+  const years = electionsYears.filter((y) => Number.isFinite(y));
+
+  years.forEach((year) => {
+    const electionData = getElectionData(year);
+    Object.entries(methods).forEach(([methodName, method]) => {
+      const ctx: CalculationContext = {
+        ...electionData,
+        apportionmentMethod: sainteLaguë,
+        sitze: electionData.kerg.wahlkreise.length * 2,
+        warnings: [],
+      };
+      const result = method(ctx);
+      methodResults[methodName].push(sumRecord1D(mapRecord(result, r => r.überhangMandate)))
+    })
+  });
+
+  const series = Object.entries(methodResults).map(([method, results]) => ({
+    type: 'line' as 'line',
+    data: results,
+    label: method,
+    curve: 'linear' as 'linear',
+  }));
+
+  return (
+    <LineChart
+      xAxis={[{ data: years, valueFormatter: (v) => v.toString(), dataKey: 'jahr' }]}
+      series={series}
+      height={500}
+    />
   );
 }
