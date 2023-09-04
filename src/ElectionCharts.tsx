@@ -209,7 +209,7 @@ export function ParlamentGröße() {
       xAxis={[
         {
           data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
-          valueFormatter: (v) => (v == 2025 ? '2021 CSU Sperrklausel' : v.toString()),
+          valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
           dataKey: 'jahr',
         },
       ]}
@@ -253,7 +253,7 @@ export function ParteienZweitstimmen() {
       xAxis={[
         {
           data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
-          valueFormatter: (v) => (v == 2025 ? '2021 CSU Sperrklausel' : v.toString()),
+          valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
           dataKey: 'jahr',
         },
       ]}
@@ -309,7 +309,7 @@ export function ÜberhangMandate() {
         xAxis={[
           {
             data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
-            valueFormatter: (v) => (v == 2025 ? '2021 CSU Sperrklausel' : v.toString()),
+            valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
             dataKey: 'jahr',
           },
         ]}
@@ -364,7 +364,7 @@ export function ÜberhangMandateTotal() {
       xAxis={[
         {
           data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
-          valueFormatter: (v) => (v == 2025 ? '2021 CSU Sperrklausel' : v.toString()),
+          valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
           dataKey: 'jahr',
         },
       ]}
@@ -423,7 +423,7 @@ export function AnteilVergleich() {
         xAxis={[
           {
             data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
-            valueFormatter: (v) => (v == 2025 ? '2021\n CSU Sperrklausel' : v.toString()),
+            valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
             dataKey: 'jahr',
           },
         ]}
