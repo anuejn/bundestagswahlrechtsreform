@@ -170,30 +170,35 @@ function getEntry(record: Record<string, any>, year: number): any {
   return record[path];
 }
 
-export function getElectionData(entry: number | string): {
+export type ElectionDataBundle = {
   kerg: ElectionData;
   einwohnerdaten: Record<string, number> | null;
-} {
-  const year = entry == '2021 CSU Sperrklausel' ? 2021 : (entry as number);
+};
+const electionDataCache: Record<number | string, ElectionDataBundle> = {};
+export function getElectionData(entry: number | string): ElectionDataBundle {
+  if (!(entry in electionDataCache)) {
+    const year = entry == '2021 CSU Sperrklausel' ? 2021 : (entry as number);
 
-  const kerg = parseElectionData(getEntry(btw_kerg, year));
+    const kerg = parseElectionData(getEntry(btw_kerg, year));
 
-  if (entry == '2021 CSU Sperrklausel') {
-    [kerg.wahlkreise, kerg.bundesländer, [kerg.bundesgebiet]].forEach((kind) => {
-      kind.forEach((gebiet) => {
-        gebiet.parteien.forEach((partei) => {
-          if (partei.name == 'CSU' && partei.zweitstimmen) {
-            partei.zweitstimmen *= 0.9749871297434228;
-          }
+    if (entry == '2021 CSU Sperrklausel') {
+      [kerg.wahlkreise, kerg.bundesländer, [kerg.bundesgebiet]].forEach((kind) => {
+        kind.forEach((gebiet) => {
+          gebiet.parteien.forEach((partei) => {
+            if (partei.name == 'CSU' && partei.zweitstimmen) {
+              partei.zweitstimmen *= 0.9749871297434228;
+            }
+          });
         });
       });
-    });
-  }
+    }
 
-  return {
-    kerg,
-    einwohnerdaten: getEntry(einwohnerdaten, year)?.default || null,
-  };
+    electionDataCache[entry] = {
+      kerg,
+      einwohnerdaten: getEntry(einwohnerdaten, year)?.default || null,
+    };
+  }
+  return electionDataCache[entry];
 }
 
 export const electionsYears = [

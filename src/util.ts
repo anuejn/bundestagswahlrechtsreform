@@ -69,9 +69,12 @@ export function sumRecord2DAxis1(
 
 export function max<T>(list: T[], acessor: (x: T) => number): T {
   let max = list[0];
+  let maxValue = -Infinity;
   list.forEach((x) => {
-    if (acessor(x) > acessor(max)) {
+    const v = acessor(x);
+    if (v > maxValue) {
       max = x;
+      maxValue = v;
     }
   });
   return max;
