@@ -7,7 +7,6 @@ import {
   mapRecord,
   max,
   sumRecord1D,
-  sumRecord2DAxis0,
   sumRecord2DAxis1,
   transposeRecord,
 } from './util';
