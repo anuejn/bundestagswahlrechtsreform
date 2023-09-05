@@ -14,7 +14,7 @@ function cachedAppointmentMethod(method: typeof sainteLaguëUncached): typeof sa
 
 function sainteLaguëUncached(input: Record<string, number>, seats: number): Record<string, number> {
   const result: Record<string, number> = {};
-  while (Object.values(result).reduce((a, b) => a + b, 0) < seats) {
+  while (sumRecord1D(result) < seats) {
     let winner = max(
       Object.entries(input),
       ([name, votes]: [string, number]) => votes / (2 * (result[name] || 0) + 1)
@@ -46,7 +46,7 @@ export function hareNimeyer(input: Record<string, number>, seats: number): Recor
 
 export function DHondt(input: Record<string, number>, seats: number): Record<string, number> {
   const result: Record<string, number> = {};
-  while (Object.values(result).reduce((a, b) => a + b, 0) < seats) {
+  while (sumRecord1D(result) < seats) {
     let winner = max(
       Object.entries(input),
       ([name, votes]: [string, number]) => votes / ((result[name] || 0) + 1)

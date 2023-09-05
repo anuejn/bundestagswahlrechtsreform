@@ -22,6 +22,7 @@ import {
   LineChart,
   PiePlot,
   ResponsiveChartContainer,
+  axisClasses,
   pieArcClasses,
   useDrawingArea,
   useYScale,
@@ -99,12 +100,12 @@ export function Wahl({ year, method }: { year: number | string; method: typeof e
 
 export function WahlSelectable() {
   const year = useRecordSelectState(Object.fromEntries(electionsYears.map((y) => [y, y])), '2021');
-  const method = useRecordSelectState(electionMethods, '2023');
+  const method = useRecordSelectState(electionMethods, 'SVV2023');
 
   return (
     <>
       <Wahl year={year.state} method={method.state} />
-      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
+      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row', gap: 10 }}>
         <RecordSelect state={method} label="Sitzzuteilungsverfahren" />
         <RecordSelect state={year} label="Wahljahr" />
       </div>
@@ -157,8 +158,13 @@ export function WahlDiff({ year }: { year: number | string }) {
     <ResponsiveChartContainer
       series={series}
       xAxis={[{ data: xaxis, scaleType: 'band', id: DEFAULT_X_AXIS_KEY }]}
-      margin={{ right: 15, left: 40, top: 45 }}
+      margin={{ right: 15, left: 50, top: 45 }}
       height={300}
+      sx={{
+        [`.${axisClasses.left} .${axisClasses.label}`]: {
+          transform: 'rotate(-90deg) translate(0px, -10px)',
+        },
+      }}
     >
       <BarPlot />
       <ChartsLegend />
@@ -179,7 +185,7 @@ export function WahlDiffSelectable() {
   return (
     <>
       <WahlDiff year={year.state} />
-      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
+      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row', gap: 10 }}>
         <RecordSelect state={year} label="Wahljahr" />
       </div>
     </>
@@ -217,19 +223,22 @@ export function ParlamentGröße() {
       leftAxis={{ label: 'Parlamentsgröße in Sitzen', axisId: DEFAULT_Y_AXIS_KEY }}
       xAxis={[
         {
-          data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+          data: electionsYears.map((y) => (y == 'PROJ CSU Sperrklausel' ? 2025 : y)),
           valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
           id: DEFAULT_X_AXIS_KEY,
           tickMaxStep: 10,
         },
       ]}
-      margin={{ right: 15, left: 40, top: 45 }}
+      margin={{ right: 15, left: 50, top: 45 }}
       series={series}
       height={500}
       sx={{
         '.MuiMarkElement-root': {
           scale: '0.6',
           strokeWidth: 2,
+        },
+        [`.${axisClasses.left} .${axisClasses.label}`]: {
+          transform: 'rotate(-90deg) translate(0px, -10px)',
         },
       }}
     />
@@ -269,7 +278,7 @@ export function ParteienZweitstimmen() {
       leftAxis={{ label: 'Zweitstimmenanteil in %', axisId: DEFAULT_Y_AXIS_KEY }}
       xAxis={[
         {
-          data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+          data: electionsYears.map((y) => (y == 'PROJ CSU Sperrklausel' ? 2025 : y)),
           valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
           id: DEFAULT_X_AXIS_KEY,
           tickMaxStep: 10,
@@ -291,12 +300,12 @@ export function ParteienZweitstimmen() {
 export function ÜberhangMandate() {
   const method = useRecordSelectState(
     {
-      1956: election1956,
-      2011: election2011,
-      2013: election2013,
-      2020: election2020,
+      SVV1956: election1956,
+      SVV2011: election2011,
+      SVV2013: election2013,
+      SVV2020: election2020,
     },
-    '2011'
+    'SVV2011'
   );
 
   const parteien = mapRecord(partyColors, (_, party) => [] as number[]);
@@ -336,7 +345,7 @@ export function ÜberhangMandate() {
         }}
         xAxis={[
           {
-            data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+            data: electionsYears.map((y) => (y == 'PROJ CSU Sperrklausel' ? 2025 : y)),
             valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
             id: DEFAULT_X_AXIS_KEY,
             tickMaxStep: 10,
@@ -352,7 +361,7 @@ export function ÜberhangMandate() {
           },
         }}
       />
-      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
+      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row', gap: 10 }}>
         <RecordSelect state={method} label="Sitzzuteilungsverfahren" />
       </div>
     </>
@@ -361,10 +370,10 @@ export function ÜberhangMandate() {
 
 export function ÜberhangMandateTotal() {
   const methods = {
-    1956: election1956,
-    2011: election2011,
-    2013: election2013,
-    2020: election2020,
+    SVV1956: election1956,
+    SVV2011: election2011,
+    SVV2013: election2013,
+    SVV2020: election2020,
   };
 
   const methodResults = mapRecord(methods, () => [] as number[]);
@@ -401,7 +410,7 @@ export function ÜberhangMandateTotal() {
       }}
       xAxis={[
         {
-          data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+          data: electionsYears.map((y) => (y == 'PROJ CSU Sperrklausel' ? 2025 : y)),
           valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
           id: DEFAULT_X_AXIS_KEY,
           tickMaxStep: 10,
@@ -421,8 +430,8 @@ export function ÜberhangMandateTotal() {
 }
 
 export function AnteilVergleich() {
-  const methodA = useRecordSelectState(electionMethods, '2020');
-  const methodB = useRecordSelectState(electionMethods, '2023');
+  const methodA = useRecordSelectState(electionMethods, 'SVV2020');
+  const methodB = useRecordSelectState(electionMethods, 'SVV2023');
 
   const parteien = mapRecord(partyColors, (_, party) => [] as number[]);
   electionsYears.forEach((year) => {
@@ -463,7 +472,7 @@ export function AnteilVergleich() {
         legend={{ hidden: true }}
         xAxis={[
           {
-            data: electionsYears.map((y) => (y == '2021 CSU Sperrklausel' ? 2025 : y)),
+            data: electionsYears.map((y) => (y == 'PROJ CSU Sperrklausel' ? 2025 : y)),
             valueFormatter: (v) => (v == 2025 ? 'PROJ' : v.toString()),
             id: DEFAULT_X_AXIS_KEY,
             tickMaxStep: 10,
@@ -487,7 +496,7 @@ export function AnteilVergleich() {
           },
         }}
       />
-      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
+      <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row', gap: 10 }}>
         <RecordSelect state={methodA} label="Sitzzuteilungsverfahren A" />
         <RecordSelect state={methodB} label="Sitzzuteilungsverfahren B" />
       </div>

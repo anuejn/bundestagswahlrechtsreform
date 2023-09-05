@@ -353,10 +353,10 @@ export function election1956(ctx: CalculationContext): Wahlergebniss {
 }
 
 export const electionMethods = {
-  1956: election1956,
-  2011: election2011,
-  2013: election2013,
-  2020: election2020,
-  2023: election2023,
-  Zweitstimmen: electionNurZweitstimmen,
+  SVV1956: election1956,
+  SVV2011: election2011,
+  SVV2013: election2013,
+  SVV2020: election2020,
+  SVV2023: election2023,
+  SVVZweitstimmen: electionNurZweitstimmen,
 };

@@ -177,11 +177,11 @@ export type ElectionDataBundle = {
 const electionDataCache: Record<number | string, ElectionDataBundle> = {};
 export function getElectionData(entry: number | string): ElectionDataBundle {
   if (!(entry in electionDataCache)) {
-    const year = entry == '2021 CSU Sperrklausel' ? 2021 : (entry as number);
+    const year = entry == 'PROJ CSU Sperrklausel' ? 2021 : (entry as number);
 
     const kerg = parseElectionData(getEntry(btw_kerg, year));
 
-    if (entry == '2021 CSU Sperrklausel') {
+    if (entry == 'PROJ CSU Sperrklausel') {
       [kerg.wahlkreise, kerg.bundesländer, [kerg.bundesgebiet]].forEach((kind) => {
         kind.forEach((gebiet) => {
           gebiet.parteien.forEach((partei) => {
@@ -221,5 +221,5 @@ export const electionsYears = [
   2013,
   2017,
   2021,
-  '2021 CSU Sperrklausel' as const,
+  'PROJ CSU Sperrklausel' as const,
 ];
