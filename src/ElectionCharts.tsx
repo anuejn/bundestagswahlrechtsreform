@@ -105,8 +105,8 @@ export function WahlSelectable() {
     <>
       <Wahl year={year.state} method={method.state} />
       <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
-        <RecordSelect state={method} label="Methode" />
-        <RecordSelect state={year} label="Jahr" />
+        <RecordSelect state={method} label="Sitzzuteilungsverfahren" />
+        <RecordSelect state={year} label="Wahljahr" />
       </div>
     </>
   );
@@ -179,7 +179,7 @@ export function WahlDiffSelectable() {
     <>
       <WahlDiff year={year.state} />
       <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
-        <RecordSelect state={year} label="Jahr" />
+        <RecordSelect state={year} label="Wahljahr" />
       </div>
     </>
   );
@@ -346,7 +346,7 @@ export function ÜberhangMandate() {
         }}
       />
       <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
-        <RecordSelect state={method} label="Methode" />
+        <RecordSelect state={method} label="Sitzzuteilungsverfahren" />
       </div>
     </>
   );
@@ -477,8 +477,8 @@ export function AnteilVergleich() {
         }}
       />
       <div style={{ paddingTop: 10, display: 'flex', flexDirection: 'row' }}>
-        <RecordSelect state={methodA} label="Methode A" />
-        <RecordSelect state={methodB} label="Methode B" />
+        <RecordSelect state={methodA} label="Sitzzuteilungsverfahren A" />
+        <RecordSelect state={methodB} label="Sitzzuteilungsverfahren B" />
       </div>
     </>
   );
