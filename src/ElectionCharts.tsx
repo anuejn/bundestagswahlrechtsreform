@@ -6,6 +6,7 @@ import {
   election2011,
   election2013,
   election2020,
+  election2023,
   electionMethods,
   electionNurZweitstimmen,
 } from './calculate_election';
@@ -129,6 +130,13 @@ function ZeroLine() {
 
 export function WahlDiff({ year }: { year: number | string }) {
   const electionData = getElectionData(year);
+  const electionMethods = {
+    SVV1956: election1956,
+    SVV2011: election2011,
+    SVV2013: election2013,
+    SVV2020: election2020,
+    SVV2023: election2023,
+  };
 
   let xaxis: string[] = [];
   const series = Object.entries(electionMethods)
