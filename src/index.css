@@ -1,0 +1,8 @@
+@media (max-width: 760px) {
+  figure {
+    max-width: 112% !important;
+    width: 112%;
+    position: relative;
+    left: -6%;
+  }
+}

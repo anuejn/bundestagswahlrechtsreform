@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 import 'tufte-css/tufte.css';
 import Essay from './essay.mdx';
 import { MDXProvider } from '@mdx-js/react';
