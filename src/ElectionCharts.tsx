@@ -490,7 +490,7 @@ export function AnteilVergleich() {
             tickMaxStep: 10,
           },
         ]}
-        margin={{ right: 15, left: 40, top: 45 }}
+        margin={{ right: 15, left: 50, top: 45 }}
         bottomAxis={{
           label: 'Jahr (PROJ = 2021 mit CSU unter Sperrklausel)',
           axisId: DEFAULT_X_AXIS_KEY,
@@ -505,6 +505,9 @@ export function AnteilVergleich() {
           '.MuiMarkElement-root': {
             scale: '0.6',
             strokeWidth: 2,
+          },
+          [`.${axisClasses.left} .${axisClasses.label}`]: {
+            transform: 'rotate(-90deg) translate(0px, -10px)',
           },
         }}
       />
