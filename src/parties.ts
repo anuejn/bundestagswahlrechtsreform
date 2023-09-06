@@ -8,7 +8,7 @@ export const partyColors = {
   GRÜNE: '#64A12D',
   FDP: '#FFED00',
   CDU: '#161A1D',
-  CSU: '#505050',
+  CSU: '#777',
   Zentrum: '#000000',
   DP: 'rgb(0, 0, 204)',
   'GB/BHE': 'rgb(156, 156, 19)',
