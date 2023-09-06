@@ -57,7 +57,6 @@ export function Wahl({ year, method }: { year: number | string; method: typeof e
     ...electionData,
     apportionmentMethod: sainteLaguë,
     sitze: electionData.kerg.wahlkreise.length * 2,
-    warnings: [],
   };
 
   const data = partiesSorted(method(ctx)).map((party) => ({
@@ -93,7 +92,9 @@ export function Wahl({ year, method }: { year: number | string; method: typeof e
         <CenterText>{ctx.sitze}</CenterText>
       </ResponsiveChartContainer>
       {ctx.warnings.map((w) => (
-        <Alert severity="warning">{w}</Alert>
+        <Alert severity="warning" sx={{ marginBottom: 1 }}>
+          {w}
+        </Alert>
       ))}
     </>
   );
@@ -130,6 +131,7 @@ function ZeroLine() {
 
 export function WahlDiff({ year }: { year: number | string }) {
   const electionData = getElectionData(year);
+  const warnings = JSON.parse(JSON.stringify(electionData.warnings)) as string[];
   const electionMethods = {
     SVV1956: election1956,
     SVV2011: election2011,
@@ -146,7 +148,6 @@ export function WahlDiff({ year }: { year: number | string }) {
         ...electionData,
         apportionmentMethod: sainteLaguë,
         sitze: electionData.kerg.wahlkreise.length * 2,
-        warnings: [],
       };
       const result = method(ctx);
       const nurZweitstimmen = electionNurZweitstimmen(ctx);
@@ -163,27 +164,34 @@ export function WahlDiff({ year }: { year: number | string }) {
     });
 
   return (
-    <ResponsiveChartContainer
-      series={series}
-      xAxis={[{ data: xaxis, scaleType: 'band', id: DEFAULT_X_AXIS_KEY }]}
-      margin={{ right: 15, left: 50, top: 45 }}
-      height={300}
-      sx={{
-        [`.${axisClasses.left} .${axisClasses.label}`]: {
-          transform: 'rotate(-90deg) translate(0px, -10px)',
-        },
-      }}
-    >
-      <BarPlot />
-      <ChartsLegend />
-      <ChartsTooltip />
-      <ChartsAxis
-        bottomAxis={{ axisId: DEFAULT_X_AXIS_KEY, disableLine: true }}
-        leftAxis={{ label: 'Differenz Sitzzahl', axisId: DEFAULT_Y_AXIS_KEY }}
-      />
-      <ChartsAxisHighlight x="band" />
-      <ZeroLine />
-    </ResponsiveChartContainer>
+    <>
+      <ResponsiveChartContainer
+        series={series}
+        xAxis={[{ data: xaxis, scaleType: 'band', id: DEFAULT_X_AXIS_KEY }]}
+        margin={{ right: 15, left: 50, top: 45 }}
+        height={300}
+        sx={{
+          [`.${axisClasses.left} .${axisClasses.label}`]: {
+            transform: 'rotate(-90deg) translate(0px, -10px)',
+          },
+        }}
+      >
+        <BarPlot />
+        <ChartsLegend />
+        <ChartsTooltip />
+        <ChartsAxis
+          bottomAxis={{ axisId: DEFAULT_X_AXIS_KEY, disableLine: true }}
+          leftAxis={{ label: 'Differenz Sitzzahl', axisId: DEFAULT_Y_AXIS_KEY }}
+        />
+        <ChartsAxisHighlight x="band" />
+        <ZeroLine />
+      </ResponsiveChartContainer>
+      {warnings.map((w) => (
+        <Alert severity="warning" sx={{ marginBottom: 1 }}>
+          {w}
+        </Alert>
+      ))}
+    </>
   );
 }
 
@@ -208,7 +216,6 @@ export function ParlamentGröße() {
         ...electionData,
         apportionmentMethod: sainteLaguë,
         sitze: electionData.kerg.wahlkreise.length * 2,
-        warnings: [],
       };
       method(ctx);
       return ctx.sitze;
@@ -323,7 +330,6 @@ export function ÜberhangMandate() {
       ...electionData,
       apportionmentMethod: sainteLaguë,
       sitze: electionData.kerg.wahlkreise.length * 2,
-      warnings: [],
     };
     const result = method.state(ctx);
     Object.entries(parteien).forEach(([partei, results]) => {
@@ -392,7 +398,6 @@ export function ÜberhangMandateTotal() {
         ...electionData,
         apportionmentMethod: sainteLaguë,
         sitze: electionData.kerg.wahlkreise.length * 2,
-        warnings: [],
       };
       const result = method(ctx);
       methodResults[methodName].push(sumRecord1D(mapRecord(result, (r) => r.überhangMandate)));
@@ -448,7 +453,6 @@ export function AnteilVergleich() {
       ...electionData,
       apportionmentMethod: sainteLaguë,
       sitze: electionData.kerg.wahlkreise.length * 2,
-      warnings: [],
     };
     const resultA = methodA.state(ctx);
     const sitzeA = ctx.sitze;

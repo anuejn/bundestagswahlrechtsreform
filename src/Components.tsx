@@ -34,7 +34,7 @@ export function Caption({ children }: { children: JSX.Element[] | JSX.Element })
         <i>Abbildung {fig_count++}:</i> {childrenList[0].props.children}
       </b>
     </p>
-  )
+  );
 
-  return <SideNote label={<>&#8853;</>}>{childrenList.map((x, i) => ({...x, key: i}))}</SideNote>;
+  return <SideNote label={<>&#8853;</>}>{childrenList.map((x, i) => ({ ...x, key: i }))}</SideNote>;
 }

@@ -1,5 +1,5 @@
 import { sainteLaguë } from './appointment_method';
-import { ElectionData, Gebiet } from './btw_kerg';
+import { ElectionDataBundle, Gebiet } from './btw_kerg';
 import {
   filterRecord,
   incrementInAccRecord,
@@ -13,14 +13,9 @@ import {
 
 const minderheitenschutz = ['SSW'];
 
-export type CalculationContext = {
-  kerg: ElectionData;
-  einwohnerdaten: Record<string, number> | null;
-
+export type CalculationContext = ElectionDataBundle & {
   sitze: number;
-
   apportionmentMethod: typeof sainteLaguë;
-  warnings: string[];
 };
 
 export type Wahlergebniss = Record<string, ParteiErgebniss>;

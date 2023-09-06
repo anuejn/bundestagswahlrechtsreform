@@ -173,8 +173,9 @@ function getEntry(record: Record<string, any>, year: number): any {
 export type ElectionDataBundle = {
   kerg: ElectionData;
   einwohnerdaten: Record<string, number> | null;
+  warnings: string[];
 };
-const electionDataCache: Record<number | string, ElectionDataBundle> = {};
+const electionDataCache: Record<number | string, Omit<ElectionDataBundle, 'warnings'>> = {};
 export function getElectionData(entry: number | string): ElectionDataBundle {
   if (!(entry in electionDataCache)) {
     const year = entry == 'PROJ CSU Sperrklausel' ? 2021 : (entry as number);
@@ -198,7 +199,26 @@ export function getElectionData(entry: number | string): ElectionDataBundle {
       einwohnerdaten: getEntry(einwohnerdaten, year)?.default || null,
     };
   }
-  return electionDataCache[entry];
+
+  let warnings: string[] = [];
+
+  if (entry == 1990) {
+    warnings.push(`
+      Für das Jahr 1990 galt wegen der „Wiedervereinigung“ eine veränderte Sperrklausel. 
+      Diese wird für bessere Vergleichbarkeit nicht berücksichtigt, 
+      weshalb die hier berechneten Ergebnisse von den tatsächlichen Ergebnissen abweichen.
+    `);
+  }
+
+  if (entry == 'PROJ CSU Sperrklausel') {
+    warnings.push(`
+      Die Daten aus „PROJ CSU Sperrklausel“ stammen von keiner Wahl, die tatsächlich stattgefunden hat.
+      Vielmehr wurden die Wahlergebnisse der Bundestagswahl 2021 so modifiziert,
+      dass die CSU unter die 5%-Hürde fällt.
+    `);
+  }
+
+  return { warnings, ...electionDataCache[entry] };
 }
 
 export const electionsYears = [

@@ -16,7 +16,6 @@ describe('election 2021', () => {
     ...getElectionData(2021),
     apportionmentMethod: sainteLaguë,
     sitze: 598,
-    warnings: [],
   };
 
   it('ländersitzeverteilung', () => {
@@ -96,7 +95,6 @@ describe('election 2017', () => {
     ...getElectionData(2017),
     apportionmentMethod: sainteLaguë,
     sitze: 598,
-    warnings: [],
   };
 
   it('ländersitzeverteilung', () => {
@@ -171,7 +169,6 @@ describe('election 2013', () => {
     ...getElectionData(2013),
     apportionmentMethod: sainteLaguë,
     sitze: 598,
-    warnings: [],
   };
 
   it('ländersitzeverteilung', () => {
@@ -236,7 +233,6 @@ describe('election 2009', () => {
     ...getElectionData(2009),
     apportionmentMethod: sainteLaguë,
     sitze: 598,
-    warnings: [],
   };
 
   it('gesamtergebniss', () => {
@@ -283,7 +279,6 @@ describe('election 2002', () => {
     ...getElectionData(2002),
     apportionmentMethod: hareNimeyer,
     sitze: 598,
-    warnings: [],
   };
 
   it('gesamtergebniss', () => {
@@ -351,7 +346,6 @@ describe('election 1987', () => {
     ...data,
     apportionmentMethod: hareNimeyer,
     sitze: data.kerg.wahlkreise.length * 2,
-    warnings: [],
   };
 
   it('gesamtergebniss', () => {
@@ -399,7 +393,6 @@ describe('Does not crash', () => {
           ...data,
           apportionmentMethod: sainteLaguë,
           sitze: data.kerg.wahlkreise.length * 2,
-          warnings: [],
         };
         method(ctx);
         expect(ctx.sitze).toBeGreaterThan(0);

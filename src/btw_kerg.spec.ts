@@ -19,7 +19,6 @@ describe('Has Correct Party Names', () => {
         ...getElectionData(year),
         apportionmentMethod: sainteLaguë,
         sitze: 598,
-        warnings: [],
       };
       const result = election1956(ctx);
       Object.keys(result).forEach((party) => {
