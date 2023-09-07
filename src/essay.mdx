@@ -31,7 +31,9 @@ import { election2020 } from './calculate_election';
 Die Wahlen zum Deutschen Bundestag sind verhältnismäßig komplex: Erststimmen, Zweitstimmen,
 Überhang- und Ausgleichsmandate, Direktkandidaten und Landeslisten. Und dann ändern sich auch noch ständig Details im Sitzverteilungsverfahren: 2011, 2013, 2021 und nun zuletzt dieses Jahr 2023. Doch was verändert sich eigentlich? In diesem Essay möchte ich versuchen, die Änderungen im Sitzverteilungsverfahren und vor allem deren Auswirkungen greifbarer zu machen. Hiermit möchte ich zeigen, dass es sich beim Wahlrecht nicht nur um bürokratische Details handelt, sondern handfeste politische Machtverhältnisse auf dem Spiel stehen.
 
-Natürlich ist das Sitzverteilungsverfahren nicht der einzig relevante Punkt des Wahlrechts. Eine der wichtigsten Fragen ist zum Beispiel, _wer_ wählen darf.<SideNote>Dies Änderte sich z.B. mit der [Herabsetzung der Altersgrenze für das aktive Wahlrecht auf 18 Jahre 1972](https://www.bundestag.de/dokumente/textarchiv/2022/kw22-kalenderblatt-wahlalter-897958) und durch die Aufhebung verschiedener Gründe für den Wahlrechtsausschluss (z.B. für Personen, die im Gefängnis sitzen). Immer noch dürfen viele Einwohner:innen Deutschlands nicht wählen z.B. wegen prekären Aufenthaltsverhältnissen.</SideNote> Zusätzlich haben die Zuschneidung der Wahlkreise und das Wahlgebiet großen Einfluss und sich im Laufe der Geschichte geändert, z.B. durch den Anschluss des Saarlandes und die „Wiedervereinigung“ 1990. An dieser Stelle möchte ich allerdings vor allem das Sitzverteilungsverfahren betrachten, da dies der Knackpunkt an der Wahlrechtsreform 2023 ist.
+Natürlich ist das Sitzverteilungsverfahren nicht der einzig relevante Punkt des Wahlrechts. Eine der wichtigsten Fragen ist zum Beispiel, _wer_ wählen darf.<SideNote>Dies änderte sich z.B. mit der [Herabsetzung der Altersgrenze für das aktive Wahlrecht auf 18 Jahre 1972](https://www.bundestag.de/dokumente/textarchiv/2022/kw22-kalenderblatt-wahlalter-897958) und durch die Aufhebung verschiedener Gründe für den Wahlrechtsausschluss (z.B. für Personen, die im Gefängnis sitzen). Immer noch dürfen viele Einwohner:innen Deutschlands nicht wählen z.B. wegen prekären Aufenthaltsverhältnissen.</SideNote> Zusätzlich haben die Zuschneidung der Wahlkreise und das Wahlgebiet großen Einfluss und sich im Laufe der Geschichte geändert, z.B. durch den Anschluss des Saarlandes und die „Wiedervereinigung“ 1990. An dieser Stelle möchte ich allerdings vor allem das Sitzverteilungsverfahren betrachten, da dies der Knackpunkt an der Wahlrechtsreform 2023 ist.
+
+Im ersten Teil dieses Essays möchte ich einen groben Überblick über die Geschichte und Motivationen für erfolgte Reformen am Sitzverteilungsverfahren geben.<SideNote>Dieser Teil kann ohne Probleme übersprungen und nachträglich bei Interesse nachgelesen werden.</SideNote> Hiernach wird die Wahlrechtsreform 2023 erklärt. Im Haupt- und Endteil des Essays werden die Folgen der Reform(en) mittels Computersimulationen untersucht und diskutiert.
 
 ## Geschichte: Ein komplexes Wahlsystem
 
@@ -133,10 +135,15 @@ Ein Blick auf die Entwicklung der Zweitstimmen verrät, dass die CSU eher Stimme
 
 ## Wahlen nachrechnen: <br/> Die Auswirkungen der Sitzverteilungsverfahren
 
-Um ein besseres Gefühl für die praktischen Auswirkungen der verschiedenen Wahlverfahren zu bekommen ist es hilfreich, zuerst im Detail zu verstehen, wie die endgültige Sitzverteilung aus den abgegebenen Stimmen berechnet wird. Nützlich ist hier die Veröffentlichung der Bundeswahlleiterin der Stimmdaten aller Bundestagswahlen als Open-Data. <SideNote>Unter dem kryptischen Namen [btw_kerg.zip](https://www.bundeswahlleiter.de/dam/jcr/ce2d2b6a-f211-4355-8eea-355c98cd4e47/btw_kerg.zip). Leider verändert sich das Datenformat sehr oft und nicht alle Daten zur Berechnung der Sitzverteilung sind enthalten. Daher ist noch viel manuelle Arbeit zur Bereinigung und Anreicherung der Daten notwendig.</SideNote>
-Um zu überprüfen, dass wir das Sitzverteilungsverfahren zur Sitzverteilung richtig verstanden haben, lohnt es sich zunächst, eine Wahl nachzurechnen und das Ergebnis mit dem amtlichen Endergebnis zu vergleichen. Dies ist in der allerersten Grafik dieses Essays geschehen.<SideNote>Vgl. [*Bundeswahlleiter. 2021. “Endgültige Sitzberechnung Und Verteilung Der Mandate.” Wahl Zum 20. Deutschen Bundestag Am 26. September 2021 - Heft 3: Endgültige Ergebnisse Nach Wahlkreisen.*](https://bundeswahlleiterin.de/en/dam/jcr/bf33c285-ee92-455a-a9c3-8d4e3a1ee4b4/btw21_sitzberechnung.pdf)</SideNote> Zu sehen ist, dass das Ergebnis dem aktuellen Bundestag entspricht.
+Um ein besseres Gefühl für die praktischen Auswirkungen der verschiedenen Wahlverfahren zu bekommen, ist es hilfreich zu betrachten, zu welchen tatsächlichen Ergebnissen sie führen. Die Parlamente, die die verschiedenen Sitzverteilungsverfahren produzieren, sollen verglichen werden, um politische Konsequenzen zu erkennen. Hierzu ist es notwendig, aus den Stimmdaten eines Wahljahres mithilfe der verschiedenen Verfahren Sitzverteilungen zu berechnen.
 
-Tatsächlich interessant wird dieses aufwändige Nachrechnen von Wahlen allerdings erst, wenn wir die Wahl mit einem anderen Sitzverteilungsverfahren nachrechnen.<SideNote>Da die Berechnungsverfahren viele subtile Feinheiten beinhalten, kann es sein, dass die hier berechneten Zahlen nicht exakt stimmen und ich mich verrechnet habe. Für Hinweise bin ich dankbar.</SideNote> So können wir die Ergebnisse vergleichen und feststellen, welche Parteien von welchem Sitzverteilungsverfahren bevorzugt bzw. benachteiligt werden:
+
+### Methode: Computersimulationen
+Die Sitzverteilungsverfahren sind relativ aufwändig händisch zu berechnen.<SideNote>[Die Publikation der Bundeswahlleiterin zur Sitzberechnung und Verteilung der Mandate zur Bundestagswahl 2021](https://bundeswahlleiterin.de/en/dam/jcr/bf33c285-ee92-455a-a9c3-8d4e3a1ee4b4/btw21_sitzberechnung.pdf) umfasst 63-Seiten.</SideNote> Für eine solide Analyse sollten jedoch optimalerweise die Daten vieler verschiedener Wahljahre genutzt werden und mit den verschiedenen Sitzverteilungsverfahren Parlamente berechnet werden. Da dies manuell unpraktikabel ist,<SideNote>20 Wahljahre * 5 Sitzverteilungsverfahren = 100 Kombinationen</SideNote> habe ich Software entwickelt, die aus den Stimmdaten aller Bundestagswahlen Sitzverteilung mithilfe der verschiedenen Verfahren berechnet. Die Bundeswahlleiterin veröffentlicht die Stimmdaten der Wahlkreise als Open-Data.<SideNote>Unter dem kryptischen Namen [btw_kerg.zip](https://www.bundeswahlleiter.de/dam/jcr/ce2d2b6a-f211-4355-8eea-355c98cd4e47/btw_kerg.zip). Leider verändert sich das Datenformat sehr oft und nicht alle Daten zur Berechnung der Sitzverteilung sind enthalten. Daher ist noch viel manuelle Arbeit zur Bereinigung und Anreicherung der Daten notwendig.</SideNote> Der code, der aus diesen Stimmdaten Sitzverteilungen berechnet ist in TypeScript geschrieben und wird zur Erzeugung aller Grafiken in diesem Essay verwendet. Mit diesen Computersimulationen können wir die Ergebnisse der verschiedenen Sitzverteilungsverfahren basierend auf einer soliden Datenbasis vergleichen und feststellen, welche Parteien von welchen Sitzverteilungsverfahren bevorzugt bzw. benachteiligt werden.
+
+Um die Berechnungen zu überprüfen wurden verschiedene Bundestagswahlen mit dem jeweils gültigen Sitzverteilungsverfahren nachgerechnet und das Ergebnis mit dem jeweiligen amtlichen Endergebnis vergleichen. Dies ist in der allerersten Grafik dieses Essays für die Wahl von 2021 geschehen (zu sehen ist, dass das Ergebnis dem aktuellen Bundestag entspricht) und wurde für die Sitzverteilungsverfahren von 1956, 2013 und 2020 durch automatisierte Softwaretests mit verschiedenen Wahljahren überprüft.<SideNote>Da die Berechnungsverfahren viele subtile Feinheiten beinhalten, kann es dennoch sein, dass sich Fehler eingeschlichen haben. Für Hinweise bin ich dankbar.</SideNote> Für die Sitzverteilungsverfahren von 2011 und 2023 gibt es leider (noch) keine Daten um die Berechnung zu überprüfen.
+
+### Ergebnisse: „Was wäre wenn?“
 
 <figure>
   <Caption>
@@ -147,9 +154,11 @@ Tatsächlich interessant wird dieses aufwändige Nachrechnen von Wahlen allerdin
   <WahlSelectable />
 </figure>
 
-Wenn wir nun die Sitzverteilung für das Wahlergebnis der Bundestagswahl 2021 mit den Sitzverteilungsverfahren von 2020 und 2023 vergleichen, stellen wir fest, dass die Parlamentsgröße tatsächlich stark reduziert wird. Zusätzlich, und noch viel auffälliger stellen wir aber auch fest, dass sich die Machtverhältnisse zugunsten der Ampel-Koalition verschieben. Hat sie im aktuellen Parlament nur 56,5% der Sitze, so sind es mit dem neuen Verteilungsverfahren nunmehr 60%. Auch die CDU/CSU gewinnt (relativ) an Sitzen, während die Linkspartei nicht mehr im Parlament vertreten ist.
+Wenn wir nun die Sitzverteilung für das Wahlergebnis der Bundestagswahl 2021 mit den Sitzverteilungsverfahren von 2020 und 2023 vergleichen, stellen wir fest, dass die Parlamentsgröße tatsächlich stark reduziert wird. Zusätzlich - und noch viel auffälliger - stellen wir fest, dass die Linkspartei nicht mehr im Parlament vertreten ist und sich die Machtverhältnisse zugunsten der Ampel-Koalition verschieben. Hat sie im aktuellen Parlament nur 56,5% der Sitze, so sind es mit dem neuen Verteilungsverfahren nunmehr 60%. Auch die CDU/CSU gewinnt (relativ) an Sitzen.
 
-Doch welches Sitzverteilungsverfahren ist „besser“? Diese Frage lässt sich nur durch ein Werturteil beantworten. Das Grundgesetz und das Bundesverfassungsgericht geben hierzu Werte zur Orientierung an die Hand. Die Bundestagswahl ist eine personalisierte Verhältniswahl, die „den Grundcharakter einer Verhältniswahl trägt“.<SideNote>[BVerfG, Urteil des Zweiten Senats vom 03. Juli 2008](https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2008/07/cs20080703_2bvc000107.html)</SideNote> Die Sitzverteilung soll sich im Optimalfall nach dem Verhältnis der Zweitstimmen richten. Ein Urteil kann auf Basis der Abweichung von diesem Optimalfall gebildet werden, indem die einzelnen Wahlverfahren mit einer reinen Sitzverteilung nach Zweitstimmen (mit 5%-Hürde und Grundmandatsklausel) bei gleicher Parlamentsgröße verglichen und die Differenzen betrachtet werden:
+
+### Das beste Sitzverteilungsverfahren?
+Doch welches der Sitzverteilungsverfahren ist „besser“? Diese Frage lässt sich nur durch ein Werturteil beantworten. Das Grundgesetz und das Bundesverfassungsgericht geben hierzu Werte zur Orientierung an die Hand. Die Bundestagswahl ist eine personalisierte Verhältniswahl, die „den Grundcharakter einer Verhältniswahl trägt“.<SideNote>[BVerfG, Urteil des Zweiten Senats vom 03. Juli 2008](https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2008/07/cs20080703_2bvc000107.html)</SideNote> Die Sitzverteilung soll sich im Optimalfall nach dem Verhältnis der Zweitstimmen richten. Ein Urteil kann auf Basis der Abweichung von diesem Optimalfall gebildet werden, indem die einzelnen Wahlverfahren mit einer reinen Sitzverteilung nach Zweitstimmen (mit 5%-Hürde und Grundmandatsklausel) bei gleicher Parlamentsgröße verglichen und die Differenzen betrachtet werden:
 
 <figure>
   <Caption>
@@ -158,11 +167,15 @@ Doch welches Sitzverteilungsverfahren ist „besser“? Diese Frage lässt sich 
   <WahlDiffSelectable />
 </figure>
 
-Bei längerer Beschäftigung mit dieser Grafik fällt auf, dass CDU/CSU (und in geringerem Umfang auch die SPD) in vielen Jahren von den Sitzverteilungsverfahren von 1956, 2011 und 2020 profitieren. Die CDU/CSU war 2011, 2013, und 2020 an der Regierung beteiligt.
+Das Sitzverteilungsverfahren von 2013 produziert fast nie Abweichungen vom Zweitstimmenergebnis und ist so sehr nah an der grundgesetzlichen Maßgabe.
+
+### Wer profitiert, wer verliert?
+Bei längerer Beschäftigung mit *Abbildung 7* fällt auf, dass CDU/CSU (und in geringerem Umfang auch die SPD) in vielen Jahren von den Sitzverteilungsverfahren von SVV1956, SVV2011 und (deutlich weniger stark) SVV2020 profitieren. Die CDU/CSU war 2011, 2013, und 2020 an der Regierung beteiligt.
 Das Sitzverteilungsverfahren von 2023 rückt dieses Ungleichgewicht für viele vergangene Jahre gerade und bevorzugt FDP, Grüne, SPD und AfD für das Jahr 2021 bzw. in stärkerem Umfang in der Projektion, in der die CSU unter 5% der Zweitstimmen bekommt. Für die CDU ist die Wahlrechtsreform ein vergiftetes Geschenk, weil sie mit der CSU im Boot sitzt.
 2023 waren FDP, Grüne und die SPD an der Regierung.
+Es fällt außerdem auf, dass bei einigen Sitzzuteilungsverfahren teilweise Abweichungen von über 15 Sitzen (halbe Fraktionsstärke) auftreten.
 
-Noch klarer sind die Unterschiede der Sitzverteilungsverfahren im direkten Vergleich zu sehen:
+Noch klarer sind die Unterschiede der Sitzverteilungsverfahren im direkten Vergleich bei Betrachtung des Unterschiedes des prozentualen Anteils an Sitzen zu sehen:
 
 <figure>
   <Caption>
@@ -170,6 +183,8 @@ Noch klarer sind die Unterschiede der Sitzverteilungsverfahren im direkten Vergl
   </Caption>
   <AnteilVergleich />
 </figure>
+
+Auch hier ist zu sehen, was in *Abbildung 7* angeklungen ist. Die Hauptverlierer der Wahlrechtsreform 2023 sind die Linkspartei und die CSU, während SPD, Grüne, FDP und AfD profitieren.
 
 ## Fazit
 
