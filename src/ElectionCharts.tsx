@@ -418,7 +418,7 @@ export function ÜberhangMandateTotal() {
         axisId: DEFAULT_X_AXIS_KEY,
       }}
       leftAxis={{
-        label: 'Anzahl der Unausgeglichenen Überhangmandate Aller Parteien',
+        label: 'Summe der unausgeglichenen Überhangmandate aller Parteien',
         axisId: DEFAULT_Y_AXIS_KEY,
       }}
       xAxis={[
