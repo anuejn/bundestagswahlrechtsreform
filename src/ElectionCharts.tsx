@@ -18,6 +18,7 @@ import {
   ChartsAxis,
   ChartsAxisHighlight,
   ChartsTooltip,
+  ChartsGrid,
   DEFAULT_X_AXIS_KEY,
   DEFAULT_Y_AXIS_KEY,
   LineChart,
@@ -62,6 +63,7 @@ export function Wahl({ year, method }: { year: number | string; method: typeof e
   const data = partiesSorted(method(ctx)).map((party) => ({
     ...party,
     label: party.name,
+    id: party.name,
     value: Math.max(ctx.sitze * 0.01, party.sitze), // we do this so that small parties are still visible
   }));
 
@@ -160,6 +162,7 @@ export function WahlDiff({ year }: { year: number | string }) {
           (party) => (result[party.name]?.sitze || 0) - (nurZweitstimmen[party.name]?.sitze || 0)
         ),
         label: methodName,
+        id: methodName,
       };
     });
 
@@ -172,13 +175,14 @@ export function WahlDiff({ year }: { year: number | string }) {
         height={300}
         sx={{
           [`.${axisClasses.left} .${axisClasses.label}`]: {
-            transform: 'rotate(-90deg) translate(0px, -10px)',
+            transform: 'translate(-10px, 0px)',
           },
         }}
       >
         <BarPlot />
         <ChartsLegend />
         <ChartsTooltip />
+        <ChartsGrid vertical={true} horizontal={false} />
         <ChartsAxis
           bottomAxis={{ axisId: DEFAULT_X_AXIS_KEY, disableLine: true }}
           leftAxis={{ label: 'Differenz Sitzzahl', axisId: DEFAULT_Y_AXIS_KEY }}
@@ -225,6 +229,7 @@ export function ParlamentGröße() {
       type: 'line' as 'line',
       data,
       label: methodName,
+      id: methodName,
       curve: 'linear' as 'linear',
     };
   });
@@ -235,7 +240,7 @@ export function ParlamentGröße() {
         label: 'Jahr (PROJ = 2021 mit CSU unter Sperrklausel)',
         axisId: DEFAULT_X_AXIS_KEY,
       }}
-      leftAxis={{ label: 'Parlamentsgröße in Sitzen', axisId: DEFAULT_Y_AXIS_KEY }}
+      leftAxis={{ label: 'Parlamentsgröße in Sitzen' }}
       xAxis={[
         {
           data: electionsYears.map((y) => (y == 'PROJ CSU Sperrklausel' ? 2025 : y)),
@@ -253,7 +258,7 @@ export function ParlamentGröße() {
           strokeWidth: 2,
         },
         [`.${axisClasses.left} .${axisClasses.label}`]: {
-          transform: 'rotate(-90deg) translate(0px, -10px)',
+          transform: 'translate(-10px, 0px)',
         },
       }}
     />
@@ -278,6 +283,7 @@ export function ParteienZweitstimmen() {
     type: 'line' as 'line',
     data: results,
     label: partei,
+    id: partei,
     curve: 'linear' as 'linear',
     valueFormatter: (v: number) => `${v.toFixed(1)}%`,
     color: partyColors[partei as keyof typeof partyColors],
@@ -408,6 +414,7 @@ export function ÜberhangMandateTotal() {
     type: 'line' as 'line',
     data: results,
     label: method,
+    id: method,
     curve: 'linear' as 'linear',
   }));
 
@@ -473,6 +480,7 @@ export function AnteilVergleich() {
     type: 'line' as 'line',
     data: results,
     label: partei,
+    id: partei,
     curve: 'linear' as 'linear',
     color: partyColors[partei as keyof typeof partyColors],
     valueFormatter: (v: number) => `${v.toFixed(2)}%`,
@@ -507,7 +515,7 @@ export function AnteilVergleich() {
             strokeWidth: 2,
           },
           [`.${axisClasses.left} .${axisClasses.label}`]: {
-            transform: 'rotate(-90deg) translate(0px, -10px)',
+            transform: 'translate(-10px, 0px)',
           },
         }}
       />

@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 2332.4422084590565 702.9751887694238"
+   width="2332.4422084590565"
+   height="702.9751887694238"
+   id="svg109"
+   sodipodi:docname="svv2013.excalidraw.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview109"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="1.4453657"
+   inkscape:cx="1871.1527"
+   inkscape:cy="489.84143"
+   inkscape:window-width="2056"
+   inkscape:window-height="1257"
+   inkscape:window-x="0"
+   inkscape:window-y="44"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg109" />
+<!-- svg-source:excalidraw -->
+<!-- payload-type:application/vnd.excalidraw+json -->
+<!-- payload-version:2 -->
+<!-- payload-start -->
+eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29kZWQiOiJ4nO1dWVMjSZJ+r1+B1dia7THEhEd4XFxjtjaGKO7iplxuiu0xTECChE50cI31b9mX/Vxy+7Rv/cfWXVWglFIpJFBSSfeom1KVJDJDmeGff37/48Pc3MfOfTP6+Ne5j9HdWbFaPm9cdTAwMTVvP/6ZX7+JWu1yo05vqd6/241u66z3yVKn02z/9S9/qVx1MDAxNVuVqNOsXHUwMDE2z1wicVNud4vVdqd7Xm6Is0btL+VOVGv/jf/cKtai/2w2auedluifZD46L3dcdTAwMWGt7+eKqlEtqnfadPT/on/Pzf2j92dsda3orFOsX1aj3i/03uovXHUwMDEwlFx1MDAxZH51q1HvLVaht+CD909cdTAwMWYotz/R6TrROb17QUuO+u/wS1x1MDAxZsGcdFcu1/ZcdTAwMGU3d4qR29lU0Tps9896Ua5W9zv31d6q2lxy+jL999qdVqNcdTAwMTJcdTAwMWSWzzulx8tcdTAwMTZ7Pe23Wo3uZalcdTAwMWW1+dvD06uNZvGs3Lnn16R8evX7JfjrXFz/lTv6l3FKKEt/eiOtdVx1MDAxNp/e7f2+RaGtllaiXGbaQLBDXHUwMDBiW2xU6UbQwv5cdTAwMDRcdTAwMTH/11/aafGscknrq58/fabTKtbbzWKLblf/c7ePX9krXHUwMDAxIH1AOptzTpunj5Si8mWpQ59cdFI4XHUwMDEzjLbBamVU/8a0o949UZq+SEDTv3y8gubaeW93/L1/I1q0r9b4N+rdajV+NevnP67m4y7q7yP945Vf+1+RP780vP/ie3BgXHUwMDFmdqK7/veO7Zp6u727VdlrXHUwMDFl4fLRQeNoo1q/+nr38elzv/559GG///LxZ7zRes08NGirQXXztPawsDZ4lsfzXHUwMDE3W63G7aTHdWpr8/jkXHUwMDE2bk9aX8HVdmtbXHUwMDE3leNcdTAwMTlcdTAwMWP32+bZ9tLXq9LF8frXcvH2Yv9hYTGa7Lg//ta/jd3mefG7MIJcdTAwMDNcdTAwMWJos2pU2j29Xy3XK8P3uNo4q/Tl90NswVx03Fx1MDAxOLhfcciQIVxyMlx1MDAwMnqD6Fx1MDAxNE5cZlx1MDAxOaNvfq4hw0ojrFx1MDAwMnDeeO+VXG6DkOFROCRp9j7I4LzOXHUwMDEwMsBcYlx1MDAxZOihfbDoUfskZFx1MDAxODlcZlx1MDAxMuhcXFx1MDAwMCCgeD1IXGa8kUCDWW7U/qpcdTAwMWH1zn75oaef5MCry8VauXo/cFd7O5iu4kaxfl6mJczVyvRcdTAwMTOV252oPvdLfb9TrtFqP1x1MDAwZXx+oVq+5F3+8Yy+R9RcdTAwMWFcdTAwMTCATplU8NNcdTAwMDdq5fPzuFI9o0VcdTAwMTTL9ai1NokybLTKl+V6sXowbo2JXHUwMDE10pWKVlx1MDAxZu8tXGJlYpunXHUwMDFk8bt8h/VYuVx1MDAxZctcdTAwMDcsmuFXXHUwMDFmhdtJ0oA6rlx1MDAwM59cdTAwMTPu24fDq876ldmrL3Xgfm/jwl3sn85UuM+L7VI0W0KgjDDWSfBEXHUwMDA3XHUwMDFjKdtB6dZWqCDpSljlJe1kPbSyvnRfSH8m5culXHUwMDFigU6lXHUwMDAxrFxuoFx0a6AvL0/SXHJcdTAwMTiEV7RQ+lxiSGVjMvVIXHQkXHUwMDA2jTZvnODVyjArUpBcdTAwMTclXHUwMDFiVytDclxihN5cdTAwMDGJuE9OzJe79zs311uf9lx1MDAwYq2jw4eDyu7F8s7Re1x1MDAxMERnpKdvXHUwMDFhSFx1MDAwMOygIEorUPfUMHjp45Rj1oJcYlpcblx1MDAwZmRcdTAwMDfRinSQVo1g5rHXflxinvEqXHUwMDA0hTGS/tZqVntHT+rt1OxOqzF3WCxVKy1SXylatVx1MDAxYV10xujUTqOZplBcdTAwMDeWPaw9U049kbpcdTAwMDQ/VkK/I8QoXHUwMDEx1TD86pOIXHUwMDFhQNqy6CbXleMxK5dEXHUwMDE42WQ1UrmgjJHS6EFdqaRcdTAwMTZAW9ApYsFaXHUwMDFha4ZWNjsm7J2QZFx1MDAxMNtcdTAwMWVcdTAwMTRIuvYjVKUwmsx7Mk9opbTi0P/OPyRcdTAwMTaUQVx0ymNcdTAwMWZKZqgq1fOqMlx1MDAxM8Lc7lx1MDAxNFudQpnIZf1ycGE/PEff2epJYW1bL1xc7e40/dHGxX1lrdUtmZjKJNk/6/Iq56WQpH4ksSBj6O5cdTAwMDZcdTAwMDLh2Mcui81cdTAwMWVkXG7r0SplXHUwMDFjcVx1MDAwZrJNkt8+qp8/v6rxXHUwMDFjOrYqXlx1MDAxNHjaaC44rVx1MDAxNVx1MDAwNtv3nzytSlx1MDAwYlx1MDAxOYjXOURcdTAwMTXYhWKT9KVabHdcdTAwMTZcdTAwMWI14uB0+XdcdTAwMWHlemf4Mveu51x1MDAwMmNCKSom9lx1MDAwMH2r+HvD4NHkI1x1MDAwZdKi/t/m+uLV+8fT3//+55GfTt30/Ehu9/7hPsSfX2YlQCo7UYrYsZNTIF+js7ovy1V7vL6n9vXRXHUwMDEyXHUwMDE4jPbyjXyWLG9nrVckXHUwMDA3lsyBvmTy7+uAgjaiXHUwMDA2a4i+Q3ZcdTAwMGVcdTAwMDBcYiBIzYDTXHUwMDA0sNbaXHUwMDExsOdpoVx1MDAwMN5bUFJ5q2PX6Fx1MDAwN+pZklGNoPNlIDznNDw4Ltitm9W78LW59iB98WGxUL15XHUwMDAzJ9zY4y50z07Xb43c2JPy4Xa39HX/5CTM4Lhf6yfbXHUwMDFkVdJfdq+9qXxdWdh6WLt6X/ZMXGaPXHUwMDEziFx1MDAwMZLZgdKTQ8bou59vyDBKXHUwMDA0T1x1MDAxNlx1MDAwMcEyUVxmOeg1RDJ2lCZcdTAwMDMjXHUwMDE4XCJMJqh0v8KrQVx1MDAwM6xcYppcdTAwMWWojTSedPkk5lxm8TzUgXSnfD1MvFx1MDAxN7fhfjNqtSrVYpdMhYychM/ovmEzZ/SKMrVyiFx1MDAxMOvhl588gp44YHCxvf+c4I5H3nxcbm4wwqOXgbgjMdrQv7o9I8cq0vVcdTAwMDBopbZEudLdXHUwMDEwr5VboriOlDxcdTAwMThcdTAwMWZIXGaIVMNcYsFcdTAwMDXlXHUwMDA0Wlx1MDAxZFx1MDAxY3FhXHUwMDE5MGaRPcoxOvDaZKPtc27jTGFNXHUwMDAwaSNNXHUwMDA0XHUwMDBlnfLgbZ/gPVx1MDAxOVx1MDAxM044XHUwMDBldnliXUGzXHUwMDBiNvHdJ7Jwxlx1MDAwM8Cg3UXLoXUppSWiM0rrxKJQXHUwMDEw4YdAXHUwMDFjnFxinXnf5s38mFxyz4/EVu9cdTAwMWbwQ/x5asSzMVxyMVxmeIFuNFx1MDAxOVWTXHUwMDAz3nhKmEvAQ1x1MDAwMjynXGbZ70ibzfpBr1x1MDAwZWpPO19cdTAwMWFcdTAwMDI80Ojits/MmYrWQtFD04a2kshTnyD2mYqAQOJcdTAwMTnY8lx1MDAwZoZcZp0k4lx1MDAxOeeDMWZcdTAwMTbMJbeQNyylKe+8J/lPv/v8mE/e+CnlP81S0ZAq/qCA/59cIlx1MDAwMnpx2irsXHUwMDFmXHUwMDE0S/Lb9UG3XFxddU27+y3f4u9cdTAwMDCFguCQJFxcXHUwMDExXGZcZvJcdTAwMWRcdTAwMDJkgYqVXHUwMDFlITKZM1x1MDAxOUq/9MLQvUW6yaRcdTAwMDLibtlxdkov6CHjXHUwMDE4npGd8rTd3jbL582jOnpus1jnJbxtRGfEaWdh56RKvcbhV/vx1iCdZVx1MDAxMJpY7CsrpVt327WFi6OVysppo9k1d1x1MDAwZvlcdTAwMTZ70pLCXHUwMDA1IFVJl8KgXHUwMDFi9E/oYIVyzpHap1x1MDAxZOh9dmKvQYBcdTAwMGUk7qClN0G7iaKt4LRcdN55+/PcXHUwMDEzP1x1MDAwNNPHt2umgmn+5W0lMn6+WYji2Fxig08n4Vx1MDAxMMBJ6zROkf9QaVx1MDAxNO6u/Fxu7e7iw+3W51u13vmUb3nk7S8ssPljtDHWXHUwMDBmxVx1MDAxODx7JUhH8qbzXHUwMDEybHZcdTAwMTKprFx1MDAxM3TFjbeBgFCBXHUwMDFioYi9XHUwMDE2XtPmd2SlXHUwMDA1MKGPXHUwMDFlj+lcdTAwMTBcdTAwMWODIPzoU6f3XHUwMDEwZbg7rywuNNtXXG62XHUwMDBld05LZufwbGXjXHK89mOPu7K/tlx1MDAxOfnb6+votNvqLnw7eSjdXHUwMDFkzuC43Tu5c+tWVtql63lfPbSth8JVY1x1MDAwNsf9cn275y/O5m8vl83qXVS4vHf1xfdcdTAwMTW9cCZcdTAwMWSNyLAkhqqn8Fx0jN5VOUcjRWyc7H2ytqTTXHUwMDAxh5xcdTAwMDJgSFx1MDAwN1x1MDAwNKXBaFx1MDAxMvJgM0x6Vk5w9EJ5hU46OVwi5pmkXHUwMDA3gYCUc6RnkNnxboJcdTAwMTflzsNDt1x1MDAxM5Wr3fplmzbtRbHUyizZ+Vx1MDAxOVx1MDAwNZuIYzy3uGxcdTAwMTO3SJulk1x1MDAwYlJjylx1MDAxYjt5XHTDeJzPpTh74lx1MDAxNoBcdTAwMThcdTAwMDIzZmNd/yjfXXxcdTAwMWOM1Fxcu2CcXCLZzk6YtVx1MDAxMpwmYS2Z+PQ8Mlx1MDAxNinIXHUwMDFlUVx1MDAxZYhcXDjkerQk95eEz0HqTLjFa1x1MDAxY3xKI1x1MDAxOVKx1OvZxzSmiVx1MDAxZrCaslx1MDAxYcAojlZcdTAwMDWdXGZqQOLLTlx1MDAxNMS4wfrK/mUrija2bu7wc3H/bvs6pCxCSU2awlnP3uVcdTAwMTBwRPJcdTAwMTh9iMhcIu07XGZSXHUwMDE5kMlVvSc/ZvpcdTAwMWXvvTu8u/uH+1x1MDAxMH9+kVx1MDAxMVx1MDAwNaSq04DOg9RGSzk5zl2tmXt1XHUwMDFhYbRQuzu9Kp006rowW6dGXHUwMDA2SeRcdTAwMWGFtbydlNNcdTAwMTDMINBpXHUwMDBiglx1MDAwME56JM5cdTAwMDLSYjptUVx1MDAxNyFCfF01h3GW0NSzXHIlX1TMoVGHQDdtXHUwMDA2OeXvppbjd5D7pKVKk0Lgqlx1MDAwMtBuXG7rYf5WfdveX/7yrbBQabkjuJVcdTAwMGa6lnsx5OQnXHUwMDE3PDikLVx1MDAxZSsp74kh2Vx1MDAxNk5LXHUwMDAwTVJCP2OSKF4rhiR4XHUwMDFj3PCBM7DAXHUwMDA1XHUwMDFiknKYNFx1MDAxZpxcdTAwMDND4J19TCE/zsVcdTAwMDKtLGrfRuVOisWQkZNx1HkzdzaCi3nXhiRcdTAwMTRcdTAwMDHo+rtYueyzIf/G/Vx1MDAwNVx1MDAxZe7V1G29fnC8fdqCb7CSb3tcdTAwMDAkXHUwMDFh4dmbSFxmUXpjXHUwMDA2XHUwMDA1XHUwMDE0jFx1MDAxM0ZcdTAwMWEn0YNH5WWG2YlcdTAwMWVcdTAwMDQ7O1x0XHKslyF22Sf3NUIge4CJ92iDoK/5zvevm+tmsXJTOVnutu9cdTAwMGa2XHUwMDFh29dfXHUwMDFmXHUwMDE1SF59kpcnXHUwMDFiZ4d3ZmutsXmlXG5XctMubn362W1ccvTyl0ZklpbP5k/DQaN2V6jCRuF9aWlwLlx1MDAxNVx1MDAwNJRSXHUwMDFlddx7/Vx1MDAxY1xijL5LOVx1MDAwN1x1MDAwMZK9oI1cIrVItMTYoYpLh4Lug0fPXHUwMDE5b97K4ZXNMvRcdTAwMWbIZFxuQUrDxZ8mVmg3prFcdTAwMDFxKbZcdTAwMTbRj/byZSH2L9Tm7Fx1MDAxNzDSwlx1MDAxNFv6ddp8v1urRXPNVmPul/p3XHJbLdbPUzT7a32Bz+i/hC/waW2jVjaLhlx1MDAwN+mOQOtTu1x1MDAxZpHaR1KGYVxuZj5cdTAwMWVcXHMp8yTmXCJI4zm9mYRaXHUwMDBmtj9S3OmE+1x0OWU4ITDue5u53nfCuVx1MDAxMLhcclx1MDAxMyGMXHUwMDFiwculUErq4KzjzlxmfqBg5KmEs9cvwcI/05vHpDezK5DNTie199ZraUd4XHUwMDAyhVGB7znhMF1QrX3iy0/kXHUwMDFhXHUwMDFjXHUwMDBmXHUwMDA2g4tcdTAwMDJkS9hxnMZxXHUwMDBiXHUwMDFkTKxKXHRQRoKmXHUwMDE1WYlWjsi6fk+uwdRNz4/5XHUwMDEx+71/wFx1MDAwZvHnXHUwMDE3XHUwMDE5PSqe4zNcZn7ye4Rccia3er58XHQ7XHUwMDE3flx1MDAwNU6LVycrtav7avdL2edcdTAwMWL8yHZcdTAwMDDhOb9cdTAwMWYkmYBcdTAwMDCDhEd5T9uNcNGgXHUwMDBmqDDLmqxcdTAwMTlYPVx1MDAxYZQjOH/W6Gl9XT24P9ktl/dPa/dLla+LtrK5lnejR5XqJjR93X+52Fte3jDLh/Ornyc1Tk6uXHUwMDFjXHUwMDE2d+fr5Xldv+3eNLqFjeLpzzV6xlx1MDAxZfd3kDChjEtvjkE0Q5GdMbkxNfru51x1MDAxYlsskrLyJK9eXHUwMDAysot3XHUwMDAwWzQ4QbBcdTAwMDJkSVx1MDAxMdZ6lZ0t5aUgZUlcdTAwMWFcdTAwMDRcdTAwMWNr9DBcIvAwqtrTkNrx8a+ZNZi8l7yKzeJdudatZWQ7PaNFh22nxGIyzZswWqfmTSjUpJ2mcZOOR898XG61QimYXHUwMDE4XHUwMDExRXXc/G3QTcpccm9cdTAwMWOZ9excdTAwMWORZDtlZy0hmW3ScVx1MDAwN1xub5xH9CMqo5xcdTAwMTWEMkRfvPRAwjyiXHUwMDE0lCBcdTAwMDGdzKY1XFzOjaWJ7Vx1MDAxMrKVUFx1MDAwNq+40llcdTAwMTGOg8dYIdKjtaRcdTAwMDTnzXOUSCqQ9JT49lx1MDAxM1lL48V/YFV081xi1Vx1MDAwM5D9oDjLJGnCXHUwMDExe+X6fke3X5KB8c7TKJCEi+1CL9Fw0e1ANVhcdTAwMTCEPUE77blcdTAwMWaLXHUwMDA2++zRUlx1MDAwNYhcdTAwMWZcdNHpXHUwMDFm7kP8eWpcdTAwMDRFXHUwMDFic6FcZiEoZymAsmZyXHUwMDA0XHUwMDFkz2vziaCOr21gXHUwMDBmKP2VWMYgK9IotDFcdTAwMDBorPFcdTAwMWVhaF0zXHUwMDA00OBcdTAwMDT7N4h/XHUwMDEx2ph4nkzf4lwi0Wcod4pcdTAwMTaq0CS8TWRcdTAwMTZcdTAwMWHQv+u60tSMr1LnWq1cdTAwMTevWzv1g/Or48MvpY3r+VFAxVx1MDAxZVx1MDAxYlKXhIqgtSZcdTAwMWI7iZ0oeL2kMGnxYDy80NNcdTAwMDSX1UKxvlCvf97bPautqe17+DIyXHRNXG4yoOF7SId2olM22SrMseXvpKSlXHUwMDEz8qNO4vm7wk50hHbehEA3QVx1MDAwNjvQKYwuP0lcdTAwMDIg/Vx1MDAxMHdcdN49e7RU2eFHQmqmxM7xPivrU81KJSXXpJopKGhU3FxcefBcdTAwMWI3d1x1MDAwZlx1MDAwYqVcdTAwMWHi/dVKeftwplx1MDAwMDr7VFx1MDAxYZCgXHUwMDA1V+BcdTAwMTFcdTAwMTchKTc4mNLGVdNkelx1MDAwNk/IxL2E7JiGJMHBmXo5hlx1MDAwNmnJwnWkijmDcVTzce1cdTAwMWPpbPSE5paTXHUwMDA3XHUwMDEyXHRtTJXZw4Y/K6NtXGaGXHUwMDFhwLhdnlXU2Zr0wlNDplx1MDAwNnHJKUJQi1x1MDAwYl+OXG6VjbX9tfr++aeH/fW70+Zs201ksaO1XHUwMDE3nvAnXHUwMDEwsyPDSVx1MDAwZlacXHUwMDA3w1xm3GjSIcZoXHUwMDAzY6yqV25oMFJYbnLFqaJaT9hcdTAwMTmLXGIncofun9dP/82Tw3ZSgrVv1en3xYHiXHUwMDE3XHUwMDE2h0OQqd3rgIhccmGgmaJcdNZ48pRT3u6DXHUwMDAwXHUwMDBlvtlAUjjUvY4kl7tMOu6gS1xuwWfZvI6sQFx1MDAxMtFgSG94r/yIzJBR5V9cdTAwMWVcdTAwMTWxg6wl9ElcdTAwMDPNNlxi8cibciP/m2WWv85DsZTWXHUwMDE3LyPhXHUwMDFmeeJM20KkXHUwMDE3UCiFzst4UvCz9vrYXHUwMDFly7mUe21cdTAwMTTnXG6QRvS2N+9mUDdcdTAwMTMwXG4yXHUwMDFiPCeNalx1MDAwNzhOOc+gbaV232V+slx1MDAwZfyA0kvl4k3Yf4LcZziL4s3lfqnV7rTHXHUwMDBlzclI7keeOFONn55cdTAwMGJcblo6w1x0UZNXTtnlc7soN29b3Z0vl+c7plZbtzbvgk9cXDiQXHRvSfCIfKtBwUeFwkhcdTAwMDQk8aJtKLNre1x0ynIzbYJcdTAwMWbiXHUwMDFkXHUwMDBl5GSkPGjF5YP+p0/feDvhPOaiiZ9cIp2jz5ypeEJ6dlx1MDAwMWkhlM5O0U16/2b/8/Gn8vaGLpwvXHUwMDFlRFx1MDAxN3J1qVDJt3h6Z1x1MDAwNMdcdTAwMWZcdTAwMDG5XHUwMDExXHUwMDFiXGZNrXRBSCVcdTAwMWT90ENbzK43jGH9zz3awFx1MDAxYoPWT9atSUmLste0748jntzy4I1bqFxynTJLgVQ6Na5cdTAwMDWSm9XiNOOq7o931eby5cLpceto5axwXHUwMDE1fSsu5by9O1x0myCebJHMXHUwMDAy7kM2lEpcdTAwMTi8YG1J2lx1MDAxNLU0IW9cdTAwMDLpwHBkYFx1MDAxNmnT/5THPMijhlR55LBcck/kmdxubdyuRFx1MDAxNb1V2t7cPN7sfD3amKdtk29x9Iq9xkH6XHUwMDAwzlx1MDAxMD/tn7nHXuX3vF/wtlx1MDAxN8fKTlx1MDAxY13PXVx1MDAxNZRlpmwnJK/Aet3pN+hh+pw4hvhmzVZcdTAwMWN/XHUwMDA2cX3ZeNVXVVx1MDAxYY+ZpsA5sb2SjIlcdTAwMDVTby+XmotcdTAwMGK6vtpqut1Py0tYOsn5zDhvUFx1MDAwNENcdTAwMDTQO1x1MDAxZWo6lEFnXHUwMDAzXG5ir0iGntFcdTAwMTKz8yPPpKchXHUwMDEw9eb8KpdJXHUwMDA2SGa59Kc3tqCubPHqbu/qoX6J9Vx1MDAwMoTipLnpp9Bd7WxULqqVz+tcdTAwMTeb39aq89H8LOaty+bh4dqevDj3N7Igy8ftw0J5Z1x1MDAwNsd9RVPDXHUwMDFmf/vpufSgIN1cdTAwMTnlNSu5eGe750Bj9O3PN2g4ZHKNnlx1MDAxYlx1MDAwM2szZO46pVx1MDAwNVFqw4UzKGV2SWO91oN8Jos2cNrQqHlcdTAwMDQjjF0lXHQ9lPt5xu6Pnfq25Prtmlx1MDAwZj6jXHUwMDA289V8UEufSs17KXBcdTAwMTaniSWPx+NcXEpz8F6g5eI7MoVcdTAwMDfaOPcogFx1MDAwNoFBaaNR6iyHJ0o+jbSS5IKnXHUwMDFjoFx1MDAxOVFcdTAwMTljnOB0Y1x1MDAxMlx1MDAxZWkkYqw8+olcdTAwMDJonn/rTV5nxr5I5idMXHUwMDAyPYKbi9VP21x1MDAwNVe+2tqqXHUwMDE1V+C03KzHdGs8h15cdTAwMDZcdTAwMWVbToTPXHUwMDExkdLYv+lz/YrjQDhpiFJ5XHRcbumaJr79RHmg49FgaFWWSaBcInvQguY0jsSqjOChS1x1MDAxOFxm3X1PZtz7LjhO3/P8SOz2/uE+xJ+nJjC63+Ux6a7nXHUwMDAx71x1MDAxYfzkkDd+2+VcdTAwMTLyyNghXHUwMDAyo7ntR1A8p3hcdTAwMDDyjFx1MDAwYkRgpGchMVbqLPutSlpcdTAwMDdxKMVcdTAwMDFcdTAwMTJcdTAwMTd3wI9prKI5MdggZO6OyMjweI7Iv7mz47hcdTAwMWNVL1u//e9v/1x1MDAxZM3tXHUwMDE0W9VcIl+BX+r/ulDnzJb+IPto7t/n1L+9cTDvhWubRaOWdFx1MDAwMFGp8T7L3TKdnmImXHUwMDEz7Fx1MDAxZFxc7jSXXHUwMDFlroqdsFL7vPOl3Z7PeXTBXHUwMDE4I0xvXHUwMDA0XHJcdTAwMGZvlGEw59uB4dGywI1cciWG7GqJSUtcdTAwMTJQXHUwMDExfyNqppXUMKJPQVx1MDAxMj6UlCogXHUwMDAxzk/Fj1c4XHUwMDE4codcdTAwMWY/ZHGpXFy/bdDGav1ST2uf9Fx1MDAxNogx+WqybebkVWqSLjqyrKSfYoLT+O2SS5BwXG6ElahJ0ND6uL+hXHUwMDA3XHUwMDEySCDhLDfNMcYrlVx1MDAxZMlcdTAwMDBlXHUwMDA0XHSE5ImdzodRzdt6PVx0jFx1MDAwMW5v44JxMX741MyNPsBp/3mtrsvSsFx1MDAxYa+hXHUwMDA2TFx1MDAxOEVcXN1xXHUwMDE5jfeBQFx1MDAxOZNlwChcdTAwMTCV4lx1MDAwMYmSLDAjXHUwMDFkJr78bO0q7uREXHUwMDFizFx1MDAwNrKsiM0qtCGxKMfNsC17xTSPXHUwMDE2ke+7vi51x/NjPrnZ+8f7XHUwMDEwf55cdTAwMWHyuEViqmEl+YQyTEGMxvvKc4l5XHUwMDAwKojekFrLpVLBXHUwMDBmXHUwMDA2eolcdTAwMTdcbk67XHUwMDAw7qzvnMnON6xcdTAwMTVHej1381KuNyEniXo8K5xcdTAwMWJ5Id03i5iIJ5GR5Vx1MDAwMslq7uZYvFx1MDAwMeTtbkDtIThZPNm6Xtm+3De7X1v7KZAnXHUwMDAz135cdTAwMDB6I1x1MDAxNZfwJ9BcdTAwMDVIXHUwMDExXHUwMDFhXHUwMDEyNlCO4NFcdTAwMTJXfVx1MDAxOeSNn2ozXHUwMDA0eTKQRU3UnFx1MDAxYqFcdTAwMTBcdTAwMTFP1lx1MDAxNFtcdTAwMTG4h1wiXHUwMDFh5HR59O+7XHUwMDFmXHUwMDAzaVx1MDAxM6HomyhcdTAwMGJKoepnWPBjXrHfjEFcdTAwMGaB21x1MDAxYYTw7OFS5ef78YZEZ0pcdTAwMDRNMyxJaabhp+fbSHRq8sDa+C2cU/hEKTxRLemIXHUwMDE0SoODWd4kQIJHVtCBMFgvs6vuUNJcdCT45jFdaPSEXHUwMDE1XHUwMDFlvSpnwvafWuCRYYT57bNwOEMttVx1MDAxN++b5ci9rlx1MDAxYvBr8nOUXHUwMDFhM1x1MDAxYYxuhTXTIML4uUj5RFx1MDAwNGmkcKRYJTuI3dAgXHUwMDAw2pBkRKJcdTAwMDPuzqKszdDVNIs5XHUwMDAwpCm40bZcdTAwMWVcdTAwMWR57+vnRaO2Vlx1MDAwZmqVvZurUujMm/tPRCvy3lx1MDAxMnPzbnUjuljdPa53rufvqsWHtVx1MDAxYa6/49mkz4HhXHUwMDBihqm9iFx1MDAxM1x1MDAxMP9cdTAwMWXTutJwlbN3k1x1MDAxYlWjb1POMcBzzVx1MDAxNbuKbCBO4Fx1MDAwN6u9UaLwgc0tjp1cdTAwMTI9yC599mWDXHUwMDAwMHjszdB6M7F/+Vx1MDAxY1x1MDAwMNInb6nf33JcdTAwMGXAM9ovR3NcdTAwMDDGNMJWxlx1MDAxOeJhUzTCXHUwMDFlXHUwMDBmgflcdTAwMTR4su2FU0pzmSVr/UF5V0Gwb9FcdTAwMDMnZsiQYbGn1cJ6siZcdTAwMDNKXHUwMDEzwI/s7iBQXHUwMDEy7lx1MDAxOM+mJTqZzMlR3D9Og82dXHUwMDFi5VxyxoFOPImTR1x1MDAwMDCkWqckIHItROxTj1x1MDAwZVx1MDAwYqTLXHUwMDFi2EhcZkDrTua+zNaLXCJcdTAwMDXZctzfylx1MDAxOFx1MDAwN1IpsGrEmnqd5CS3nHJIezGxpvfkREnd7/yYT271/vE+xJ+n7+RrU1x1MDAxM3J8XGKAyk0x/3h8u/J8XHUwMDAynvFGgFx1MDAwZvRJZ8G7obmgqLzQXHUwMDBlXHUwMDAyslNPWuOzy0KkfS4kz7pg11x1MDAwN+egjVx1MDAxOHxiiG9cdTAwMDFnXHUwMDA38VxmWedDcuyJsciJyX9Iz/E08GKCNWiVsVx1MDAxMEaOXHUwMDFlXHUwMDBlJHGK4Id/PNdxvlxm8SZu48t+Y6Og5/KSbFrAyEksbOJ6XHUwMDFkuITMulx1MDAxMb2F31x1MDAxM+R5usbBWdImknNcdTAwMTCdj//2PFxudFxue1mZkrfOs80o0+Wnd7yE6EyJoOOLuUL6YFfF2t5Nk3Gwo26rxlx1MDAxZpyt3a3p689rJ4ul7ctSzmHUXHUwMDExUHKjSVxiykg15D22hjBcdTAwMTbp2pMgcalXhoVcdTAwMTmzqOYyytLO0ynzU/LqXHUwMDA1kua8dGF2d1xuZ2dcdTAwMTdcdTAwMWLbJVxyrdPTtUm9NXed1mdbrtyEy9PC2kojnG+oi73Bs7zIXHUwMDBitFs97y43uktcdTAwMTf7386X/FVjXHUwMDA1sb4/g+Oai1x1MDAwMlbVcTM6XHUwMDBmXHUwMDE1XFwsLO7dfr5Tk1x1MDAxZPdR2scrqlinzayKueIz1oapl/RcdTAwMTiCnKJcdTAwMDP46Lufc8xAL5D7a6JcdTAwMDHpUFxydkqwXHUwMDFlXHUwMDA15ydpkmXiw5C3ai5as1xuLsyi6ferirmm2qn9VeW/mOtcdTAwMTk1mK9iLtZ9adJMnC5wNt7khtR4OM6nNPNcdTAwMDBJYsvMTrVSWlxyXHUwMDE1c0nWumTMXHUwMDAzKEmMLzs7is5DXFyDXHIhLi1cdTAwMDc5op8/XHUwMDFhgdxQ2VpcIoT8sYRcdTAwMWTl6Vx1MDAwMNrF50rmxowyXsYyXbJIwDnYrFxcXHUwMDFkbnZcdTAwMTZcbvtFqU+vju92NtopniMwPE3KKp7DXHUwMDE4pFx1MDAxYzFcdTAwMGZFWEJUy2VTXFz2XCJfmoAzXHUwMDFlXGZcdTAwMDZcdTAwMTclnWSL3Vx1MDAwNa6w9FYnXHUwMDEzcIzgeKJ20jnDXHUwMDFlryQpe0+GVOqO50dyr/dcdTAwMGb3If48dXRMmtQsayXJwsKBis5nc2bG7rqcQp5SPZNcdTAwMWNAI1x1MDAxMsJcdTAwMGb6jowjW8RcInL2XHUwMDEw7TKX3sNcIpJcdTAwMWE0vMpZXHUwMDFlyI5BY52fuDFcIq0+KDWQxfBcdTAwMTNyZrIyPLrHXHUwMDA3XHUwMDBid4v1neOb+636ytfrhY2C2ninuTjHv/1PqVx1MDAxYWdSb1L9NXzSTOlcdTAwMTNdz/TCUOUt+7ynXHUwMDE4XHUwMDEzOd7szCeYWCtcdTAwMDW3V1aBvUleXHKG2rlcdTAwMWaOJz3KvXLIUspwXHUwMDAyrfE9tS45i517R47Iv6OF2lx1MDAxMLSRllx1MDAxNsw+lJht9lxiLr2SXHL0Oa2Gf5nRNCGBml8/vDtcZlx1MDAwYrJRWr22XHUwMDA3RyenPuyl+6E58E9cdTAwMDZCkFx1MDAxMM+rnOtcdTAwMTdtkO4m6oTIPk0tX1x1MDAxOHqbij9hYFx1MDAxN7RcdTAwMDHO5nUmJKdvXHUwMDA3XHUwMDExXHUwMDE0cStcdTAwMTVcZr3LMeN3zZ9Sd3zvt1x1MDAxM3t9RvzJp9OnwGNypuqTOX7L5Vx1MDAxM/CM4mEv0krPIWWNQ+5cdTAwMWZcdTAwMTdcdTAwMDRcdTAwMTmNXHUwMDA0+0QjXYben5e1lSZz31x1MDAxOVx1MDAxMtmf21L+XHUwMDE17tX8sZzfYdfq8UGjWL5asmRcdTAwMGI82Vx1MDAxM1NQnvFD73KJXHUwMDAwPC+CjFNcdTAwMGVcdTAwMDJyXHUwMDEz/aHcQlx1MDAwNYJRQSmiPFx1MDAxNjKcXHUwMDAwqTnlyXDcSkplQbpcdTAwMTHtf1x1MDAwMJzwXHUwMDFlneXwLOm+kFx1MDAwNFx1MDAwNFxiPLrQZ+MyyixqtLW7cnKztlx1MDAwMMXq5dlG+Oxtu3mLk1x1MDAxYVmvmGQz9riviO5kZVx1MDAxNI49bmH9XHUwMDEzMYPKXHLe7dV2v5xcXFU+rVeX3lc0Klx1MDAxNnxcdTAwMTnuXHUwMDEyzGM7NUzhvVx1MDAxZb2nclx1MDAwZUXWiIDITkwzMIWwh0XWicCOV550Kd3AXHUwMDAw2JnHorRwOnh69o7znCchI1x1MDAxNjzZXHUwMDA2mP1Yq/yEopZ/+7/W3FV03mtN04nKcz861aR5SV5cdTAwMWKMeka9XHUwMDBlU4pcdJaXcTgqPVx1MDAxYcVNuLScXCJcdTAwMWZlPFx1MDAxY+dTnsmIJfpgMKDiolPoy9GjN4XUPdncWnLyaIaxZS+FXHUwMDA3kmRviENYN2q8NNlcdTAwMTKCVspiLzknRSd7YIByIfDI8yzIRc7dKdO4LoxcdDJwtIluqlY6mdfXMzmD91x1MDAxMkEq9JgkVrNcdTAwMWQxzXl9XHUwMDFhib6awN2aTCxcdTAwMDPyaU1g6PYruv9IXHUwMDA2aEBn3rc7RVx1MDAxOaBcdTAwMWLBU6Rdz5NcdTAwMTlcdTAwMDbiUfM8PdJJZaxyksg0qGePlypCveMlpad/wFx1MDAwZvHn6YtB0lOjnVx1MDAwNznFXFyh8cQzp1xiXHUwMDFhQFjNXHUwMDBlZ2J/crhcdTAwMTKEXHUwMDAwXHUwMDE0uSaevSbBYXo9+GtjW8BQrSXPK1x1MDAwN8v1XHUwMDFjSfxcZkpYrkJcdTAwMDOOQmtcdTAwMTn3jf/gR9Jz7ecs+NG7i+ZPjFSSLrNxnvgt3Wzt9YgyXHUwMDEwsKI3ltlrxYgmk30rJlx1MDAwMs8pXHUwMDEyXGYsN2R1ynEvK6VHVIFcdTAwMDAtm6DEslx1MDAwMc/DpN55TvR86nbnR2KjT4l06VON0+tcXOnSerqsU3RlvVtYOv26ft3slFbbt4WlWlx1MDAxYo5cdTAwMWVW8lx1MDAwNnaGeFx1MDAwMF9Hw6atUbFe8T3fdPBcdTAwMWPiINXF1m9cIp+ZxENcdTAwMThQpI2IS1xmpFx1MDAxOM1cdTAwMWH9XHUwMDFjXG5uhEI7QqrAOTaTmIPcpIObtP6BhsZsReX63+b+XHUwMDAzUqy/jFx1MDAxY8fJs2Zq1Kn0XCJcdTAwMDOQqD1HXHUwMDEwJ/fSjHda5URMhzhcdFx1MDAxYStcdTAwMDKHXHUwMDFkuVx1MDAwZne8l3SPk3hFbzpcdTAwMDTnXHUwMDFjd+9cYlx1MDAxOVx1MDAwZVx1MDAxZudak0AmXHUwMDA2cENkjEeB+lZcdTAwMWSRYNLwoDhySH+4ZMt4TZaBJ8WWxyA5XHUwMDEy2GRZnzpcdTAwMDUvkUBcdTAwMTZbL8dQXCJcdTAwMTlcdTAwMTYjerNcdTAwMDfhvHdcXLZBWE1X/Fx1MDAxOatu8Gu8I3qQvu967yZ23Iz4gU1cclQp0oKIfpo2XHUwMDE4N1ZVq5Xt25PL9rdtu7pcdTAwMDaXh4s576eqyCZcdTAwMTdcdTAwMWE4OUeylVx1MDAxOVx1MDAwNsfOkLJcdTAwMTUqXHUwMDA0S4o6OC+1zq5ccoamdfDoXHUwMDFiMshcdTAwMDJImKxSgesnJE+H/ePwgfXi396WXG5cZpww04HH6cJcYk6S0iPzYHJhPFi4MvtcdTAwMTdcdTAwMGJ7W9+OqodLjctKV5/Vci6MXFyxrU3wyFx1MDAxZChcYu5cdTAwMDddu2hcdTAwMDNZjTzBlNs8u1xm48bO9bg5j3kly3lCWVx1MDAwNM1jX39mqOa7LOq3XHUwMDBi1Sy1LqPTern9tlx1MDAwMpk861RS+eGHXHUwMDBl/lhsNvc7dP2eqFxm3bDy+Y+L0F/Bx5tydFtI7qA/XfRcdTAwMWVcdTAwMWPx7Uk6i1TUI2y/fvj1/1x1MDAwMVx1MDAwM1Gl0iJ9<!-- payload-end -->
+<defs
+   id="defs1">
+  <style
+     class="style-fonts"
+     id="style1"></style>
+</defs>
+<rect
+   x="0"
+   y="0"
+   width="2332.4422084590565"
+   height="702.9751887694238"
+   fill="#ffffff"
+   id="rect1" />
+<mask
+   id="mask8" />
+<mask
+   id="mask14" />
+<mask
+   id="mask18" />
+<mask
+   id="mask26" />
+<mask
+   id="mask34" />
+<mask
+   id="mask40" />
+<mask
+   id="mask44" />
+<g
+   id="g119"
+   inkscape:label="14">
+  <g
+     transform="translate(1448.4149508387727 209.6711765232331) rotate(0 56.719947814941406 12.5)"
+     id="g47">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text46">Mindestzahl</text>
+  </g>
+</g>
+<g
+   stroke-linecap="round"
+   id="g44"
+   inkscape:label="7">
+  <g
+     transform="translate(1435.7016780610206 249.31457854034892) rotate(0 248.64626969582537 40.01930363776228)"
+     id="g41">
+    <path
+       d="M1.09 0.3 C75.63 1.13, 363.95 -8.88, 446.83 4.54 C529.71 17.96, 489.97 68.22, 498.38 80.81 M0.2 -0.59 C74.6 0.48, 362.76 -7.21, 445.76 6.03 C528.75 19.28, 489.56 66.34, 498.18 78.88"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path40" />
+  </g>
+  <g
+     transform="translate(1435.7016780610206 249.31457854034892) rotate(0 248.64626969582537 40.01930363776228)"
+     id="g42">
+    <path
+       d="M488.77 50.39 C491.65 57.45, 493.5 67.22, 498.18 78.88 M488.77 50.39 C491.48 60.94, 496.6 70.99, 498.18 78.88"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path41" />
+  </g>
+  <g
+     transform="translate(1435.7016780610206 249.31457854034892) rotate(0 248.64626969582537 40.01930363776228)"
+     id="g43">
+    <path
+       d="M509.28 51 C506.73 58.08, 503.14 67.69, 498.18 78.88 M509.28 51 C504.52 61.35, 502.16 71.17, 498.18 78.88"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path42" />
+  </g>
+</g>
+<g
+   id="g110"
+   inkscape:label="1"
+   style="display:inline">
+  <g
+     stroke-linecap="round"
+     transform="translate(231.56817,79.322524)"
+     id="g1">
+    <path
+       d="m 22.69,0 c 81.66,-1.87 162.35,0.03 236.73,0 M 22.69,0 c 92.18,0.04 185.62,-0.54 236.73,0 m 0,0 c 13.64,0.17 22.94,6.8 22.69,22.69 M 259.42,0 c 17.31,0.97 23.81,8.22 22.69,22.69 m 0,0 c -0.86,10.73 -0.23,22.96 0,45.38 m 0,-45.38 c 0.15,15.46 -0.49,29.65 0,45.38 m 0,0 c 0.77,14.59 -7.08,21.5 -22.69,22.69 m 22.69,-22.69 c -0.01,17.43 -5.29,24.2 -22.69,22.69 m 0,0 c -69.4,0.78 -139.56,0.55 -236.73,0 m 236.73,0 c -54.39,2.32 -109.97,2.08 -236.73,0 m 0,0 C 7.1,92.67 0.08,82.1 0,68.07 M 22.69,90.76 C 8.76,91.85 -1.12,83.49 0,68.07 m 0,0 C -0.65,56.46 -0.12,41.76 0,22.69 M 0,68.07 C -0.13,50.69 -0.16,34.69 0,22.69 m 0,0 C -1.94,8.75 7.12,-1.18 22.69,0 M 0,22.69 C -1.09,5.67 7.38,-0.92 22.69,0"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path1" />
+  </g>
+  <g
+     transform="translate(264.92362,99.702293)"
+     id="g2">
+    <text
+       x="107.7"
+       y="0"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text1">Kandidat mit meisten </text>
+    <text
+       x="107.7"
+       y="25"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text2">Stimmen</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     transform="translate(184.86946,51.2495)"
+     id="g3">
+    <path
+       d="m 32,0 c 75.33,2.54 153.02,2.33 352.23,0 m 0,0 c 22.72,1.44 32.35,10.57 32,32 m 0,0 c 0.73,16.47 1.02,35.32 0,85.83 m 0,0 c 0.5,19.55 -10.45,32.16 -32,32 m 0,0 c -117.86,-1.32 -235.55,-3.35 -352.23,0 m 0,0 c -21.47,-0.29 -31.51,-8.98 -32,-32 m 0,0 C -0.7,99.5 1.43,82.24 0,32 m 0,0 C 0.32,11.23 11.06,-0.45 32,0"
+       stroke="#f08c00"
+       stroke-width="2.5"
+       fill="none"
+       stroke-dasharray="8, 10"
+       id="path2" />
+  </g>
+  <g
+     transform="translate(184.87753,21.395676)"
+     id="g4">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#f08c00"
+       text-anchor="start"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text3">Pro Wahlkreis</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g8">
+    <g
+       transform="translate(141.45272,118.13664)"
+       id="g5">
+      <path
+         d="m -0.34,0.08 c 14.57,0.16 73.32,1.15 88.02,1.48 m -86,-2.49 c 14.44,0.32 71.09,3.89 85.4,4.04"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path4" />
+    </g>
+    <g
+       transform="translate(141.45272,118.13664)"
+       id="g6">
+      <path
+         d="M 58.51,12.24 C 67.85,10.46 77.02,7.82 87.08,3.11 M 58.51,12.24 C 68.95,8.08 78.26,5.69 87.08,3.11"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path5" />
+    </g>
+    <g
+       transform="translate(141.45272,118.13664)"
+       id="g7">
+      <path
+         d="M 59.32,-8.27 C 68.51,-3.4 77.41,0.6 87.08,3.11 M 59.32,-8.27 C 69.37,-5.4 78.4,-0.76 87.08,3.11"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path6" />
+    </g>
+  </g>
+  <g
+     stroke-linecap="round"
+     transform="translate(705.11332,72.465169)"
+     id="g29">
+    <path
+       d="M 20.96,0 C 47.1,0.73 78.78,-0.34 160.61,0 M 20.96,0 c 43.72,-0.7 88.58,-1.64 139.65,0 m 0,0 c 14.51,1.53 20.28,7.78 20.96,20.96 M 160.61,0 c 14.6,-0.31 22.6,9.12 20.96,20.96 m 0,0 c -2.1,10.67 -0.06,26.29 0,41.92 m 0,-41.92 c 0.81,9.48 0.8,18.6 0,41.92 m 0,0 c -1.74,13.93 -6.18,22.11 -20.96,20.96 m 20.96,-20.96 c -0.8,15.41 -5.92,23.19 -20.96,20.96 m 0,0 c -38.02,-1.5 -75.31,-1.42 -139.65,0 m 139.65,0 c -51.27,0.34 -103.29,1.13 -139.65,0 m 0,0 C 6.25,83.18 -2,77.97 0,62.88 M 20.96,83.84 C 6.83,84.69 1.38,75.54 0,62.88 m 0,0 C 0.03,51.12 -0.41,41.48 0,20.96 M 0,62.88 C 0.42,49.58 -1.01,36.37 0,20.96 m 0,0 C -0.78,8.52 6.45,0.77 20.96,0 M 0,20.96 C -0.69,7.91 6.77,2.21 20.96,0"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path28" />
+  </g>
+  <g
+     transform="translate(741.23772,89.383313)"
+     id="g30">
+    <text
+       x="54.65995"
+       y="0"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text29">Summe pro </text>
+    <text
+       x="54.65995"
+       y="25"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text30">Bundesland</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g34">
+    <g
+       transform="translate(515.20832,120.65399)"
+       id="g31">
+      <path
+         d="M -1.03,0.32 C 29.95,0.24 155.45,0.12 186.93,0.1 M 0.63,-0.55 c 31.26,-0.52 157.48,-1.08 188.56,-1.31"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path30" />
+    </g>
+    <g
+       transform="translate(515.20832,120.65399)"
+       id="g32">
+      <path
+         d="M 161.06,8.57 C 172.42,3.36 183.29,0.81 189.19,-1.86 M 161.06,8.57 c 8.84,-4.18 19.5,-6.2 28.13,-10.43"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path31" />
+    </g>
+    <g
+       transform="translate(515.20832,120.65399)"
+       id="g33">
+      <path
+         d="m 160.94,-11.95 c 11.51,2.72 22.42,8.11 28.25,10.09 m -28.25,-10.09 c 8.73,2.73 19.43,7.62 28.25,10.09"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path32" />
+    </g>
+  </g>
+  <g
+     stroke-linecap="round"
+     transform="translate(1251.1843,203.08946)"
+     id="g35">
+    <path
+       d="m 20.96,0 c 47.67,-1.62 99.52,-0.5 139.65,0 M 20.96,0 c 50.91,0.55 102.56,0.18 139.65,0 m 0,0 c 14.28,0.03 22.91,5.88 20.96,20.96 M 160.61,0 c 11.9,0.08 18.9,8.17 20.96,20.96 m 0,0 c 1.51,10.74 1.31,18.42 0,41.92 m 0,-41.92 c -0.32,11.54 -0.88,21.95 0,41.92 m 0,0 c 1.89,15.83 -6.41,20.42 -20.96,20.96 m 20.96,-20.96 c -1.86,14.26 -7.98,19.95 -20.96,20.96 m 0,0 c -39.16,0.18 -77.83,-1.49 -139.65,0 m 139.65,0 c -37.33,-0.09 -73.94,-0.77 -139.65,0 m 0,0 C 7.46,84.27 -1.35,77.15 0,62.88 M 20.96,83.84 C 5.06,83.51 1.48,76.56 0,62.88 m 0,0 C 1.88,52.46 1.93,36.44 0,20.96 M 0,62.88 C -0.25,50.76 0.97,37.56 0,20.96 m 0,0 C -0.59,8.55 6.11,-1.27 20.96,0 M 0,20.96 C 0.44,6.43 4.87,-0.08 20.96,0"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path34" />
+  </g>
+  <g
+     transform="translate(1301.4853,232.5076)"
+     id="g36">
+    <text
+       x="40.483334"
+       y="0"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text35">Maximum</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g40">
+    <g
+       transform="translate(899.63534,118.6656)"
+       id="g37">
+      <path
+         d="m 0.99,-0.54 c 67.29,1.42 327.08,-2.66 402.77,9.99 75.7,12.65 42.88,54.77 51.4,65.93 M 0.06,1.79 c 67.14,1.52 327.19,-3.3 402.92,9.1 75.73,12.41 42.79,54.2 51.46,65.31"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path36" />
+    </g>
+    <g
+       transform="translate(899.63534,118.6656)"
+       id="g38">
+      <path
+         d="m 443.13,48.42 c 2.78,8.95 6.85,17.07 11.31,27.78 M 443.13,48.42 c 2.89,6.6 4.33,12.78 11.31,27.78"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path37" />
+    </g>
+    <g
+       transform="translate(899.63534,118.6656)"
+       id="g39">
+      <path
+         d="m 463.63,47.65 c -3.49,9.35 -5.7,17.71 -9.19,28.55 m 9.19,-28.55 c -1.65,6.79 -4.76,13.14 -9.19,28.55"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path38" />
+    </g>
+  </g>
+  <g
+     stroke-linecap="round"
+     transform="translate(673.19117,48.602449)"
+     id="g45">
+    <path
+       d="m 32,0 c 195.24,0 391.56,-1.21 842.19,0 m 0,0 c 22.65,0.64 30.94,11.29 32,32 m 0,0 c -0.64,114.09 -0.73,224.63 0,313.44 m 0,0 c -0.56,20.39 -11.09,30.2 -32,32 m 0,0 c -274.25,1.79 -547.81,0.86 -842.19,0 m 0,0 C 12.25,376.19 1.4,367.09 0,345.44 m 0,0 C 1.04,250.1 -0.53,154.94 0,32 m 0,0 C 1,9.39 10.17,-1.86 32,0"
+       stroke="#1971c2"
+       stroke-width="2.5"
+       fill="none"
+       stroke-dasharray="8, 10"
+       id="path44" />
+  </g>
+  <g
+     transform="translate(698.15174,10)"
+     id="g46">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#1971c2"
+       text-anchor="start"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text45">Pro Bundesland</text>
+  </g>
+  <g
+     transform="translate(11.388218,105.1703)"
+     id="g48">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text47">Erststimmen</text>
+  </g>
+  <g
+     transform="translate(534.46626,93.980166)"
+     id="g50">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text49">Sitze</text>
+  </g>
+</g>
+<g
+   id="g111"
+   inkscape:label="2">
+  <g
+     stroke-linecap="round"
+     transform="translate(275.0692679103645 309.83878048608085) rotate(0 95.68908691683316 42.85594306014315)"
+     id="g9">
+    <path
+       d="M21.43 0 C72.24 -0.75, 122.92 0.34, 169.95 0 M21.43 0 C68.14 0.84, 116.68 1.45, 169.95 0 M169.95 0 C184.82 1.5, 189.45 8.96, 191.38 21.43 M169.95 0 C186.22 -0.36, 189.55 8.57, 191.38 21.43 M191.38 21.43 C190.47 32.37, 190.09 42.43, 191.38 64.28 M191.38 21.43 C190.68 30.39, 191.34 40.2, 191.38 64.28 M191.38 64.28 C190.23 77.37, 185.1 85.53, 169.95 85.71 M191.38 64.28 C192.65 80.67, 182.95 84.14, 169.95 85.71 M169.95 85.71 C126.74 86.75, 86.18 84.06, 21.43 85.71 M169.95 85.71 C123.45 84.29, 78.44 85.37, 21.43 85.71 M21.43 85.71 C8.52 83.96, 1.86 77.92, 0 64.28 M21.43 85.71 C9.2 86.98, 0.18 80.57, 0 64.28 M0 64.28 C-1.87 52.71, 0.09 37.8, 0 21.43 M0 64.28 C0.97 53.28, 0.41 42.74, 0 21.43 M0 21.43 C1.02 8.41, 8.44 1.58, 21.43 0 M0 21.43 C-0.99 5.63, 7.69 -0.02, 21.43 0"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path8" />
+  </g>
+  <g
+     transform="translate(312.2916876519047 340.19472354622405) rotate(0 58.46666717529297 12.5)"
+     id="g10">
+    <text
+       x="58.46666717529297"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text9">Sperrklausel</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g14">
+    <g
+       transform="translate(355.1505428996933 177.83061001100225) rotate(0 -0.03683079467123207 63.73198913547165)"
+       id="g11">
+      <path
+         d="M0.54 0.05 C0.41 21.53, -0.99 106.69, -1.06 127.97 M-0.63 -0.96 C-0.37 20.23, 1.12 104.43, 1.14 126.11"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path10" />
+    </g>
+    <g
+       transform="translate(355.1505428996933 177.83061001100225) rotate(0 -0.03683079467123207 63.73198913547165)"
+       id="g12">
+      <path
+         d="M-9.41 98.03 C-6.62 104.1, -2.95 113.83, 1.14 126.11 M-9.41 98.03 C-6.3 106.51, -2.3 114.94, 1.14 126.11"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path11" />
+    </g>
+    <g
+       transform="translate(355.1505428996933 177.83061001100225) rotate(0 -0.03683079467123207 63.73198913547165)"
+       id="g13">
+      <path
+         d="M11.11 97.82 C8.23 104.04, 6.22 113.83, 1.14 126.11 M11.11 97.82 C7.66 106.51, 5.1 115.01, 1.14 126.11"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path12" />
+    </g>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g18">
+    <g
+       transform="translate(155.02829031573208 353.7000099879349) rotate(0 66.61111961304948 -1.0980398939975942)"
+       id="g15">
+      <path
+         d="M-1.07 0.01 C20.96 -0.65, 110.33 -2.56, 132.56 -3.11 M0.57 -1.03 C22.96 -1.65, 112.56 -1.8, 134.92 -2.06"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path14" />
+    </g>
+    <g
+       transform="translate(155.02829031573208 353.7000099879349) rotate(0 66.61111961304948 -1.0980398939975942)"
+       id="g16">
+      <path
+         d="M106.79 8.38 C116.08 4.05, 123.88 0.14, 134.92 -2.06 M106.79 8.38 C113.21 6.67, 118.07 4.42, 134.92 -2.06"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path15" />
+    </g>
+    <g
+       transform="translate(155.02829031573208 353.7000099879349) rotate(0 66.61111961304948 -1.0980398939975942)"
+       id="g17">
+      <path
+         d="M106.66 -12.14 C116.14 -9.65, 123.99 -6.74, 134.92 -2.06 M106.66 -12.14 C112.98 -9.61, 117.87 -7.63, 134.92 -2.06"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path16" />
+    </g>
+  </g>
+  <g
+     transform="translate(373.52218848572227 281.38610322135753) rotate(0 54.28997039794922 12.5)"
+     id="g19">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text18">3 Mandate</text>
+  </g>
+  <g
+     transform="translate(238.09433921801167 311.23721866835353) rotate(0 15.569992065429688 12.5)"
+     id="g20">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text19">5%</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g26">
+    <g
+       transform="translate(467.4474417440308 350.1932476317063) rotate(0 116.15828347908297 1.172640643870949)"
+       id="g23">
+      <path
+         d="M-0.08 0.73 C38.72 1.01, 193.66 1.13, 232.23 1.48 M-1.57 0.06 C37.1 0.5, 192.03 2.45, 231.24 2.57"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path22" />
+    </g>
+    <g
+       transform="translate(467.4474417440308 350.1932476317063) rotate(0 116.15828347908297 1.172640643870949)"
+       id="g24">
+      <path
+         d="M202.96 12.59 C211.42 9.9, 216.01 5.81, 231.24 2.57 M202.96 12.59 C213.5 8.97, 221.8 5.92, 231.24 2.57"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path23" />
+    </g>
+    <g
+       transform="translate(467.4474417440308 350.1932476317063) rotate(0 116.15828347908297 1.172640643870949)"
+       id="g25">
+      <path
+         d="M203.13 -7.93 C211.51 -5.37, 216.05 -4.21, 231.24 2.57 M203.13 -7.93 C213.45 -4.53, 221.69 -0.55, 231.24 2.57"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path24" />
+    </g>
+  </g>
+  <g
+     stroke-linecap="round"
+     transform="translate(193.96533015665887 276.6835487335713) rotate(0 208.28812090360537 74.91333956551318)"
+     id="g27">
+    <path
+       d="M32 0 C125.11 -0.61, 215.26 -0.62, 384.58 0 M384.58 0 C406.04 -0.08, 416.28 12.66, 416.58 32 M416.58 32 C418.05 52.25, 416.16 67.85, 416.58 117.83 M416.58 117.83 C416.99 137.59, 405.02 148.28, 384.58 149.83 M384.58 149.83 C296.51 150.83, 209.61 151.9, 32 149.83 M32 149.83 C9.49 150.41, 1.01 138.41, 0 117.83 M0 117.83 C0.98 88.85, -0.85 60.83, 0 32 M0 32 C-0.66 10.33, 8.73 1.57, 32 0"
+       stroke="#2f9e44"
+       stroke-width="2.5"
+       fill="none"
+       stroke-dasharray="8 10"
+       id="path26" />
+  </g>
+  <g
+     transform="translate(192.29042563173255 243.68957739080656) rotate(0 53.609947204589844 12.5)"
+     id="g28">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#2f9e44"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text27">Bundesweit</text>
+  </g>
+  <g
+     transform="translate(10 339.4636114483352) rotate(0 63.43993377685547 12.5)"
+     id="g49">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text48">Zweitstimmen</text>
+  </g>
+  <g
+     transform="translate(362.1600861322504 213.00092011752452) rotate(0 25.109970092773438 12.5)"
+     id="g51">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text50">Sitze</text>
+  </g>
+  <g
+     transform="translate(484.351533059334 316.8412826670045) rotate(0 36.71996307373047 12.5)"
+     id="g52">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text51">Stimmen</text>
+  </g>
+</g>
+<mask
+   id="mask58" />
+<g
+   transform="translate(214.86470406697288 630.9485859549568) rotate(0 80.79994201660156 25)"
+   id="g61"
+   inkscape:label="5">
+  <text
+     x="0"
+     y="0"
+     font-family="Virgil, Segoe UI Emoji"
+     font-size="20px"
+     fill="#1e1e1e"
+     text-anchor="start"
+     style="white-space: pre;"
+     direction="ltr"
+     dominant-baseline="text-before-edge"
+     id="text60">Anzahl Einwohner</text>
+  <text
+     x="0"
+     y="25"
+     font-family="Virgil, Segoe UI Emoji"
+     font-size="20px"
+     fill="#1e1e1e"
+     text-anchor="start"
+     style="white-space: pre;"
+     direction="ltr"
+     dominant-baseline="text-before-edge"
+     id="text61">pro Bundesland</text>
+</g>
+<mask
+   id="mask65" />
+<mask
+   id="mask69" />
+<g
+   id="g113"
+   inkscape:label="4">
+  <g
+     stroke-linecap="round"
+     transform="translate(514.2545126213175 609.1389011275078) rotate(0 133.58529349536082 41.918143820957994)"
+     id="g53">
+    <path
+       d="M20.96 0 C101.13 2.68, 185.77 2.6, 246.21 0 M20.96 0 C90.31 0.04, 159.66 -1.34, 246.21 0 M246.21 0 C259.39 0.29, 265.52 6.61, 267.17 20.96 M246.21 0 C262.09 1.2, 268.01 5.26, 267.17 20.96 M267.17 20.96 C265.99 30.93, 265.5 40.35, 267.17 62.88 M267.17 20.96 C267.34 37.23, 266.9 51.37, 267.17 62.88 M267.17 62.88 C265.45 74.89, 260.48 85.17, 246.21 83.84 M267.17 62.88 C267.71 78.36, 258.02 84.89, 246.21 83.84 M246.21 83.84 C156.96 82.51, 71.2 81.01, 20.96 83.84 M246.21 83.84 C164.64 84.93, 81.74 86.4, 20.96 83.84 M20.96 83.84 C8.63 85.08, 0.13 78.19, 0 62.88 M20.96 83.84 C7.96 84.1, 0.77 79.09, 0 62.88 M0 62.88 C-1.08 51.35, -0.8 39.37, 0 20.96 M0 62.88 C-0.5 54.55, -0.53 44.91, 0 20.96 M0 20.96 C1.92 7.17, 7.32 -0.73, 20.96 0 M0 20.96 C-0.31 7.13, 7.51 0.01, 20.96 0"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path52" />
+  </g>
+  <g
+     transform="translate(534.1599278818152 638.5570449484658) rotate(0 113.67987823486328 12.5)"
+     id="g54">
+    <text
+       x="113.67987823486328"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text53">Sitzzuteilungsverfahren</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g58">
+    <g
+       transform="translate(647.7640351891986 546.4518173780808) rotate(0 0.24603011912927286 28.52291710252217)"
+       id="g55">
+      <path
+         d="M-1.11 0.42 C-1.14 10.08, 0.09 48.77, 0.29 58.05 M0.52 -0.41 C0.26 8.92, -0.53 46.9, -0.76 56.46"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path54" />
+    </g>
+    <g
+       transform="translate(647.7640351891986 546.4518173780808) rotate(0 0.24603011912927286 28.52291710252217)"
+       id="g56">
+      <path
+         d="M-9.91 29.44 C-6.07 38.41, -1.97 47.3, -0.76 56.46 M-9.91 29.44 C-8.81 35.24, -5.13 41.94, -0.76 56.46"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path55" />
+    </g>
+    <g
+       transform="translate(647.7640351891986 546.4518173780808) rotate(0 0.24603011912927286 28.52291710252217)"
+       id="g57">
+      <path
+         d="M9.59 29.88 C6.78 38.52, 4.22 47.26, -0.76 56.46 M9.59 29.88 C6.37 35.61, 5.72 42.22, -0.76 56.46"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path56" />
+    </g>
+  </g>
+  <g
+     transform="translate(533.1557884756464 494.5502648900683) rotate(0 115.42991638183588 25)"
+     id="g59">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text58">Zielgröße Parlament</text>
+    <text
+       x="0"
+       y="25"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text59">(Anzahl Wahlkreise * 2)</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g65">
+    <g
+       transform="translate(380.9068069302915 660.9359246302873) rotate(0 62.88552320894655 -0.4832755198897871)"
+       id="g62">
+      <path
+         d="M-1.09 0.03 C19.88 -0.4, 105.66 -1.77, 126.96 -2.02 M0.55 -1 C21.36 -1.37, 105.65 -1.13, 126.63 -1.03"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path61" />
+    </g>
+    <g
+       transform="translate(380.9068069302915 660.9359246302873) rotate(0 62.88552320894655 -0.4832755198897871)"
+       id="g63">
+      <path
+         d="M98.41 9.14 C109.57 7.35, 118.94 2.88, 126.63 -1.03 M98.41 9.14 C104.96 6.91, 113.78 3.96, 126.63 -1.03"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path62" />
+    </g>
+    <g
+       transform="translate(380.9068069302915 660.9359246302873) rotate(0 62.88552320894655 -0.4832755198897871)"
+       id="g64">
+      <path
+         d="M98.47 -11.38 C109.72 -5.06, 119.06 -1.4, 126.63 -1.03 M98.47 -11.38 C105.14 -8.31, 113.94 -5.95, 126.63 -1.03"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path63" />
+    </g>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g69">
+    <g
+       transform="translate(788.5292801694619 654.3739758732399) rotate(0 161.71938996353697 -131.3893209982245)"
+       id="g66">
+      <path
+         d="M-0.33 -0.44 C49.65 -4.92, 246.68 17.62, 300.6 -25.91 C354.52 -69.44, 319.44 -222.03, 323.18 -261.63 M1.69 -1.72 C52.01 -6.1, 249.55 19.1, 302.98 -24.51 C356.41 -68.12, 318.94 -223.65, 322.27 -263.37"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path65" />
+    </g>
+    <g
+       transform="translate(788.5292801694619 654.3739758732399) rotate(0 161.71938996353697 -131.3893209982245)"
+       id="g67">
+      <path
+         d="M334.57 -236.01 C329.23 -246.87, 325.14 -256, 322.27 -263.37 M334.57 -236.01 C329.33 -246.76, 325.02 -257.94, 322.27 -263.37"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path66" />
+    </g>
+    <g
+       transform="translate(788.5292801694619 654.3739758732399) rotate(0 161.71938996353697 -131.3893209982245)"
+       id="g68">
+      <path
+         d="M314.1 -234.51 C316.05 -245.85, 319.26 -255.51, 322.27 -263.37 M314.1 -234.51 C316.97 -245.72, 320.75 -257.5, 322.27 -263.37"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path67" />
+    </g>
+  </g>
+  <g
+     transform="translate(800.1890514415182 627.5835740241456) rotate(0 103.74990844726562 12.5)"
+     id="g70">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text69">Sitze pro Bundesland</text>
+  </g>
+</g>
+<g
+   id="g112"
+   inkscape:label="3">
+  <g
+     stroke-linecap="round"
+     transform="translate(967.9186024190325 300.8005516912665) rotate(0 133.58529349536082 41.918143820957994)"
+     id="g21">
+    <path
+       d="M20.96 0 C68.94 3.1, 118.76 1.11, 246.21 0 M20.96 0 C99.61 -0.19, 178.11 0.04, 246.21 0 M246.21 0 C259.84 -1.07, 266.8 5.54, 267.17 20.96 M246.21 0 C260.08 0.5, 265.6 6.74, 267.17 20.96 M267.17 20.96 C268.22 37.64, 269.16 54.3, 267.17 62.88 M267.17 20.96 C268.04 35.11, 266.8 50.9, 267.17 62.88 M267.17 62.88 C267.68 74.89, 259.62 83.83, 246.21 83.84 M267.17 62.88 C264.99 77.69, 258.26 85.71, 246.21 83.84 M246.21 83.84 C175.67 85.87, 106.77 85.59, 20.96 83.84 M246.21 83.84 C162.78 84.85, 79.23 84.16, 20.96 83.84 M20.96 83.84 C7.24 82.45, 1.53 78.85, 0 62.88 M20.96 83.84 C4.91 85.08, 0.57 75.32, 0 62.88 M0 62.88 C-0.34 52.25, -1.14 40.68, 0 20.96 M0 62.88 C0.78 53.28, 1.06 42.4, 0 20.96 M0 20.96 C0.33 7.85, 6.05 -0.08, 20.96 0 M0 20.96 C1.52 6.66, 5.31 -0.25, 20.96 0"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path20" />
+  </g>
+  <g
+     transform="translate(987.837231790858 330.2186955122245) rotate(0 113.66666412353516 12.5)"
+     id="g22">
+    <text
+       x="113.66666412353516"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text21">Sitzzuteilungsverfahren</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     transform="translate(710.0526502512217 302.934179858731) rotate(0 90.78435058404864 41.918143820957994)"
+     id="g71">
+    <path
+       d="M20.96 0 C70.14 -0.17, 118.68 1.58, 160.61 0 M20.96 0 C59.43 -0.21, 97.99 1.15, 160.61 0 M160.61 0 C175.12 1.09, 182.86 7.38, 181.57 20.96 M160.61 0 C176.43 0.62, 180.11 8.09, 181.57 20.96 M181.57 20.96 C180.6 35.03, 183.25 51.13, 181.57 62.88 M181.57 20.96 C181.59 36.02, 182.15 48.48, 181.57 62.88 M181.57 62.88 C180.92 75.35, 175.54 83.17, 160.61 83.84 M181.57 62.88 C181.95 78.89, 174.21 84.97, 160.61 83.84 M160.61 83.84 C130.62 83.71, 102.73 85.47, 20.96 83.84 M160.61 83.84 C111.4 84.14, 63.03 83.61, 20.96 83.84 M20.96 83.84 C5.04 83.27, 1.18 78.56, 0 62.88 M20.96 83.84 C7.11 83.94, -0.17 78.73, 0 62.88 M0 62.88 C0.62 48.66, -1.86 38.31, 0 20.96 M0 62.88 C-1.17 48.95, 0.09 32.94, 0 20.96 M0 20.96 C-0.69 6.52, 8.72 1.23, 20.96 0 M0 20.96 C-1.82 7.76, 5.95 1.03, 20.96 0"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path70" />
+  </g>
+  <g
+     transform="translate(746.1770505789226 319.852323679689) rotate(0 54.659950256347656 25)"
+     id="g72">
+    <text
+       x="54.659950256347656"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text71">Summe pro </text>
+    <text
+       x="54.659950256347656"
+       y="25"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text72">Bundesland</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g76">
+    <g
+       transform="translate(898.0248425602387 344.86284577567386) rotate(0 31.841214702959405 -1.2035279070623517)"
+       id="g73">
+      <path
+         d="M-1 0.07 C9.98 -0.36, 54.01 -2.27, 64.74 -2.64 M0.68 -0.94 C11.69 -1.18, 54.06 -1.27, 64.35 -1.22"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path72" />
+    </g>
+    <g
+       transform="translate(898.0248425602387 344.86284577567386) rotate(0 31.841214702959405 -1.2035279070623517)"
+       id="g74">
+      <path
+         d="M36.15 9.03 C42.09 8.91, 47.4 4.5, 64.35 -1.22 M36.15 9.03 C44.35 6.12, 54.45 3.23, 64.35 -1.22"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path73" />
+    </g>
+    <g
+       transform="translate(898.0248425602387 344.86284577567386) rotate(0 31.841214702959405 -1.2035279070623517)"
+       id="g75">
+      <path
+         d="M36.16 -11.49 C42.08 -7.38, 47.39 -7.56, 64.35 -1.22 M36.16 -11.49 C44.35 -7.76, 54.45 -3.99, 64.35 -1.22"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path74" />
+    </g>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g80">
+    <g
+       transform="translate(1244.4915446453388 343.3314050675307) rotate(0 51.021424084066894 -27.40900478348948)"
+       id="g77">
+      <path
+         d="M-0.57 -1.09 C14.36 -1.48, 72.8 5.65, 89.81 -3.39 C106.82 -12.42, 99.36 -46.6, 101.5 -55.31 M1.33 0.95 C16.12 0.35, 72.5 4.26, 89.02 -4.94 C105.54 -14.14, 98.09 -45.91, 100.45 -54.25"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path76" />
+    </g>
+    <g
+       transform="translate(1244.4915446453388 343.3314050675307) rotate(0 51.021424084066894 -27.40900478348948)"
+       id="g78">
+      <path
+         d="M108.57 -29.61 C104.41 -36.91, 105.47 -46.11, 100.45 -54.25 M108.57 -29.61 C106.89 -36.22, 104.22 -43.18, 100.45 -54.25"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path77" />
+    </g>
+    <g
+       transform="translate(1244.4915446453388 343.3314050675307) rotate(0 51.021424084066894 -27.40900478348948)"
+       id="g79">
+      <path
+         d="M90.83 -30.16 C92.26 -37.19, 98.93 -46.22, 100.45 -54.25 M90.83 -30.16 C93.75 -36.5, 95.67 -43.32, 100.45 -54.25"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path78" />
+    </g>
+  </g>
+</g>
+<mask
+   id="mask76" />
+<mask
+   id="mask80" />
+<mask
+   id="mask86" />
+<g
+   id="g115"
+   inkscape:label="12">
+  <g
+     stroke-linecap="round"
+     id="g86">
+    <g
+       transform="translate(1514.5382833156964 518.7965650947355) rotate(0 1.9070078203435514 22.716428340020343)"
+       id="g83">
+      <path
+         d="M-0.33 0.11 C0.22 7.71, 3.11 38.41, 3.73 45.95 M0.51 -0.31 C0.94 7.11, 2.59 37.55, 3.25 45.25"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path82" />
+    </g>
+    <g
+       transform="translate(1514.5382833156964 518.7965650947355) rotate(0 1.9070078203435514 22.716428340020343)"
+       id="g84">
+      <path
+         d="M-5.98 24.4 C-2.19 32.2, 2.05 39.53, 3.25 45.25 M-5.98 24.4 C-3.32 30.64, -0.61 36.12, 3.25 45.25"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path83" />
+    </g>
+    <g
+       transform="translate(1514.5382833156964 518.7965650947355) rotate(0 1.9070078203435514 22.716428340020343)"
+       id="g85">
+      <path
+         d="M9.58 23.34 C7.45 31.5, 5.77 39.24, 3.25 45.25 M9.58 23.34 C7.9 29.82, 6.25 35.59, 3.25 45.25"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path84" />
+    </g>
+  </g>
+  <g
+     transform="translate(1481.8900552275068 492.12390013988215) rotate(0 31.97997283935547 12.5)"
+     id="g87">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#e03131"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text86">Zähler</text>
+  </g>
+</g>
+<g
+   id="g114"
+   inkscape:label="11">
+  <g
+     stroke-linecap="round"
+     transform="translate(1387.8163631337088 570.099558852318) rotate(0 133.58529349536082 41.918143820957994)"
+     id="g81">
+    <path
+       d="M20.96 0 C107.56 1.6, 196.23 -0.8, 246.21 0 M20.96 0 C92.47 -1.98, 165.56 -2.44, 246.21 0 M246.21 0 C260.39 1.52, 267.87 7.13, 267.17 20.96 M246.21 0 C261.06 1.53, 266.27 4.91, 267.17 20.96 M267.17 20.96 C266.03 32.67, 267.48 46.04, 267.17 62.88 M267.17 20.96 C266.35 30.33, 267.43 39.96, 267.17 62.88 M267.17 62.88 C265.18 75.79, 258.29 85.07, 246.21 83.84 M267.17 62.88 C266.41 74.95, 261.71 84.63, 246.21 83.84 M246.21 83.84 C191.98 83.14, 134.85 83.43, 20.96 83.84 M246.21 83.84 C186.46 83.42, 127.35 82.97, 20.96 83.84 M20.96 83.84 C8.74 84.42, 0.41 77.22, 0 62.88 M20.96 83.84 C5.85 85.38, 1.47 76.79, 0 62.88 M0 62.88 C2.22 51.55, 0.5 39.16, 0 20.96 M0 62.88 C1.17 51.9, 0.06 40.59, 0 20.96 M0 20.96 C-1.89 8.86, 6.01 1.35, 20.96 0 M0 20.96 C-0.3 5.51, 6.15 1.42, 20.96 0"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path80" />
+  </g>
+  <g
+     transform="translate(1407.7217783942065 599.517702673276) rotate(0 113.67987823486328 12.5)"
+     id="g82">
+    <text
+       x="113.67987823486328"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text81">Sitzzuteilungsverfahren</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g91">
+    <g
+       transform="translate(1319.8797730737465 609.8259377587272) rotate(0 29.007853552010374 0.28496753288595755)"
+       id="g88">
+      <path
+         d="M1.09 -0.03 C10.93 -0.1, 49.02 -0.29, 58.55 -0.06 M0.2 -1.1 C9.97 -1.05, 48.3 1.06, 57.89 1.15"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path87" />
+    </g>
+    <g
+       transform="translate(1319.8797730737465 609.8259377587272) rotate(0 29.007853552010374 0.28496753288595755)"
+       id="g89">
+      <path
+         d="M30.3 10.12 C37.37 8.45, 43.53 5.73, 57.89 1.15 M30.3 10.12 C40.05 6.54, 50.67 2.97, 57.89 1.15"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path88" />
+    </g>
+    <g
+       transform="translate(1319.8797730737465 609.8259377587272) rotate(0 29.007853552010374 0.28496753288595755)"
+       id="g90">
+      <path
+         d="M30.99 -9.71 C37.94 -6.24, 43.92 -3.81, 57.89 1.15 M30.99 -9.71 C40.38 -6.03, 50.75 -2.33, 57.89 1.15"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path89" />
+    </g>
+  </g>
+</g>
+<mask
+   id="mask91" />
+<g
+   transform="translate(1188.1430520786985 594.5624997091759) rotate(0 63.43993377685547 12.5)"
+   id="g92"
+   inkscape:label="10">
+  <text
+     x="0"
+     y="0"
+     font-family="Virgil, Segoe UI Emoji"
+     font-size="20px"
+     fill="#1e1e1e"
+     text-anchor="start"
+     style="white-space: pre;"
+     direction="ltr"
+     dominant-baseline="text-before-edge"
+     id="text91">Zweitstimmen</text>
+</g>
+<g
+   id="g116"
+   inkscape:label="14">
+  <g
+     stroke-linecap="round"
+     transform="translate(1767.7374201359535 336.48288671207894) rotate(0 169.37962500130539 58.94238265546048)"
+     id="g93">
+    <path
+       d="M29.47 0 C98.22 0.04, 168.85 -0.94, 309.29 0 M29.47 0 C135.34 -0.41, 242.33 0.04, 309.29 0 M309.29 0 C329.45 -1.36, 338.78 10.32, 338.76 29.47 M309.29 0 C327.33 1.63, 337.7 8.11, 338.76 29.47 M338.76 29.47 C340.28 53.53, 339.47 76.35, 338.76 88.41 M338.76 29.47 C339.22 49.32, 339.56 69.19, 338.76 88.41 M338.76 88.41 C338.75 107.2, 330.54 116.05, 309.29 117.88 M338.76 88.41 C338.59 108.65, 327.04 118.56, 309.29 117.88 M309.29 117.88 C224.48 117.42, 141.97 116.54, 29.47 117.88 M309.29 117.88 C238.16 116.16, 167.37 116.23, 29.47 117.88 M29.47 117.88 C10.73 118.25, -0.42 106.44, 0 88.41 M29.47 117.88 C11.78 115.68, -1.17 107.98, 0 88.41 M0 88.41 C1.24 71.2, 0.25 54.2, 0 29.47 M0 88.41 C-0.42 66.01, 0.23 43.7, 0 29.47 M0 29.47 C1.94 11.55, 11.19 0.94, 29.47 0 M0 29.47 C0.11 8.14, 11.15 2.06, 29.47 0"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path92" />
+  </g>
+  <g
+     transform="translate(1825.2471,386.92527)"
+     id="g94">
+    <text
+       x="111.86991"
+       y="0"
+       font-family="Virgil, 'Segoe UI Emoji'"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="middle"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text93">Für jede Partei größer</text>
+  </g>
+</g>
+<g
+   id="g120"
+   inkscape:label="30"
+   transform="translate(0,8)">
+  <path
+     style="fill:none;fill-opacity:0.42;stroke:#000000;stroke-width:3.77953;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:280.479;stroke-opacity:1"
+     d="m 1808.5389,389.5208 258.758,-0.69187"
+     id="path119"
+     sodipodi:nodetypes="cc" />
+</g>
+<g
+   stroke-linecap="round"
+   id="g98"
+   inkscape:label="13">
+  <g
+     transform="translate(1663.8279381654552 609.460365283214) rotate(0 140.40884925588387 -69.77486990320966)"
+     id="g95">
+    <path
+       d="M0.55 -0.06 C42.57 -1.64, 204.28 13.47, 251.05 -9.95 C297.83 -33.38, 276.15 -118.92, 281.23 -140.6 M-0.62 -1.14 C41.34 -2.54, 203.22 14.26, 250.11 -8.86 C296.99 -31.97, 275.35 -118.11, 280.68 -139.83"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path94" />
+  </g>
+  <g
+     transform="translate(1663.8279381654552 609.460365283214) rotate(0 140.40884925588387 -69.77486990320966)"
+     id="g96">
+    <path
+       d="M290.86 -111.61 C288.71 -117.56, 285.26 -122.86, 280.68 -139.83 M290.86 -111.61 C289.41 -118.6, 285.54 -124.51, 280.68 -139.83"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path95" />
+  </g>
+  <g
+     transform="translate(1663.8279381654552 609.460365283214) rotate(0 140.40884925588387 -69.77486990320966)"
+     id="g97">
+    <path
+       d="M270.34 -111.67 C272.55 -117.7, 273.45 -122.99, 280.68 -139.83 M270.34 -111.67 C273.26 -118.57, 273.75 -124.46, 280.68 -139.83"
+       stroke="#1e1e1e"
+       stroke-width="2"
+       fill="none"
+       id="path96" />
+  </g>
+</g>
+<mask
+   id="mask98" />
+<mask
+   id="mask102" />
+<g
+   id="g117"
+   inkscape:label="15">
+  <g
+     stroke-linecap="round"
+     id="g102">
+    <g
+       transform="translate(1750.9371818145387 409.4199107304396) rotate(0 -97.26545665805725 46.346425664815115)"
+       id="g99">
+      <path
+         d="M0.77 -0.96 C-31.69 14.29, -161.29 77.06, -193.78 92.53 M-0.28 1.15 C-32.92 17.11, -161.93 78.72, -194.34 93.99"
+         stroke="#e03131"
+         stroke-width="2"
+         fill="none"
+         id="path98" />
+    </g>
+    <g
+       transform="translate(1750.9371818145387 409.4199107304396) rotate(0 -97.26545665805725 46.346425664815115)"
+       id="g100">
+      <path
+         d="M-173.28 72.62 C-182.74 82.17, -189.46 89.68, -194.34 93.99 M-173.28 72.62 C-179.06 77.57, -183.57 82.32, -194.34 93.99"
+         stroke="#e03131"
+         stroke-width="2"
+         fill="none"
+         id="path99" />
+    </g>
+    <g
+       transform="translate(1750.9371818145387 409.4199107304396) rotate(0 -97.26545665805725 46.346425664815115)"
+       id="g101">
+      <path
+         d="M-164.47 91.16 C-177.46 93.68, -187.55 94.1, -194.34 93.99 M-164.47 91.16 C-172.28 91.86, -178.82 92.32, -194.34 93.99"
+         stroke="#e03131"
+         stroke-width="2"
+         fill="none"
+         id="path100" />
+    </g>
+  </g>
+  <g
+     transform="translate(1649.2313770114883 453.4715813841751) rotate(334.9014282827245 37.38997650146473 12.5)"
+     id="g103">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#e03131"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text102">Nein? +1</text>
+  </g>
+</g>
+<mask
+   id="mask107" />
+<g
+   id="g118"
+   inkscape:label="20">
+  <g
+     stroke-linecap="round"
+     id="g107">
+    <g
+       transform="translate(2116.2853963788057 397.94688174673576) rotate(0 51.04746555307338 0.5284556032860337)"
+       id="g104">
+      <path
+         d="M-1.06 -1.19 C15.75 -0.92, 84.16 0.21, 101.47 0.6 M0.59 0.79 C17.74 1.32, 86.89 1.6, 103.86 1.9"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path103" />
+    </g>
+    <g
+       transform="translate(2116.2853963788057 397.94688174673576) rotate(0 51.04746555307338 0.5284556032860337)"
+       id="g105">
+      <path
+         d="M75.56 11.87 C83.59 7.58, 94.74 6.26, 103.86 1.9 M75.56 11.87 C84.21 8.69, 94.03 6.26, 103.86 1.9"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path104" />
+    </g>
+    <g
+       transform="translate(2116.2853963788057 397.94688174673576) rotate(0 51.04746555307338 0.5284556032860337)"
+       id="g106">
+      <path
+         d="M75.77 -8.65 C83.54 -5.74, 94.63 0.14, 103.86 1.9 M75.77 -8.65 C84.32 -5.49, 94.07 -1.57, 103.86 1.9"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path105" />
+    </g>
+  </g>
+  <g
+     transform="translate(2134.620175981533 369.2591439722682) rotate(0 17.66999053955078 12.5)"
+     id="g108">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text107">Ja?</text>
+  </g>
+  <g
+     transform="translate(2244.662285973705 384.60247668313895) rotate(0 38.88996124267578 12.5)"
+     id="g109">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text108">Ergebnis</text>
+  </g>
+</g>
+<rect
+   style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:280.479;stroke-opacity:1"
+   id="rect122"
+   width="299.57816"
+   height="70.570374"
+   x="1789.8584"
+   y="362.53799"
+   inkscape:label="31" />
+<g
+   transform="translate(1804.5672,421.03624)"
+   id="g94-4"
+   inkscape:label="32">
+  <text
+     x="141.62016"
+     y="-50.506252"
+     font-family="Virgil, 'Segoe UI Emoji'"
+     font-size="20px"
+     fill="#1e1e1e"
+     text-anchor="middle"
+     style="white-space:pre"
+     direction="ltr"
+     dominant-baseline="text-before-edge"
+     id="text93-5"><tspan
+       sodipodi:role="line"
+       id="tspan119"
+       x="141.62016"
+       y="-50.506252">Für jede Partei max. 3 </tspan><tspan
+       sodipodi:role="line"
+       id="tspan120"
+       x="141.62016"
+       y="-24.569744">Überhangmandate</tspan></text>
+</g>
+</svg>

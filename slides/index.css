@@ -1,0 +1,28 @@
+.caption {
+    font-size: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    --r-heading-font: 'Aleo';
+}
+
+.b {
+    font-weight: bold;
+}
+
+.remark {
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.MuiPaper-root {
+    background: white !important;
+}
+
+.notes {
+    white-space: pre-wrap;
+}
+
+.reveal img, .reveal svg {
+    margin: 0;
+}
