@@ -17,13 +17,15 @@ export function Presentation({ }) {
   return (<>
 
     <section>
-    <section>
+      <section>
         <h3>Wer sind die Gewinner der Bundestagswahlrechtsreform?</h3>
       </section>
+      {/*
       <section>
         <img src="./xkcd-356.png" className="r-stretch" />
         <Remark>CC BY-NC 2.5 - https://xkcd.com/356</Remark>
       </section>
+      */}
     </section>
 
     <section>
@@ -319,7 +321,7 @@ export function Reform2023() {
 
     <section>
       <img src="./montagslächeln.png" alt="" />
-      <Remark>Quelle: blog.campact.de / montagslächeln / Kostas Koufogiorgos, Toonpool </Remark>
+      <Remark>blog.campact.de / montagslächeln / Kostas Koufogiorgos, Toonpool </Remark>
     </section>
 
     <section>
@@ -336,8 +338,8 @@ export function Reform2023() {
       <section>
         <h3>Selbst nachrechnen!</h3>
         <div className="r-stack">
-          <img src="./code.png" className="fragment r-stretch" />
-          <img src="./tests.png" className="fragment r-stretch" />
+          <img src="./code.png" className="fragmenth" />
+          <img src="./tests.png" className="fragment" />
         </div>
 
       </section>
@@ -382,7 +384,7 @@ export function Reform2023() {
 
 
       <section>
-        <h3>Sind Wahlrechtsreformen die deutsche Form des Gerrymanderings?</h3>
+        <h3>Sind Wahlrechtsreformen<br /> die deutsche Form des Gerrymanderings?</h3>
       </section>
 
 
@@ -424,37 +426,37 @@ export function Sitzzuteilungsverfahren({ }) {
       <section data-auto-animate>
         <pre data-id="code-animation"><code className="python" data-trim data-line-numbers="1-7|1|2|3|4-6|1-7">{`
           def d_hondt(votes: ArrayLike, seats: int):
-              assigned_seats = np.zeros_like(votes)
-              while sum(assigned_seats) < seats:
-                  scores = votes / (assigned_seats + 1)
-                  to_increment = scores.index(max(scores))
-                  assigned_seats[to_increment] += 1
-              return assigned_seats
+            assigned_seats = np.zeros_like(votes)
+            while sum(assigned_seats) < seats:
+                scores = votes / (assigned_seats + 1)
+                to_increment = np.argmax(scores)
+                assigned_seats[to_increment] += 1
+            return assigned_seats
         `}</code></pre>
       </section>
 
       <section data-auto-animate>
         <pre data-id="code-animation"><code className="python" data-trim data-line-numbers>{`
           def sainte_laguë(votes: ArrayLike, seats: int):
-              assigned_seats = np.zeros_like(votes)
-              while sum(assigned_seats) < seats:
-                  scores = votes / (2 * assigned_seats + 1)
-                  to_increment = scores.index(max(scores))
-                  assigned_seats[to_increment] += 1
-              return assigned_seats
+            assigned_seats = np.zeros_like(votes)
+            while sum(assigned_seats) < seats:
+                scores = votes / (2 * assigned_seats + 1)
+                to_increment = np.argmax(scores)
+                assigned_seats[to_increment] += 1
+            return assigned_seats
         `}</code></pre>
       </section>
 
       <section data-auto-animate>
         <pre data-id="code-animation"><code className="python" data-trim data-line-numbers="1-7|2|3|5-7|1-8">{`
           def hare_nimeyer(votes: ArrayLike, seats: int):
-              assigned_seats = np.floor((votes * seats) / sum(votes))
-              rest = (votes * seats) / sum(votes) - assigned_seats
-              while sum(assigned_seats) < seats:
-                  to_increment = rest.index(max(rest))
-                  rest[to_increment] = 0
-                  assigned_seats[to_increment] += 1
-              return assigned_seats
+            assigned_seats = np.floor((votes * seats) / sum(votes))
+            rest = (votes * seats) / sum(votes) - assigned_seats
+            while sum(assigned_seats) < seats:
+                to_increment = np.argmax(rest)
+                rest[to_increment] = 0
+                assigned_seats[to_increment] += 1
+            return assigned_seats
         `}</code></pre>
       </section>
     </section>
