@@ -53,7 +53,7 @@ export function Presentation({ }) {
     <Alternativen />
 
     <section>
-      <h3>Fazit</h3>
+      <h3>Wahlrecht is Politisch!</h3>
 
       <aside className="notes">
         * Eingangsfrage<br />
@@ -83,26 +83,17 @@ export function WarumUndWie() {
         und <span className="fragment b">geheimer </span>Wahl gewählt
       </blockquote>
 
-    </section>
-
-
-    <section>
-      <h3 className="r-fit-text">Wer darf wählen?</h3>
-
       <aside className="notes">
+        * Wer darf wählen?<br />
         * Herabsetzung der Altersgrenze für das aktive Wahlrecht
         auf 18 Jahre 1972 <br />
         * Aufhebung verschiedener Gründe für den
         Wahlrechtsausschluss (z.B. für Personen, die im Gefängnis sitzen).<br />
-        Immer noch dürfen
-        viele Einwohner:innen Deutschlands nicht wählen z.B. wegen prekären Aufenthaltsverhältnissen. <br />
-        * 83 237 124 Einwohner <br />
-        * Alter 13,9 Mio <br />
-        * 8,1 wegen anderen Gründen <br />
-        * 61,18 Mio durften 2021 Wählen <br />
-        * 14,32 Mio wollten nicht <br />
-        * 46,86 Haben gewählt <br />
       </aside>
+    </section>
+
+    <section>
+      <h3>Nach der Wahl:  <br />Sitzverteilung</h3>
     </section>
   </section>
 }
@@ -114,6 +105,10 @@ export function History() {
     </section>
     <section>
       <h3 className="r-fit-text">1949</h3>
+      <aside className="notes">
+        * 1. Bundestag wird gewählt <br />
+        * Nur eine stimme <br />
+      </aside>
     </section>
     <section >
       <h3 className="r-fit-text">1953</h3>
@@ -157,8 +152,8 @@ export function History() {
       <SvgAnimation src="./svv1956.excalidraw.svg" from={12} />
 
       <aside className="notes">
-        * Was sind überhangmandate!!<br />
         * Was ist grundmandatsklausel!!<br />
+        * Was sind überhangmandate!!<br />
       </aside>
     </section>
 
@@ -224,6 +219,10 @@ export function History() {
     </section>
 
     <section>
+      <h3 className="r-fit-text">Warum?</h3> {/* schlechte grafikreihenfolge */}
+    </section>
+
+    <section>
       <ÜberhangMandate />
 
       <aside className="notes">
@@ -237,6 +236,11 @@ export function History() {
     </section>
 
     <section>
+      <ParteienZweitstimmen />
+    </section>
+
+
+    <section>
       <h3 className="r-fit-text">2013</h3>
     </section>
 
@@ -246,6 +250,7 @@ export function History() {
         hat länger gehalten: 2013 + 2017
       </aside>
     </section>
+
 
 
     <section>
@@ -266,16 +271,6 @@ export function History() {
         Das Sitzverteilungsverfahren „SVVZweitstimmen“ ist ein imaginäres Verfahren, welches immer die Zielgröße des Bundestages (doppelte Anzahl Wahlkreise) proportional nach Zweitstimmen aufteilt.
       </aside>
     </section>
-
-
-    <section>
-      <h3 className="r-fit-text">Warum?</h3> {/* schlechte grafikreihenfolge */}
-    </section>
-
-    <section>
-      <ParteienZweitstimmen />
-    </section>
-
 
     <section>
       <h3 className="r-fit-text">2020</h3>
@@ -320,7 +315,7 @@ export function Reform2023() {
     </section>
 
     <section>
-      <img src="./montagslächeln.png" alt="" />
+      <img src="./montagslächeln.png" className="r-stretch" />
       <Remark>blog.campact.de / montagslächeln / Kostas Koufogiorgos, Toonpool </Remark>
     </section>
 
@@ -368,8 +363,6 @@ export function Reform2023() {
       <section>
         <WahlDiffSelectable />
 
-        {/* Durchgehende linien */}
-
         <aside className="notes">
           Vergleich der Ergebnisse der Sitzverteilungsverfahren mit einer Sitzverteilung nach reinem Zweitstimmenergebnis bei gleicher Parlamentsgröße.
         </aside>
@@ -382,14 +375,22 @@ export function Reform2023() {
         </aside>
       </section>
 
-
       <section>
         <h3>Sind Wahlrechtsreformen<br /> die deutsche Form des Gerrymanderings?</h3>
       </section>
 
-
       <section>
         <h3>Nein.<span className="fragment">.</span><span className="fragment">.</span></h3>
+      </section>
+
+
+
+      <section>
+        <WahlDiffSelectable />
+
+        <aside className="notes">
+          Vergleich der Ergebnisse der Sitzverteilungsverfahren mit einer Sitzverteilung nach reinem Zweitstimmenergebnis bei gleicher Parlamentsgröße.
+        </aside>
       </section>
     </section>
   </>
@@ -398,7 +399,7 @@ export function Reform2023() {
 export function Alternativen({ }) {
   return <section>
     <section>
-      <h3>Alternativen</h3>
+      <h3>Alternativen<br />zur Reform 2023</h3>
     </section>
 
     <section>
@@ -419,8 +420,35 @@ export function Alternativen({ }) {
 export function Sitzzuteilungsverfahren({ }) {
   return <>
     <section>
+    <section>
       <section>
-        <h3>Sitzzuteilungsverfahren: Bonus slides</h3>
+        <h3>Bonus Slides:<br />Wer darf wählen?</h3>
+
+        <aside className="notes">
+          * Herabsetzung der Altersgrenze für das aktive Wahlrecht
+          auf 18 Jahre 1972 <br />
+          * Aufhebung verschiedener Gründe für den
+          Wahlrechtsausschluss (z.B. für Personen, die im Gefängnis sitzen).<br />
+        </aside>
+      </section>
+
+      <section>
+        <SvgAnimation src="./wähler.svg" />
+        <aside className="notes">
+          viele Einwohner:innen Deutschlands nicht wählen z.B. wegen prekären Aufenthaltsverhältnissen. <br />
+          * 83 237 124 Einwohner <br />
+          * Alter 13,9 Mio <br />
+          * 8,1 wegen anderen Gründen <br />
+          * 61,18 Mio durften 2021 Wählen <br />
+          * 14,32 Mio wollten nicht <br />
+          * 46,86 Haben gewählt <br />
+        </aside>
+      </section>
+
+    </section>
+
+      <section>
+        <h3>Bonus slides: <br />Sitzzuteilungsverfahren</h3>
       </section>
 
       <section data-auto-animate>
@@ -448,7 +476,7 @@ export function Sitzzuteilungsverfahren({ }) {
       </section>
 
       <section data-auto-animate>
-        <pre data-id="code-animation"><code className="python" data-trim data-line-numbers="1-7|2|3|5-7|1-8">{`
+        <pre data-id="code-animation"><code className="python" data-trim data-line-numbers="1-8|2|3|4-7|1-8">{`
           def hare_nimeyer(votes: ArrayLike, seats: int):
             assigned_seats = np.floor((votes * seats) / sum(votes))
             rest = (votes * seats) / sum(votes) - assigned_seats
@@ -460,6 +488,7 @@ export function Sitzzuteilungsverfahren({ }) {
         `}</code></pre>
       </section>
     </section>
+
   </>
 }
 

@@ -11,7 +11,7 @@ import {
   electionNurZweitstimmen,
 } from './calculate_election';
 import { sainteLaguë } from './appointment_method';
-import { partiesSorted, partyColors } from './parties';
+import { partiesSorted, partyColors, svvColors } from './parties';
 import { electionsYears, getElectionData } from './btw_kerg';
 import {
   BarPlot,
@@ -163,6 +163,7 @@ export function WahlDiff({ year }: { year: number | string }) {
         ),
         label: methodName,
         id: methodName,
+        color: svvColors[methodName as keyof typeof svvColors],
       };
     });
 
@@ -231,6 +232,7 @@ export function ParlamentGröße() {
       label: methodName,
       id: methodName,
       curve: 'linear' as 'linear',
+      color: svvColors[methodName as keyof typeof svvColors],
     };
   });
 
@@ -416,6 +418,7 @@ export function ÜberhangMandateTotal() {
     label: method,
     id: method,
     curve: 'linear' as 'linear',
+    color: svvColors[method as keyof typeof svvColors],
   }));
 
   return (

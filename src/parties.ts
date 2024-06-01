@@ -15,6 +15,14 @@ export const partyColors = {
   AfD: '#009EE0',
 };
 
+export const svvColors = {
+  SVV1956: '#E2C2FF',
+  SVV2011: '#161A1D',
+  SVV2013: '#8aea92',
+  SVV2020: '#777',
+  SVV2023: '#FF525E',
+}
+
 export function partiesSorted(
   parties: Wahlergebniss
 ): (ParteiErgebniss & { name: string; color: string })[] {

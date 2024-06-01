@@ -19,9 +19,9 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:zoom="1.4453657"
-   inkscape:cx="1871.1527"
-   inkscape:cy="489.84143"
+   inkscape:zoom="1.397127"
+   inkscape:cx="1635.857"
+   inkscape:cy="525.36383"
    inkscape:window-width="2056"
    inkscape:window-height="1257"
    inkscape:window-x="0"
@@ -795,55 +795,6 @@ eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29k
          id="path63" />
     </g>
   </g>
-  <g
-     stroke-linecap="round"
-     id="g69">
-    <g
-       transform="translate(788.5292801694619 654.3739758732399) rotate(0 161.71938996353697 -131.3893209982245)"
-       id="g66">
-      <path
-         d="M-0.33 -0.44 C49.65 -4.92, 246.68 17.62, 300.6 -25.91 C354.52 -69.44, 319.44 -222.03, 323.18 -261.63 M1.69 -1.72 C52.01 -6.1, 249.55 19.1, 302.98 -24.51 C356.41 -68.12, 318.94 -223.65, 322.27 -263.37"
-         stroke="#1e1e1e"
-         stroke-width="2"
-         fill="none"
-         id="path65" />
-    </g>
-    <g
-       transform="translate(788.5292801694619 654.3739758732399) rotate(0 161.71938996353697 -131.3893209982245)"
-       id="g67">
-      <path
-         d="M334.57 -236.01 C329.23 -246.87, 325.14 -256, 322.27 -263.37 M334.57 -236.01 C329.33 -246.76, 325.02 -257.94, 322.27 -263.37"
-         stroke="#1e1e1e"
-         stroke-width="2"
-         fill="none"
-         id="path66" />
-    </g>
-    <g
-       transform="translate(788.5292801694619 654.3739758732399) rotate(0 161.71938996353697 -131.3893209982245)"
-       id="g68">
-      <path
-         d="M314.1 -234.51 C316.05 -245.85, 319.26 -255.51, 322.27 -263.37 M314.1 -234.51 C316.97 -245.72, 320.75 -257.5, 322.27 -263.37"
-         stroke="#1e1e1e"
-         stroke-width="2"
-         fill="none"
-         id="path67" />
-    </g>
-  </g>
-  <g
-     transform="translate(800.1890514415182 627.5835740241456) rotate(0 103.74990844726562 12.5)"
-     id="g70">
-    <text
-       x="0"
-       y="0"
-       font-family="Virgil, Segoe UI Emoji"
-       font-size="20px"
-       fill="#1e1e1e"
-       text-anchor="start"
-       style="white-space: pre;"
-       direction="ltr"
-       dominant-baseline="text-before-edge"
-       id="text69">Sitze pro Bundesland</text>
-  </g>
 </g>
 <g
    id="g112"
@@ -979,6 +930,55 @@ eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29k
          id="path78" />
     </g>
   </g>
+  <g
+     stroke-linecap="round"
+     id="g69">
+    <g
+       transform="translate(788.5292801694619 654.3739758732399) rotate(0 161.71938996353697 -131.3893209982245)"
+       id="g66">
+      <path
+         d="M-0.33 -0.44 C49.65 -4.92, 246.68 17.62, 300.6 -25.91 C354.52 -69.44, 319.44 -222.03, 323.18 -261.63 M1.69 -1.72 C52.01 -6.1, 249.55 19.1, 302.98 -24.51 C356.41 -68.12, 318.94 -223.65, 322.27 -263.37"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path65" />
+    </g>
+    <g
+       transform="translate(788.5292801694619 654.3739758732399) rotate(0 161.71938996353697 -131.3893209982245)"
+       id="g67">
+      <path
+         d="M334.57 -236.01 C329.23 -246.87, 325.14 -256, 322.27 -263.37 M334.57 -236.01 C329.33 -246.76, 325.02 -257.94, 322.27 -263.37"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path66" />
+    </g>
+    <g
+       transform="translate(788.5292801694619 654.3739758732399) rotate(0 161.71938996353697 -131.3893209982245)"
+       id="g68">
+      <path
+         d="M314.1 -234.51 C316.05 -245.85, 319.26 -255.51, 322.27 -263.37 M314.1 -234.51 C316.97 -245.72, 320.75 -257.5, 322.27 -263.37"
+         stroke="#1e1e1e"
+         stroke-width="2"
+         fill="none"
+         id="path67" />
+    </g>
+  </g>
+  <g
+     transform="translate(800.18905,627.58357)"
+     id="g70">
+    <text
+       x="0"
+       y="0"
+       font-family="Virgil, Segoe UI Emoji"
+       font-size="20px"
+       fill="#1e1e1e"
+       text-anchor="start"
+       style="white-space: pre;"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text69">Sitze pro Bundesland</text>
+  </g>
 </g>
 <mask
    id="mask76" />
@@ -1027,16 +1027,17 @@ eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29k
      transform="translate(1481.8900552275068 492.12390013988215) rotate(0 31.97997283935547 12.5)"
      id="g87">
     <text
-       x="0"
-       y="0"
-       font-family="Virgil, Segoe UI Emoji"
+       x="-20"
+       y="4"
+       font-family="Virgil, 'Segoe UI Emoji'"
        font-size="20px"
        fill="#e03131"
        text-anchor="start"
-       style="white-space: pre;"
+       style="white-space:pre"
        direction="ltr"
        dominant-baseline="text-before-edge"
-       id="text86">Zähler</text>
+       id="text86"
+       inkscape:label="text86">Zielgröße</text>
   </g>
 </g>
 <g
@@ -1202,35 +1203,36 @@ eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29k
    id="mask102" />
 <g
    id="g117"
-   inkscape:label="15">
+   inkscape:label="15"
+   transform="matrix(1.0181289,0,0,1.0118136,-31.77153,-4.8104197)">
   <g
      stroke-linecap="round"
      id="g102">
     <g
-       transform="translate(1750.9371818145387 409.4199107304396) rotate(0 -97.26545665805725 46.346425664815115)"
+       transform="matrix(0.88362476,0,0,0.91715569,1751.1266,409.24056)"
        id="g99">
       <path
-         d="M0.77 -0.96 C-31.69 14.29, -161.29 77.06, -193.78 92.53 M-0.28 1.15 C-32.92 17.11, -161.93 78.72, -194.34 93.99"
+         d="M 0.77,-0.96 C -31.69,14.29 -161.29,77.06 -193.78,92.53 M -0.28,1.15 c -32.64,15.96 -161.65,77.57 -194.06,92.84"
          stroke="#e03131"
          stroke-width="2"
          fill="none"
          id="path98" />
     </g>
     <g
-       transform="translate(1750.9371818145387 409.4199107304396) rotate(0 -97.26545665805725 46.346425664815115)"
+       transform="translate(1750.9372,409.41991)"
        id="g100">
       <path
-         d="M-173.28 72.62 C-182.74 82.17, -189.46 89.68, -194.34 93.99 M-173.28 72.62 C-179.06 77.57, -183.57 82.32, -194.34 93.99"
+         d="m -152.92507,66.424497 c -8.35909,8.758837 -14.29705,15.646676 -18.60914,19.599617 m 18.60914,-19.599617 c -5.10735,4.539921 -9.0925,8.896411 -18.60914,19.599617"
          stroke="#e03131"
-         stroke-width="2"
+         stroke-width="1.80047"
          fill="none"
          id="path99" />
     </g>
     <g
-       transform="translate(1750.9371818145387 409.4199107304396) rotate(0 -97.26545665805725 46.346425664815115)"
+       transform="matrix(0.88362476,0,0,0.91715569,1751.1266,409.24056)"
        id="g101">
       <path
-         d="M-164.47 91.16 C-177.46 93.68, -187.55 94.1, -194.34 93.99 M-164.47 91.16 C-172.28 91.86, -178.82 92.32, -194.34 93.99"
+         d="m -164.47,91.16 c -12.99,2.52 -23.08,2.94 -29.87,2.83 m 29.87,-2.83 c -7.81,0.7 -14.35,1.16 -29.87,2.83"
          stroke="#e03131"
          stroke-width="2"
          fill="none"
@@ -1238,16 +1240,16 @@ eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29k
     </g>
   </g>
   <g
-     transform="translate(1649.2313770114883 453.4715813841751) rotate(334.9014282827245 37.38997650146473 12.5)"
+     transform="rotate(-25.098572,1880.5974,-3465.2819)"
      id="g103">
     <text
        x="0"
        y="0"
-       font-family="Virgil, Segoe UI Emoji"
+       font-family="Virgil, 'Segoe UI Emoji'"
        font-size="20px"
        fill="#e03131"
        text-anchor="start"
-       style="white-space: pre;"
+       style="white-space:pre"
        direction="ltr"
        dominant-baseline="text-before-edge"
        id="text102">Nein? +1</text>
@@ -1354,5 +1356,76 @@ eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29k
        id="tspan120"
        x="141.62016"
        y="-24.569744">Überhangmandate</tspan></text>
+</g>
+<g
+   id="g123"
+   inkscape:label="16">
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:280.479;stroke-opacity:1"
+     id="rect123"
+     width="116.66799"
+     height="33.640465"
+     x="1447.2556"
+     y="485.28159" />
+  <text
+     x="1427.9098"
+     y="493.21832"
+     font-family="Virgil, 'Segoe UI Emoji'"
+     font-size="20px"
+     fill="#e03131"
+     text-anchor="start"
+     style="white-space:pre"
+     direction="ltr"
+     dominant-baseline="text-before-edge"
+     id="text86-1"
+     inkscape:label="text86">Zielgröße +1</text>
+</g>
+<g
+   id="g123-6"
+   inkscape:label="17"
+   transform="translate(-0.61994333,0.09851036)">
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:280.479;stroke-opacity:1"
+     id="rect123-4"
+     width="116.66799"
+     height="33.640465"
+     x="1447.2556"
+     y="485.28159" />
+  <text
+     x="1427.9098"
+     y="493.21832"
+     font-family="Virgil, 'Segoe UI Emoji'"
+     font-size="20px"
+     fill="#e03131"
+     text-anchor="start"
+     style="white-space:pre"
+     direction="ltr"
+     dominant-baseline="text-before-edge"
+     id="text86-1-6"
+     inkscape:label="text86">Zielgröße +2</text>
+</g>
+<g
+   id="g123-6-4"
+   inkscape:label="18"
+   transform="translate(-0.61988333,0.09851036)">
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:280.479;stroke-opacity:1"
+     id="rect123-4-6"
+     width="116.66799"
+     height="33.640465"
+     x="1447.2556"
+     y="485.28159" />
+  <text
+     x="1427.9098"
+     y="493.21832"
+     font-family="Virgil, 'Segoe UI Emoji'"
+     font-size="20px"
+     fill="#e03131"
+     text-anchor="start"
+     style="white-space:pre"
+     direction="ltr"
+     dominant-baseline="text-before-edge"
+     id="text86-1-6-1"
+     inkscape:label="text86">Zielgröße +X</text>
 </g>
 </svg>
